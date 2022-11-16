@@ -13,6 +13,7 @@
  */
 package bridgedesigner;
 
+
 /**
  * RC4 encoder/decoder of byte arrays.
  * 

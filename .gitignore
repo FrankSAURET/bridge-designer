@@ -20,7 +20,7 @@
 /nsis/classes/
 
 # Omit the RC4 key
-/src/bridgedesigner/RC4Key.java
+#/src/bridgedesigner/RC4Key.java
 
 # Various build locations
 /mac/Bridge Designer 2014 (2nd Ed) Installation Image/Bridge Designer 2014 (2nd Ed).app/
