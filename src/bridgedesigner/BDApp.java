@@ -1,5 +1,5 @@
 /*
- * The Bridge Designer (2nd Edition) application class.
+ * The Bridge Designer application class.
  */
 
 package bridgedesigner;
@@ -31,7 +31,7 @@ import org.jdesktop.application.ResourceMap;
 import org.jdesktop.application.SessionStorage;
 
 /**
- * The main class of the Bridge Designer (2nd Edition) application.
+ * The main class of the Bridge Designer application.
  */
 public class BDApp extends SingleFrameApplication {
 

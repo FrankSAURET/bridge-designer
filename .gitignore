@@ -23,7 +23,6 @@
 #/src/bridgedesigner/RC4Key.java
 
 # Various build locations
-/mac/Bridge Designer 2014 (2nd Ed) Installation Image/Bridge Designer 2014 (2nd Ed).app/
+/mac/Bridge Designer 2014 Installation Image/Bridge Designer 2014.app/
 /mac/lib/
-/jre/
-/l4j/wpbd.xml
+

@@ -3,12 +3,12 @@
   <headerType>gui</headerType>
   <jar>..\nsis\DetectJVM.jar</jar>
   <outfile>..\dist\detectjvm.exe</outfile>
-  <errTitle>Bridge Designer 2014 (2nd Edition)</errTitle>
+  <errTitle>Bridge Designer</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
   <priority>normal</priority>
   <downloadUrl>http://java.com/download</downloadUrl>
-  <supportUrl>http://bridgecontest.org</supportUrl>
+  <supportUrl>https://github.com/FrankSAURET/bridge-designer/discussions</supportUrl>
   <customProcName>false</customProcName>
   <stayAlive>true</stayAlive>
   <manifest>wpbd.manifest</manifest>

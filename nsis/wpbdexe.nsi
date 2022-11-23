@@ -27,7 +27,7 @@ Function un.onInit
   !insertmacro MULTIUSER_UNINIT
 FunctionEnd
 
-!define BD "Bridge Designer 20${YEAR} (2nd Edition)"
+!define BD "Bridge Designer 20${YEAR}"
 !define RESOURCE_DIR  "..\src\wpbd\resources"
 !define EXE "wpbdv${YEAR}j${BUILD}.exe"
 

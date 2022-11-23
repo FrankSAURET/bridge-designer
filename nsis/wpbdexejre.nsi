@@ -95,8 +95,8 @@ installation.$\r$\n$\r$\nClick Next to continue."
 ; Finish page settings.
 !define MUI_FINISHPAGE_TITLE "${BD} installation complete"
 !define MUI_FINISHPAGE_TEXT "Installation is complete! Thanks for choosing to \
-use our software. Check http://bridgecontest.org for information and \
-updates about the Bridge Design Contest."
+use our software. Check http://bridgecontest.org for information \
+about the original bridgedesigner and https://github.com/FrankSAURET/bridge-designer for this copy."
 !define MUI_FINISHPAGE_RUN "$INSTDIR\${EXE}"
 !define MUI_FINISHPAGE_RUN_TEXT "Run the ${BD}."
 !define MUI_FINISHPAGE_RUN_NOTCHECKED
@@ -107,9 +107,8 @@ updates about the Bridge Design Contest."
 !insertmacro MUI_UNPAGE_CONFIRM
 !insertmacro MUI_UNPAGE_INSTFILES
 !define MUI_FINISHPAGE_TITLE "${BD} is uninstalled"
-!define MUI_FINISHPAGE_TEXT "Uninstallation is complete! Check \
-http://bridgecontest.org for information and updates \
-about the Bridge Design Contest."
+!define MUI_FINISHPAGE_TEXT "Uninstallation is complete! Check http://bridgecontest.org for information \
+about the original bridgedesigner and https://github.com/FrankSAURET/bridge-designer for this copy."
 !insertmacro MUI_UNPAGE_FINISH
 
 !insertmacro MUI_LANGUAGE "English"
@@ -139,9 +138,9 @@ Section "Bridge Designer" SectionBD
     ; Copy all the system files to the install directory.
     File ${RESOURCE_DIR}\*.ico
     File /r /x WPBD.jar /x README.TXT /x detectjvm.exe ..\dist\*.* 
-    File /r ..\jre\*.*
+    File /r ..\jre6
     ; Since we are using a 32-bit jre, always get the 32-bit dll.
-    File ..\..\lib\jogamp-all-platforms\lib\windows-i586\*.dll
+    File ..\lib-sup\jogamp-all-platforms\lib\windows-i586\*.dll
 
     ; Create the uninstaller executable.
     WriteUninstaller "$INSTDIR\uninstall.exe"

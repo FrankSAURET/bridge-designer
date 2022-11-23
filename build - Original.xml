@@ -279,10 +279,10 @@
                 </or>
             </fileset>
         </copy>
-        <delete dir="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year} (2nd Ed).app" />
+        <delete dir="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year}.app" />
         <bundleapp outputdirectory="mac/Bridge Designer 20${year} Installation Image"
-            name="Bridge Designer 20${year} (2nd Ed)"
-            displayname="Bridge Designer 20${year} (2nd Ed)"
+            name="Bridge Designer 20${year}"
+            displayname="Bridge Designer 20${year}"
             identifier="bd20${year}"
             icon="mac/bdicon.icns"
             shortversion="20${year}.1"
@@ -304,7 +304,7 @@
 
     <target name="compile-mac-installer" unless="build.ok" depends="set-config-props">
         <mkdir dir="release" />
-        <copy file="dist/WPBD.jar" tofile="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year} (2nd Ed).app/Contents/Java/WPBD.jar" />
+        <copy file="dist/WPBD.jar" tofile="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year}.app/Contents/Java/WPBD.jar" />
         <exec executable="codesign" failifexecutionfails="false">
             <!-- This env variable hack is a workaround for a codesign bug 12 Jan 13 
             <env key="CODESIGN_ALLOCATE" value="/Applications/Xcode.app/Contents/Developer/usr/bin/codesign_allocate" />
@@ -316,7 +316,7 @@
             <arg value="-s" />
             <arg value="Developer ID Application: Eugene Ressler" />
             <arg value="-fv" />
-            <arg value="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year} (2nd Ed).app" />
+            <arg value="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year}.app" />
         </exec>
         <exec executable="hdiutil">
             <arg value="create" />
