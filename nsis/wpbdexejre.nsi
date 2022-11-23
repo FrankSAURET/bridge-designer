@@ -2,8 +2,7 @@
 ;
 ; NSIS build script for the Bridge Designer.
 ;
-
-!define BD "Bridge Designer 20${YEAR} (2nd Edition)"
+!define BD "Bridge Designer 20${YEAR}"
 !define EXE "bdv${YEAR}j${BUILD}.exe"
 !define RESOURCE_DIR  "..\src\bridgedesigner\resources"
 

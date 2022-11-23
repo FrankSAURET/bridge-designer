@@ -12,8 +12,8 @@ die "Can't find installer $INSTALLER_EXE: $!" unless -x $INSTALLER_EXE;
 
 print STDERR "Found installer '$INSTALLER_EXE'.\n";
 
-our $PROGRAMS_DIR = "C:\\Program Files (x86)";
-our $INSTALL_DIR = "$PROGRAMS_DIR\\Bridge Designer 20${YEAR} (2nd Edition)";
+our $PROGRAMS_DIR = "C:\\Program Files (x86)"; 
+our $INSTALL_DIR = "$PROGRAMS_DIR\\Bridge Designer 20${YEAR}";
 our $UNINSTALLER_EXE = "$INSTALL_DIR\\uninstall.exe";
 if (-x $UNINSTALLER_EXE) {
   print STDERR "Running uninstaller '$UNINSTALLER_EXE' because the test requires no previous installation.";

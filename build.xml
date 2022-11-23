@@ -85,7 +85,7 @@
         <property file="build.number" />
         <property file="nbproject/config.properties" />
         <property name="windows.installer.name" value="setupbdv${year}j.exe" />
-        <property name="mac.installer.name" value="Bridge Designer 20${year} (2nd Ed) Installation Image" />
+        <property name="mac.installer.name" value="Bridge Designer 20${year} Installation Image" />
         <echo message="Config ${config} (win: ${windows.installer.name}, mac: ${mac.installer.name})." />
 
         <!-- whether resource help files are up to date with respect to sources. -->
@@ -175,18 +175,7 @@
         <taskdef name="launch4j" classname="net.sf.launch4j.ant.Launch4jTask"
             classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
         <launch4j configFile="l4j/detectjvm.xml" />
-        <echo message="Running sign4j at '${basedir}/l4j'." />
-        <exec executable="${basedir}/l4j/sign4j.exe" failifexecutionfails="false">
-            <arg value="--verbose" />
-            <arg value="${signtool.dir}/signtool.exe"/>
-            <arg value="sign" />
-            <arg value="/s" />
-            <arg value="my" />
-            <arg value="/sha1" />
-            <arg value="${certhash.val}" />
-            <arg value="/v" />
-            <arg value="dist/detectjvm.exe" />
-        </exec>
+
         <!-- delete file="nsis/DetectJVM.jar" -->
     </target>
 
@@ -216,18 +205,7 @@
         <taskdef name="launch4j" classname="net.sf.launch4j.ant.Launch4jTask"
             classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
         <launch4j configFile="l4j/wpbd.xml" />
-        <!-- Sign the launcher. -->
-        <echo message="Running sign4j at '${basedir}/l4j'." />
-        <exec executable="${basedir}/l4j/sign4j.exe" failifexecutionfails="false">
-            <arg value="--verbose" />
-            <arg value="${signtool.dir}/signtool.exe"/>
-            <arg value="sign" />
-            <arg value="/t" />
-            <arg value="http://timestamp.digicert.com" />
-            <arg value="/a" /> <!-- Signtool selects "best" certificate. -->
-            <arg value="/v" />
-            <arg value="dist/bdv${year}j${build.number}.exe" />
-        </exec>
+        
         <!-- Run NSIS to build the setup program, again with the correct build number. -->
         <exec executable="${nsis.dir}/makensis.exe">
             <arg value="/V1" />
@@ -235,20 +213,7 @@
             <arg value="/DYEAR=${year}" />
             <arg value="nsis/wpbdexe${jre.modifier}.nsi" />
         </exec>
-        <!-- Sign the installer. -->
-        <sleep seconds="3" />
-        <exec executable="${signtool.dir}/signtool.exe" failifexecutionfails="false">
-            <arg value="sign" />
-            <arg value="/d" />
-            <arg value="Bridge Designer" />
-            <arg value="/du" />
-            <arg value="http://bridgecontest.org" />
-            <arg value="/t" />
-            <arg value="http://timestamp.globalsign.com/scripts/timstamp.dll" />
-            <arg value="/a" /> <!-- Signtool selects "best" certificate. -->
-            <arg value="/v" />
-            <arg value="release/setupbdv${year}j.exe" />
-        </exec>
+       
     </target>
 
     <target name="compile-mac-bundle" depends="set-config-props">
@@ -279,8 +244,8 @@
                 </or>
             </fileset>
         </copy>
-        <delete dir="mac/Bridge Designer 20${year} (2nd Ed) Installation Image/Bridge Designer 20${year} (2nd Ed).app" />
-        <bundleapp outputdirectory="mac/Bridge Designer 20${year} (2nd Ed) Installation Image"
+        <delete dir="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year} (2nd Ed).app" />
+        <bundleapp outputdirectory="mac/Bridge Designer 20${year} Installation Image"
             name="Bridge Designer 20${year} (2nd Ed)"
             displayname="Bridge Designer 20${year} (2nd Ed)"
             identifier="bd20${year}"
@@ -304,7 +269,7 @@
 
     <target name="compile-mac-installer" unless="build.ok" depends="set-config-props">
         <mkdir dir="release" />
-        <copy file="dist/WPBD.jar" tofile="mac/Bridge Designer 20${year} (2nd Ed) Installation Image/Bridge Designer 20${year} (2nd Ed).app/Contents/Java/WPBD.jar" />
+        <copy file="dist/WPBD.jar" tofile="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year} (2nd Ed).app/Contents/Java/WPBD.jar" />
         <exec executable="codesign" failifexecutionfails="false">
             <!-- This env variable hack is a workaround for a codesign bug 12 Jan 13 
             <env key="CODESIGN_ALLOCATE" value="/Applications/Xcode.app/Contents/Developer/usr/bin/codesign_allocate" />
@@ -316,7 +281,7 @@
             <arg value="-s" />
             <arg value="Developer ID Application: Eugene Ressler" />
             <arg value="-fv" />
-            <arg value="mac/Bridge Designer 20${year} (2nd Ed) Installation Image/Bridge Designer 20${year} (2nd Ed).app" />
+            <arg value="mac/Bridge Designer 20${year} Installation Image/Bridge Designer 20${year} (2nd Ed).app" />
         </exec>
         <exec executable="hdiutil">
             <arg value="create" />
@@ -324,10 +289,10 @@
             <arg value="-fs" />
             <arg value="HFS+" />
             <arg value="-srcfolder" />
-            <arg value="mac/Bridge Designer 20${year} (2nd Ed) Installation Image" />
+            <arg value="mac/Bridge Designer 20${year} Installation Image" />
             <arg value="-volname" />
-            <arg value="Bridge Designer 20${year} (2nd Ed) Installation Image" />
-            <arg value="release/Bridge Designer 20${year} (2nd Ed) Installation Image.dmg" />
+            <arg value="Bridge Designer 20${year} Installation Image" />
+            <arg value="release/Bridge Designer 20${year} Installation Image.dmg" />
         </exec>
     </target>
 
