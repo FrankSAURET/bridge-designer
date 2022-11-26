@@ -163,7 +163,7 @@ public class LoadTemplateDialog extends JDialog {
         tipTextPanelLayout.setVerticalGroup(
             tipTextPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tipTextPanelLayout.createSequentialGroup()
-                .addComponent(tipTextPane, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE)
+                .addComponent(tipTextPane, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

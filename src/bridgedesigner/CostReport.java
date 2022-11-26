@@ -132,9 +132,9 @@ public class CostReport extends JDialog {
                 .addGap(18, 18, 18)
                 .addComponent(helpButton)
                 .addGap(12, 12, 12)
-                .addComponent(copyButton, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addComponent(copyButton, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(printButton, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                .addComponent(printButton, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                 .addGap(12, 12, 12)
                 .addComponent(closeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -154,7 +154,7 @@ public class CostReport extends JDialog {
                 .addContainerGap())
         );
 
-        commentLabel.getAccessibleContext().setAccessibleName(null);
+        commentLabel.getAccessibleContext().setAccessibleName(resourceMap.getString("commentLabel.AccessibleContext.accessibleName")); // NOI18N
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

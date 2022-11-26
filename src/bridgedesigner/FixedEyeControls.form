@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.1" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
@@ -13,7 +13,6 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
@@ -167,15 +166,15 @@
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="backgroundCheckBox" alignment="0" min="-2" max="-2" attributes="1"/>
-                              <Component id="abutmentsCheckBox" alignment="0" pref="105" max="32767" attributes="1"/>
-                              <Component id="truckCheckBox" alignment="1" pref="105" max="32767" attributes="1"/>
+                              <Component id="abutmentsCheckBox" alignment="0" pref="108" max="32767" attributes="1"/>
+                              <Component id="truckCheckBox" alignment="1" pref="108" max="32767" attributes="1"/>
                           </Group>
                           <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="exaggerationCheckBox" alignment="0" pref="112" max="32767" attributes="0"/>
+                              <Component id="exaggerationCheckBox" alignment="0" pref="115" max="32767" attributes="0"/>
                               <Component id="smoothTerrainCheckBox" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="colorsCheckBox" pref="70" max="32767" attributes="0"/>
+                                  <Component id="colorsCheckBox" pref="73" max="32767" attributes="0"/>
                                   <EmptySpace min="42" pref="42" max="42" attributes="0"/>
                               </Group>
                           </Group>

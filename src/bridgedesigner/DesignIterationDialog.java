@@ -194,10 +194,9 @@ public class DesignIterationDialog extends JDialog {
         selectTreeScroll = new javax.swing.JScrollPane();
         selectTree = new JTree(designIterationTreeModel);
 
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(bridgedesigner.BDApp.class).getContext().getResourceMap(DesignIterationDialog.class);
-        setTitle(resourceMap.getString("Form.title")); // NOI18N
         setName("Form"); // NOI18N
 
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(bridgedesigner.BDApp.class).getContext().getResourceMap(DesignIterationDialog.class);
         selectLabel.setText(resourceMap.getString("selectLabel.text")); // NOI18N
         selectLabel.setName("selectLabel"); // NOI18N
 
@@ -214,13 +213,13 @@ public class DesignIterationDialog extends JDialog {
             tipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tipPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tipPane, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                .addComponent(tipPane, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                 .addContainerGap())
         );
         tipPanelLayout.setVerticalGroup(
             tipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tipPanelLayout.createSequentialGroup()
-                .addComponent(tipPane)
+                .addComponent(tipPane, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

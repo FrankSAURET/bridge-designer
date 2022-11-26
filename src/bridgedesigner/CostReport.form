@@ -29,9 +29,9 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="helpButton" min="-2" max="-2" attributes="1"/>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-              <Component id="copyButton" pref="198" max="32767" attributes="1"/>
+              <Component id="copyButton" pref="200" max="32767" attributes="1"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="printButton" pref="124" max="32767" attributes="1"/>
+              <Component id="printButton" pref="126" max="32767" attributes="1"/>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="closeButton" min="-2" pref="85" max="-2" attributes="1"/>
               <EmptySpace max="-2" attributes="0"/>

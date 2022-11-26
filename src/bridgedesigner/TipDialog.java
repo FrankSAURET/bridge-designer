@@ -167,7 +167,7 @@ public class TipDialog extends JDialog {
                         .addComponent(nextTipButton)
                         .addGap(12, 12, 12)
                         .addComponent(closeButton))
-                    .addComponent(tipScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE))
+                    .addComponent(tipScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

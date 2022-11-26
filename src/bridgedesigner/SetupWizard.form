@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.1" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <NonVisualComponents>
@@ -43,7 +43,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="siteCostPanel" alignment="0" max="32767" attributes="1"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="477" max="32767" attributes="0"/>
                       <Component id="help" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cancel" min="-2" max="-2" attributes="0"/>
@@ -58,7 +58,7 @@
                       <Component id="pageNumber" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pageTitle" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="745" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="widgetPanel" min="-2" pref="222" max="-2" attributes="0"/>
@@ -181,13 +181,16 @@
                 </Property>
                 <Property name="name" type="java.lang.String" value="requirementPanel" noResource="true"/>
               </Properties>
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" resourceKey="requirementPanel.AccessibleContext.accessibleName"/>
+              </AccessibilityProperties>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="requirementPane" pref="186" max="32767" attributes="0"/>
+                          <Component id="requirementPane" pref="190" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -195,7 +198,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="requirementPane" max="32767" attributes="0"/>
+                          <Component id="requirementPane" pref="485" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -264,12 +267,12 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="21" pref="21" max="21" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="localContestCodeField" alignment="0" max="32767" attributes="1"/>
-                                      <Component id="localContestCodeLabel" alignment="0" max="32767" attributes="1"/>
-                                      <Component id="localContest4charOKMsgLabel" alignment="1" pref="177" max="32767" attributes="1"/>
+                                      <Component id="localContestCodeField" alignment="0" pref="179" max="32767" attributes="1"/>
+                                      <Component id="localContestCodeLabel" alignment="0" pref="179" max="32767" attributes="1"/>
+                                      <Component id="localContest4charOKMsgLabel" alignment="1" pref="179" max="32767" attributes="1"/>
                                   </Group>
                               </Group>
-                              <Component id="localContestMsgLabel" max="32767" attributes="1"/>
+                              <Component id="localContestMsgLabel" pref="200" max="32767" attributes="1"/>
                           </Group>
                       </Group>
                   </Group>
@@ -291,7 +294,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="localContest4charOKMsgLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="localContestMsgLabel" pref="229" max="32767" attributes="0"/>
+                          <Component id="localContestMsgLabel" pref="246" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -422,7 +425,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="deckElevationBox" max="32767" attributes="1"/>
+                          <Component id="deckElevationBox" pref="165" max="32767" attributes="1"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="deckElevationButtonPanel" min="-2" pref="19" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -566,12 +569,12 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="standardAbutmentsButton" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="archAbutmentsButton" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="standardAbutmentsButton" alignment="0" pref="170" max="32767" attributes="0"/>
+                                  <Component id="archAbutmentsButton" alignment="0" pref="170" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="21" pref="21" max="21" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="archHeightLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="archHeightLabel" alignment="0" pref="149" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="archHeightBox" min="-2" pref="104" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -714,11 +717,11 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="noPierButton" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="noPierButton" alignment="0" pref="170" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="21" pref="21" max="21" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="pierHeightLabel" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="pierHeightLabel" alignment="0" pref="149" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="pierHeightBox" min="-2" pref="104" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -726,7 +729,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <Component id="pierButton" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pierButton" alignment="0" pref="170" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -862,9 +865,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="noAnchorageButton" alignment="0" pref="182" max="32767" attributes="1"/>
+                                  <Component id="noAnchorageButton" alignment="0" pref="174" max="32767" attributes="1"/>
                                   <Component id="twoAnchoragesButton" alignment="0" min="-2" max="-2" attributes="1"/>
-                                  <Component id="oneAnchorageButton" alignment="0" pref="166" max="32767" attributes="1"/>
+                                  <Component id="oneAnchorageButton" alignment="0" pref="174" max="32767" attributes="1"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -879,7 +882,7 @@
                               <Component id="oneAnchorageButton" min="-2" pref="25" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="twoAnchoragesButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="15" max="32767" attributes="0"/>
+                              <EmptySpace pref="40" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -976,7 +979,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="mediumConcreteButton" alignment="0" pref="194" max="32767" attributes="0"/>
+                              <Component id="mediumConcreteButton" alignment="0" pref="198" max="32767" attributes="0"/>
                               <Component id="highConcreteButton" alignment="0" pref="198" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -990,7 +993,7 @@
                           <Component id="mediumConcreteButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="highConcreteButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="42" max="32767" attributes="0"/>
+                          <EmptySpace pref="53" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1043,8 +1046,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="standardTruckButton" alignment="0" max="32767" attributes="0"/>
-                              <Component id="permitLoadButton" alignment="1" max="32767" attributes="0"/>
+                              <Component id="standardTruckButton" alignment="0" pref="198" max="32767" attributes="0"/>
+                              <Component id="permitLoadButton" alignment="1" pref="198" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1133,7 +1136,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="templateList" pref="186" max="32767" attributes="0"/>
+                          <Component id="templateList" pref="190" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1141,7 +1144,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="templateList" pref="494" max="32767" attributes="0"/>
+                          <Component id="templateList" pref="485" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1216,11 +1219,11 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="projectIdPrefixLabel" pref="52" max="32767" attributes="0"/>
+                                  <Component id="projectIdPrefixLabel" pref="57" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="projectIdEdit" min="-2" pref="129" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="designedByEdit" alignment="0" max="32767" attributes="0"/>
+                              <Component id="designedByEdit" alignment="0" pref="190" max="32767" attributes="0"/>
                               <Component id="projectNameEdit" alignment="1" pref="0" max="32767" attributes="0"/>
                               <Component id="projectIdLabel" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                               <Component id="projectNameLabel" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
@@ -1248,7 +1251,7 @@
                               <Component id="projectIdEdit" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="projectIdPrefixLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="322" max="32767" attributes="0"/>
+                          <EmptySpace pref="329" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1345,7 +1348,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="instructionsPane" pref="186" max="32767" attributes="0"/>
+                          <Component id="instructionsPane" pref="190" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1353,7 +1356,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="instructionsPane" pref="494" max="32767" attributes="0"/>
+                          <Component id="instructionsPane" pref="485" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1511,7 +1514,7 @@
                           <Component id="legendTopSpacerLabel" max="32767" attributes="1"/>
                           <Component id="legendBottomSpacerLabel" alignment="1" max="32767" attributes="1"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1629,7 +1632,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="tipPane" max="32767" attributes="0"/>
+                  <Component id="tipPane" pref="487" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -1662,9 +1665,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="siteCostDetailTable" alignment="0" max="32767" attributes="0"/>
+                      <Component id="siteCostDetailTable" alignment="0" pref="806" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="siteCostLabel" pref="74" max="32767" attributes="0"/>
+                          <Component id="siteCostLabel" pref="84" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="costNoteLabel" min="-2" pref="539" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
