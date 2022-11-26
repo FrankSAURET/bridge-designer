@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.1" encoding="UTF-8" ?>
 
 <Form version="1.6" maxVersion="1.6">
   <NonVisualComponents>
@@ -85,6 +85,7 @@
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
                   <action class="bridgedesigner.WPBDView" id="saveAsSample" methodName="saveAsSample"/>
                 </Property>
+                <Property name="text" type="java.lang.String" resourceKey="saveAsSample.text"/>
                 <Property name="name" type="java.lang.String" value="saveAsSample" noResource="true"/>
               </Properties>
             </MenuItem>
@@ -93,6 +94,7 @@
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
                   <action class="bridgedesigner.WPBDView" id="saveAsTemplate" methodName="saveAsTemplate"/>
                 </Property>
+                <Property name="text" type="java.lang.String" resourceKey="saveAsTemplate.text"/>
                 <Property name="name" type="java.lang.String" value="saveAsTemplate" noResource="true"/>
               </Properties>
             </MenuItem>
@@ -259,6 +261,7 @@
                   <action class="bridgedesigner.WPBDView" id="toggleTitleBlock" methodName="toggleTitleBlock"/>
                 </Property>
                 <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="toggleTitleBlockMenuItem.text"/>
                 <Property name="name" type="java.lang.String" value="toggleTitleBlockMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>
@@ -336,7 +339,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="toolMenuGroup"/>
                 </Property>
-                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="editJointsMenuItem.text"/>
                 <Property name="name" type="java.lang.String" value="editJointsMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>
@@ -539,6 +542,7 @@
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
                   <action class="bridgedesigner.WPBDView" id="about" methodName="about"/>
                 </Property>
+                <Property name="text" type="java.lang.String" resourceKey="aboutMenuItem.text"/>
                 <Property name="name" type="java.lang.String" value="aboutMenuItem" noResource="true"/>
               </Properties>
               <AuxValues>
@@ -570,7 +574,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="statusMessageLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="979" max="32767" attributes="0"/>
+                  <EmptySpace pref="984" max="32767" attributes="0"/>
                   <Component id="progressBar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="statusAnimationLabel" min="-2" max="-2" attributes="0"/>
@@ -1840,7 +1844,7 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="memberTabs" alignment="0" pref="603" max="32767" attributes="0"/>
+                          <Component id="memberTabs" alignment="0" pref="611" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -1877,7 +1881,7 @@
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Member List">
+                              <JTabbedPaneConstraints tabName="Liste des poutres">
                                 <Property name="tabTitle" type="java.lang.String" resourceKey="memberListPanel.TabConstraints.tabTitle"/>
                               </JTabbedPaneConstraints>
                             </Constraint>
@@ -1887,7 +1891,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="264" max="32767" attributes="0"/>
+                                      <EmptySpace pref="211" max="32767" attributes="0"/>
                                       <Component id="loadTestResultsLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                                   </Group>
@@ -1962,7 +1966,7 @@
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Member Details">
+                              <JTabbedPaneConstraints tabName="D&#xe9;tails de la poutre">
                                 <Property name="tabTitle" type="java.lang.String" resourceKey="memberDetailTabs.TabConstraints.tabTitle"/>
                               </JTabbedPaneConstraints>
                             </Constraint>
@@ -1976,7 +1980,7 @@
                               </Properties>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                                  <JTabbedPaneConstraints tabName="Current Material">
+                                  <JTabbedPaneConstraints tabName="Mat&#xe9;riaux actuel">
                                     <Property name="tabTitle" type="java.lang.String" resourceKey="memberDetailPanel.TabConstraints.tabTitle"/>
                                   </JTabbedPaneConstraints>
                                 </Constraint>
@@ -1988,14 +1992,14 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="strengthCurveLabel" alignment="0" pref="432" max="32767" attributes="1"/>
-                                              <Component id="materialPropertiesTable" alignment="0" pref="432" max="32767" attributes="0"/>
+                                              <Component id="strengthCurveLabel" alignment="0" pref="516" max="32767" attributes="1"/>
+                                              <Component id="materialPropertiesTable" alignment="0" pref="516" max="32767" attributes="0"/>
                                               <Component id="materialPropertiesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Component id="memberCostLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="dimensionsLabel" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="dimensionsTable" pref="309" max="32767" attributes="0"/>
+                                                      <Component id="dimensionsTable" pref="394" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -2003,12 +2007,12 @@
                                                       <Component id="crossSectionSketchLabel" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <Component id="memberCostTable" alignment="0" pref="432" max="32767" attributes="1"/>
+                                              <Component id="memberCostTable" alignment="0" pref="516" max="32767" attributes="1"/>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="curveLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Component id="graphAllCheck" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace pref="90" max="32767" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
                                                   <Component id="memberSelectLabel" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                                   <Component id="memberSelectBox" min="-2" pref="59" max="-2" attributes="0"/>

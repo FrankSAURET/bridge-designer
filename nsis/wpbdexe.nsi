@@ -90,7 +90,7 @@ http://bridgecontest.org for information and updates \
 about the Bridge Design Contest."
 !insertmacro MUI_UNPAGE_FINISH
 
-!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "French"
 
 !verbose 3
 

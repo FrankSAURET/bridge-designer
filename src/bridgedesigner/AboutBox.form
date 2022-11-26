@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.1" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JDialogFormInfo">
   <Properties>
@@ -9,7 +9,6 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="2"/>
@@ -143,7 +142,7 @@
                               <Component id="howItWorksButton" alignment="0" min="-2" pref="211" max="-2" attributes="1"/>
                           </Group>
                       </Group>
-                      <Component id="closeButton" alignment="0" max="32767" attributes="1"/>
+                      <Component id="closeButton" alignment="0" pref="211" max="32767" attributes="1"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -158,7 +157,7 @@
                   <Component id="versionLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="sysInfoLabel" min="-2" pref="18" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="57" max="32767" attributes="0"/>
                   <Component id="purposesButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="howItWorksButton" min="-2" max="-2" attributes="0"/>
@@ -222,6 +221,7 @@
             <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
               <action class="bridgedesigner.WPBDAboutBox" id="closeAboutBox" methodName="closeAboutBox"/>
             </Property>
+            <Property name="text" type="java.lang.String" resourceKey="closeButton.text"/>
             <Property name="name" type="java.lang.String" value="closeButton" noResource="true"/>
           </Properties>
         </Component>

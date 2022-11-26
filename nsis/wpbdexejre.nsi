@@ -111,7 +111,7 @@ about the original bridgedesigner and https://github.com/FrankSAURET/bridge-desi
 about the original bridgedesigner and https://github.com/FrankSAURET/bridge-designer for this copy."
 !insertmacro MUI_UNPAGE_FINISH
 
-!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "French"
 
 !verbose 3
 

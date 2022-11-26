@@ -1500,10 +1500,12 @@ public final class BDView extends FrameView
         fileMenu.add(loadTemplateMenuItem);
 
         saveAsSample.setAction(actionMap.get("saveAsSample")); // NOI18N
+        saveAsSample.setText(resourceMap.getString("saveAsSample.text")); // NOI18N
         saveAsSample.setName("saveAsSample"); // NOI18N
         fileMenu.add(saveAsSample);
 
         saveAsTemplate.setAction(actionMap.get("saveAsTemplate")); // NOI18N
+        saveAsTemplate.setText(resourceMap.getString("saveAsTemplate.text")); // NOI18N
         saveAsTemplate.setName("saveAsTemplate"); // NOI18N
         fileMenu.add(saveAsTemplate);
 
@@ -1594,6 +1596,7 @@ public final class BDView extends FrameView
 
         toggleTitleBlockMenuItem.setAction(actionMap.get("toggleTitleBlock")); // NOI18N
         toggleTitleBlockMenuItem.setSelected(true);
+        toggleTitleBlockMenuItem.setText(resourceMap.getString("toggleTitleBlockMenuItem.text")); // NOI18N
         toggleTitleBlockMenuItem.setName("toggleTitleBlockMenuItem"); // NOI18N
         viewMenu.add(toggleTitleBlockMenuItem);
 
@@ -1636,7 +1639,7 @@ public final class BDView extends FrameView
 
         editJointsMenuItem.setAction(actionMap.get("editJoints")); // NOI18N
         toolMenuGroup.add(editJointsMenuItem);
-        editJointsMenuItem.setSelected(true);
+        editJointsMenuItem.setText(resourceMap.getString("editJointsMenuItem.text")); // NOI18N
         editJointsMenuItem.setName("editJointsMenuItem"); // NOI18N
         toolsMenu.add(editJointsMenuItem);
 
@@ -1752,6 +1755,7 @@ public final class BDView extends FrameView
         helpMenu.add(browseOurWebSiteMenuItem);
 
         aboutMenuItem.setAction(actionMap.get("about")); // NOI18N
+        aboutMenuItem.setText(resourceMap.getString("aboutMenuItem.text")); // NOI18N
         aboutMenuItem.setName("aboutMenuItem"); // NOI18N
         helpMenu.add(aboutMenuItem);
 
@@ -1780,7 +1784,7 @@ public final class BDView extends FrameView
             .addGroup(statusPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(statusMessageLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 979, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 984, Short.MAX_VALUE)
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(statusAnimationLabel)
@@ -2436,7 +2440,7 @@ public final class BDView extends FrameView
         memberListPanelLayout.setHorizontalGroup(
             memberListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memberListPanelLayout.createSequentialGroup()
-                .addContainerGap(264, Short.MAX_VALUE)
+                .addContainerGap(211, Short.MAX_VALUE)
                 .addComponent(loadTestResultsLabel)
                 .addGap(80, 80, 80))
             .addComponent(memberScroll, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
@@ -2582,24 +2586,24 @@ public final class BDView extends FrameView
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memberDetailPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(memberDetailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(strengthCurveLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
-                    .addComponent(materialPropertiesTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
+                    .addComponent(strengthCurveLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+                    .addComponent(materialPropertiesTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
                     .addComponent(materialPropertiesLabel, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(memberCostLabel, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, memberDetailPanelLayout.createSequentialGroup()
                         .addGroup(memberDetailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(dimensionsLabel)
-                            .addComponent(dimensionsTable, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE))
+                            .addComponent(dimensionsTable, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(memberDetailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(sketchLabel)
                             .addComponent(crossSectionSketchLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(memberCostTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
+                    .addComponent(memberCostTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, memberDetailPanelLayout.createSequentialGroup()
                         .addComponent(curveLabel)
                         .addGap(18, 18, 18)
                         .addComponent(graphAllCheck)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(memberSelectLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(memberSelectBox, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2663,7 +2667,7 @@ public final class BDView extends FrameView
         );
         memberPanelLayout.setVerticalGroup(
             memberPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(memberTabs, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
+            .addComponent(memberTabs, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout designPanelLayout = new javax.swing.GroupLayout(designPanel);
@@ -2829,7 +2833,7 @@ public final class BDView extends FrameView
                         .addGroup(memberPopupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(memberPopupDeleteButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
                             .addComponent(memberPopupDecreaseSizeButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(memberPopupIncreaseSizeButton, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE))
+                            .addComponent(memberPopupIncreaseSizeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 169, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(memberPopupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(memberPopupDoneButton)
