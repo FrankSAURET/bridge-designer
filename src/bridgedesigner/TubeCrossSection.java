@@ -24,7 +24,7 @@ class TubeCrossSection extends CrossSection {
      * Construct a tube cross section object.
      */
     public TubeCrossSection() {
-        super(1, "Hollow Tube", "Tube");
+        super(1, "Tube creux", "Tube");
     }
 
     /**

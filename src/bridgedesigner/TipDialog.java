@@ -34,7 +34,7 @@ public class TipDialog extends JDialog {
 
     static private String [] index;
     private int n = -1;
-    private boolean showOnStart = true;
+    private boolean showOnStart = false;
     private static final String tipNumberStorageName = "tipNumber.xml";
     private static final String showOnStartStorageName = "showOnStartState.xml";
     
@@ -200,7 +200,7 @@ private void showTipsCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN
     if ( !BDApp.saveToLocalStorage(showOnStart, showOnStartStorageName) ) {
         JOptionPane.showMessageDialog(null, 
                 "Can't save show on start checkbox state. It will remain the same next time!", 
-                "Design Tip of the Day", JOptionPane.WARNING_MESSAGE);
+                "Conseil de conception du jour", JOptionPane.WARNING_MESSAGE);
     }
 }//GEN-LAST:event_showTipsCheckActionPerformed
 

@@ -340,6 +340,7 @@
                   <ComponentRef name="toolMenuGroup"/>
                 </Property>
                 <Property name="text" type="java.lang.String" resourceKey="editJointsMenuItem.text"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="editJointsMenuItem.icon"/>
                 <Property name="name" type="java.lang.String" value="editJointsMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>
@@ -362,6 +363,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="toolMenuGroup"/>
                 </Property>
+                <Property name="text" type="java.lang.String" resourceKey="editSelectMenuItem.text"/>
                 <Property name="name" type="java.lang.String" value="editSelectMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>

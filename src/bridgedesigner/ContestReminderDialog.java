@@ -160,7 +160,7 @@ public class ContestReminderDialog extends JDialog {
                 .addContainerGap()
                 .addComponent(logoLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titleLabel)
+                .addComponent(titleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
                 .addContainerGap())
         );
         headerPanelLayout.setVerticalGroup(
@@ -208,9 +208,9 @@ public class ContestReminderDialog extends JDialog {
                     .addGroup(messageTextPanelLayout.createSequentialGroup()
                         .addComponent(messageText, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(bdcButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bdcButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, messageTextPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 6, Short.MAX_VALUE)
                         .addComponent(closingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(dontCloseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)

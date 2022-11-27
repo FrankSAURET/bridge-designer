@@ -780,7 +780,7 @@ public class SetupWizard extends JDialog {
 
         card1.setName("card1"); // NOI18N
 
-        requirementPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Design Requirement:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
+        requirementPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Contraintes de conception :", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
         requirementPanel.setName("requirementPanel"); // NOI18N
 
         requirementPane.setText(resourceMap.getString("requirementPane.text")); // NOI18N
@@ -923,7 +923,7 @@ public class SetupWizard extends JDialog {
 
         card3.setName("card3"); // NOI18N
 
-        deckElevationPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Deck Elevation", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
+        deckElevationPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Élévation du pont", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
         deckElevationPanel.setName("deckElevationPanel"); // NOI18N
 
         deckElevationButtonPanel.setName("deckElevationButtonPanel"); // NOI18N
@@ -975,7 +975,7 @@ public class SetupWizard extends JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        supportConfigPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Support Configuration", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
+        supportConfigPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Configuration du Support", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
         supportConfigPanel.setName("supportConfigPanel"); // NOI18N
 
         abutmentPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -1355,7 +1355,7 @@ public class SetupWizard extends JDialog {
 
         card5.setName("card5"); // NOI18N
 
-        selectTemplatePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Select A Template", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial 14", 1, 12), new java.awt.Color(0, 0, 128))); // NOI18N
+        selectTemplatePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Sélectionnez un modèle", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial 14", 1, 12), new java.awt.Color(0, 0, 128))); // NOI18N
         selectTemplatePanel.setName("selectTemplatePanel"); // NOI18N
 
         templateList.setBackground(resourceMap.getColor("templateList.background")); // NOI18N
@@ -1519,7 +1519,7 @@ public class SetupWizard extends JDialog {
 
         widgetPanel.add(card7, "7");
 
-        deckCrossSectionPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Deck Cross-Section", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
+        deckCrossSectionPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Section transversale du pont", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
         deckCrossSectionPanel.setName("deckCrossSectionPanel"); // NOI18N
 
         deckCartoonLabel.setIcon(resourceMap.getIcon("deckCartoonLabel.icon")); // NOI18N
@@ -1542,7 +1542,7 @@ public class SetupWizard extends JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        elevationViewPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Elevation View", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
+        elevationViewPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Vue de l'élévation", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14), new java.awt.Color(0, 0, 128))); // NOI18N
         elevationViewPanel.setName("elevationViewPanel"); // NOI18N
 
         elevationViewLabel.setIcon(resourceMap.getIcon("elevationViewLabel.icon")); // NOI18N
@@ -1654,7 +1654,7 @@ public class SetupWizard extends JDialog {
                 .addContainerGap())
         );
 
-        tipPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Design Tip:"));
+        tipPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Conseil de conception :"));
         tipPanel.setName("tipPanel"); // NOI18N
 
         tipPane.setName("tipPane"); // NOI18N
@@ -1675,7 +1675,7 @@ public class SetupWizard extends JDialog {
                 .addContainerGap())
         );
 
-        siteCostPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Site Cost:"));
+        siteCostPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Coût du site :"));
         siteCostPanel.setName("siteCostPanel"); // NOI18N
 
         siteCostDetailTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));

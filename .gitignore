@@ -13,8 +13,8 @@
 /build/
 /dist/
 /eg/
-/release/
 /src/bridgedesigner/help/
+/release/
 
 # Class files for DetectJVM.java
 /nsis/classes/

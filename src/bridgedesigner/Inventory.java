@@ -55,15 +55,17 @@ public class Inventory {
     private final CrossSection crossSections[] = new CrossSection[]{
         new BarCrossSection(),
         new TubeCrossSection(),
+        new BielleCrossSection(),
     };
     
     /**
      * Table of materials in this inventory.
      */
     private final Material materials[] = new Material[]{
-        new Material(0, "Carbon Steel",                  "CS",  200000000, 250000, 7850, new double[]{4.30, 6.30}),
-        new Material(1, "High-Strength Low-Alloy Steel", "HSS", 200000000, 345000, 7850, new double[]{5.60, 7.00}),
-        new Material(2, "Quenched & Tempered Steel",     "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70})
+        new Material(0, "Acier Carboné",                  "CS",  200000000, 250000, 7850, new double[]{4.30, 6.30}),
+        new Material(1, "Acier rapide", "HSS", 200000000, 345000, 7850, new double[]{5.60, 7.00}),
+        new Material(2, "Acier éteint et trempé",     "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70}),
+        new Material(3, "Carton",     "CN", 200000000, 485000, 7850, new double[]{6.00, 7.70})
     };
 
     /**

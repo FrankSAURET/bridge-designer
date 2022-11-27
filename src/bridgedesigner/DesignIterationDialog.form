@@ -86,7 +86,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Design Tip:">
+            <TitledBorder title="Conseil de conception :">
               <Property name="titleX" resourceKey="tipPanel.border.title"/>
             </TitledBorder>
           </Border>
@@ -184,7 +184,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="List View" toolTip="View design iterations as a list.">
+              <JTabbedPaneConstraints tabName="Vue Liste" toolTip="Afficher les it&#xe9;rations de conception comme une liste.">
                 <Property name="tabTitle" type="java.lang.String" resourceKey="selectListScroll.TabConstraints.tabTitle"/>
                 <Property name="tabToolTip" type="java.lang.String" resourceKey="selectListScroll.TabConstraints.tabToolTip"/>
               </JTabbedPaneConstraints>
@@ -224,7 +224,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Tree View" toolTip="View design iterations as a tree.">
+              <JTabbedPaneConstraints tabName="Vue en arborescence" toolTip="Voir les it&#xe9;rations de conception comme un arbre.">
                 <Property name="tabTitle" type="java.lang.String" resourceKey="selectTreeScroll.TabConstraints.tabTitle"/>
                 <Property name="tabToolTip" type="java.lang.String" resourceKey="selectTreeScroll.TabConstraints.tabToolTip"/>
               </JTabbedPaneConstraints>

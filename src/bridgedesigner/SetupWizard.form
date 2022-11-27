@@ -173,7 +173,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Design Requirement:">
+                    <TitledBorder title="Contraintes de conception :">
                       <Font PropertyName="font" name="Arial" size="14" style="1"/>
                       <Color PropertyName="color" blue="80" green="0" red="0" type="rgb"/>
                     </TitledBorder>
@@ -411,7 +411,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Deck Elevation">
+                    <TitledBorder title="Élévation du pont">
                       <Font PropertyName="font" name="Arial" size="14" style="1"/>
                       <Color PropertyName="color" blue="80" green="0" red="0" type="rgb"/>
                     </TitledBorder>
@@ -515,7 +515,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Support Configuration">
+                    <TitledBorder title="Configuration du Support">
                       <Font PropertyName="font" name="Arial" size="14" style="1"/>
                       <Color PropertyName="color" blue="80" green="0" red="0" type="rgb"/>
                     </TitledBorder>
@@ -963,7 +963,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Deck Material">
+                    <TitledBorder title="Matériau du pont">
                       <Property name="titleX" resourceKey="deckMaterialPanel.border.title"/>
                       <Property name="font" resourceKey="deckMaterialPanel.border.titleFont"/>
                       <Property name="color" resourceKey="deckMaterialPanel.border.titleColor"/>
@@ -1030,7 +1030,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Loading">
+                    <TitledBorder title="Chargement">
                       <Property name="titleX" resourceKey="loadingPanel.border.title"/>
                       <Property name="font" resourceKey="loadingPanel.border.titleFont"/>
                       <Property name="color" resourceKey="loadingPanel.border.titleColor"/>
@@ -1122,7 +1122,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Select A Template">
+                    <TitledBorder title="Sélectionnez un modèle">
                       <Font PropertyName="font" name="Arial 14" size="12" style="1"/>
                       <Color PropertyName="color" blue="80" green="0" red="0" type="rgb"/>
                     </TitledBorder>
@@ -1202,7 +1202,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="Title Block Information">
+                    <TitledBorder title="Informations du cartouche">
                       <Property name="titleX" resourceKey="titleBlockInfoPanel.border.title"/>
                       <Property name="font" resourceKey="titleBlockInfoPanel.border.titleFont"/>
                       <Property name="color" resourceKey="titleBlockInfoPanel.border.titleColor"/>
@@ -1333,7 +1333,7 @@
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                    <TitledBorder title="To Design the Truss:">
+                    <TitledBorder title="Pour concevoit le treilli :">
                       <Property name="titleX" resourceKey="designPanel.border.title"/>
                       <Property name="font" resourceKey="designPanel.border.titleFont"/>
                       <Property name="color" resourceKey="designPanel.border.titleColor"/>
@@ -1382,7 +1382,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Deck Cross-Section">
+            <TitledBorder title="Section transversale du pont">
               <Font PropertyName="font" name="Arial" size="14" style="1"/>
               <Color PropertyName="color" blue="80" green="0" red="0" type="rgb"/>
             </TitledBorder>
@@ -1428,7 +1428,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Elevation View">
+            <TitledBorder title="Vue de l'élévation">
               <Font PropertyName="font" name="Arial" size="14" style="1"/>
               <Color PropertyName="color" blue="80" green="0" red="0" type="rgb"/>
             </TitledBorder>
@@ -1613,7 +1613,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Design Tip:"/>
+            <TitledBorder title="Conseil de conception :"/>
           </Border>
         </Property>
         <Property name="name" type="java.lang.String" value="tipPanel" noResource="true"/>
@@ -1653,7 +1653,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Site Cost:"/>
+            <TitledBorder title="Coût du site :"/>
           </Border>
         </Property>
         <Property name="name" type="java.lang.String" value="siteCostPanel" noResource="true"/>

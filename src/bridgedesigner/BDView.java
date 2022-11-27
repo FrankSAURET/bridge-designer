@@ -1233,7 +1233,7 @@ public final class BDView extends FrameView
             contestReminderDialog = new ContestReminderDialog(mainFrame);
             contestReminderDialog.setLocationRelativeTo(mainFrame);
         }
-        contestReminderDialog.setVisible(true);
+        contestReminderDialog.setVisible(false);
     }
     
     /**
@@ -1640,6 +1640,7 @@ public final class BDView extends FrameView
         editJointsMenuItem.setAction(actionMap.get("editJoints")); // NOI18N
         toolMenuGroup.add(editJointsMenuItem);
         editJointsMenuItem.setText(resourceMap.getString("editJointsMenuItem.text")); // NOI18N
+        editJointsMenuItem.setIcon(resourceMap.getIcon("editJointsMenuItem.icon")); // NOI18N
         editJointsMenuItem.setName("editJointsMenuItem"); // NOI18N
         toolsMenu.add(editJointsMenuItem);
 
@@ -1650,6 +1651,7 @@ public final class BDView extends FrameView
 
         editSelectMenuItem.setAction(actionMap.get("editSelect")); // NOI18N
         toolMenuGroup.add(editSelectMenuItem);
+        editSelectMenuItem.setText(resourceMap.getString("editSelectMenuItem.text")); // NOI18N
         editSelectMenuItem.setName("editSelectMenuItem"); // NOI18N
         toolsMenu.add(editSelectMenuItem);
 

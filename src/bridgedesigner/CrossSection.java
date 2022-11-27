@@ -41,6 +41,9 @@ public abstract class CrossSection {
         220, 240, 260, 280, 300,                                   /* 23 to 27 */
         320, 340, 360, 400, 500                                    /* 28 to 32 */
     };
+    protected int[] bielleWidths = new int[]{
+        6, 7, 8, 9, 10, 11, 12
+    };
 
     /**
      * Construct a cross section object.
