@@ -24,7 +24,7 @@ class BarCrossSection extends CrossSection {
      * Construct a bar cross section object.
      */
     public BarCrossSection() {
-        super(0, "Barre pleine", "Bar");
+        super(0, "Barre pleine carrée", "Barre");
     }
 
     /**

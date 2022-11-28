@@ -61,13 +61,13 @@ public class Inventory {
     /**
      * Table of materials in this inventory.
      * index, nom, nom court, module d'élasticité (E) en kPa, limite d'élasticité (Fy) kPa, masse volumique (rho), cout
-     * Carton, CN, E= 3 à 9 GPa, Fy 15 à 34 MPa,rho 180 à 860 kg/m^3
+     *  Carton Canson C200704250, CN, E= 3 à 9 GPa, Fy=15 à 34 MPa, ρ=618 kg/m³, 18 €/kg ou 11 €/m²
      */
     private final Material materials[] = new Material[]{
-        new Material(0, "Acier Carboné",                  "CS",  200000000, 250000, 7850, new double[]{4.30, 6.30}),
+        new Material(0, "Acier carboné", "CS",  200000000, 250000, 7850, new double[]{4.30, 6.30}),
         new Material(1, "Acier rapide", "HSS", 200000000, 345000, 7850, new double[]{5.60, 7.00}),
-        new Material(2, "Acier éteint et trempé",     "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70}),
-        new Material(3, "Carton",     "CN", 3000000, 15000, 7850, new double[]{6.00, 7.70}),
+        new Material(2, "Acier trempé", "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70}),
+        new Material(3, "Carton", "CN", 3000000, 15000, 7850, new double[]{6.00, 7.70}),
     };
 
     /**
