@@ -1883,7 +1883,7 @@
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Liste des poutres">
+                              <JTabbedPaneConstraints tabName="Liste des membrures">
                                 <Property name="tabTitle" type="java.lang.String" resourceKey="memberListPanel.TabConstraints.tabTitle"/>
                               </JTabbedPaneConstraints>
                             </Constraint>
@@ -1968,7 +1968,7 @@
                           </Properties>
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="D&#xe9;tails de la poutre">
+                              <JTabbedPaneConstraints tabName="D&#xe9;tails de la membrure">
                                 <Property name="tabTitle" type="java.lang.String" resourceKey="memberDetailTabs.TabConstraints.tabTitle"/>
                               </JTabbedPaneConstraints>
                             </Constraint>
