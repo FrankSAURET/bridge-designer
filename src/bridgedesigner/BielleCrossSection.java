@@ -39,8 +39,8 @@ class BielleCrossSection extends CrossSection {
         for (int sizeIndex = 0; sizeIndex < nSizes; sizeIndex++) {
             int width = bielleWidths[sizeIndex];
             int epaisseur = 1;
-            double area = epaisseur * width * 1e-6;
-            double moment = (width* width* width*epaisseur)/12 * 1e-12;
+            double area = epaisseur * width * 1e-6;// Section en m²
+            double moment = (width* width* width * epaisseur)/12 * 1e-12; //Moment quadratique section rectangulaire en mètre cube
             s[sizeIndex] = new Shape(this, sizeIndex, String.format("%dx%d", epaisseur, width), width, area, moment, epaisseur);
         }
         return s;
