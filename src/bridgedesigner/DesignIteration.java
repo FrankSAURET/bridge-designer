@@ -34,7 +34,7 @@ public class DesignIteration extends DefaultMutableTreeNode {
     private String projectId;
     private byte [] bridgeModelAsBytes;
     private int analysisStatus;
-    private final NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.US);
+    private final NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.FRANCE);
 
     /**
      * Construct a new design iteration.

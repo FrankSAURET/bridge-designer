@@ -49,7 +49,7 @@ public class BridgeBlueprintPrintable implements Printable {
     private final BridgeBlueprintView bridgeBlueprintView;
     private final Font standardFont = UIManager.getFont("Label.font").deriveFont(6.5f);
     private final Stroke standardStroke = new BasicStroke(.25f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_ROUND);
-    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);
     
     /**
      * Tables contained in the drawing.
@@ -123,7 +123,7 @@ public class BridgeBlueprintPrintable implements Printable {
             cells[i][1] = new Cell(m.getMaterial().getShortName());
             cells[i][2] = new Cell(m.getShape().getSection().getShortName());
             cells[i][3] = new Cell(m.getShape().getName());
-            cells[i][4] = new Cell(String.format(Locale.US, "%.2f", m.getLength())).setHAlign(Cell.HALIGN_RIGHT);
+            cells[i][4] = new Cell(String.format(Locale.FRANCE, "%.2f", m.getLength())).setHAlign(Cell.HALIGN_RIGHT);
         }
         return cells;
     }

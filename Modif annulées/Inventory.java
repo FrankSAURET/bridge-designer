@@ -55,6 +55,7 @@ public class Inventory {
     private final CrossSection crossSections[] = new CrossSection[]{
         new BarCrossSection(),
         new TubeCrossSection(),
+        new BielleCrossSection(),
     };
     
     /**
@@ -66,6 +67,7 @@ public class Inventory {
         new Material(0, "Acier carboné", "CS",  200000000, 250000, 7850, new double[]{4.30, 6.30}),
         new Material(1, "Acier rapide", "HSS", 200000000, 345000, 7850, new double[]{5.60, 7.00}),
         new Material(2, "Acier trempé", "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70}),
+        new Material(3, "Carton", "CN", 3000000, 15000, 7850, new double[]{6.00, 7.70}),
     };
 
     /**

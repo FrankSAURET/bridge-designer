@@ -1282,7 +1282,7 @@ public class EditableBridgeModel extends BridgeModel {
             return resourceMap.getString("invalid.text");
         }
         StringBuilder str = new StringBuilder();
-        Formatter formatter = new Formatter(str, Locale.US);
+        Formatter formatter = new Formatter(str, Locale.FRANCE);
 
         str.append(projectName);
         str.append('\n');

@@ -139,7 +139,7 @@ public class BridgeModel {
     /**
      * Project name for this bridge.
      */
-    protected String projectName = "Dennis H. Mahan Memorial Bridge";
+    protected String projectName = "Lycée Aristide BRIAND";
     /**
      * Current read buffer used by the parser.
      */
@@ -155,7 +155,7 @@ public class BridgeModel {
     /**
      * Handy formatters.
      */
-    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);        
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
     private final NumberFormat intFormat = NumberFormat.getIntegerInstance(); // Locale-specific will be fine...    
 
     /**
@@ -364,7 +364,7 @@ public class BridgeModel {
         String toTabDelimitedText() {
             ResourceMap resourceMap = BDApp.getResourceMap(CostReportTableModel.class);
             StringBuilder str = new StringBuilder();
-            Formatter formatter = new Formatter(str, Locale.US);
+            Formatter formatter = new Formatter(str, Locale.FRANCE);
             if (notes != null) {
                 for (int i = 0; i < notes.length; i++) {
                     formatter.format("%s\n", notes[i]);
@@ -1050,7 +1050,7 @@ public class BridgeModel {
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
-        Formatter f = new Formatter(s, Locale.US);
+        Formatter f = new Formatter(s, Locale.FRANCE);
         DraftingGrid grid = new DraftingGrid(DraftingGrid.FINE_GRID);
         f.format("%" + YEAR_LEN + "d", version);
         f.format("%" + SCENARIO_CODE_LEN + "d", designConditions.getCodeLong());

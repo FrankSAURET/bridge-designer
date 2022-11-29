@@ -29,7 +29,7 @@ public class CostReportTableModel extends DefaultTableModel {
 
     private static String [] columnIds;
     private static final ResourceMap resourceMap = BDApp.getResourceMap(CostReportTableModel.class);
-    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);        
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
     private final NumberFormat intFormat = NumberFormat.getIntegerInstance(); // Locale-specific will be fine...
 
     /**

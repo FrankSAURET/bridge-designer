@@ -29,7 +29,7 @@ import javax.swing.table.DefaultTableCellRenderer;
  */
 public class CostReportTable extends JTable {
 
-    private final NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.US);
+    private final NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.FRANCE);
     private Font bold = UIManager.getFont("Label.font").deriveFont(Font.BOLD);
 
     /**

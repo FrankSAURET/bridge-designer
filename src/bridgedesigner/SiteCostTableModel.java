@@ -26,7 +26,7 @@ import org.jdesktop.application.ResourceMap;
 public class SiteCostTableModel extends DefaultTableModel {
 
     // Cost calculations always in US dollars.
-    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);
     private static final ResourceMap resourceMap = BDApp.getResourceMap(SiteCostTableModel.class);
 
     /**

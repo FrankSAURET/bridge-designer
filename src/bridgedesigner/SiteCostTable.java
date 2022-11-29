@@ -42,7 +42,7 @@ public class SiteCostTable extends JTable {
     }
     
     private DefaultTableCellRenderer specialRender = new DefaultTableCellRenderer() {
-        private final NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.US);        
+        private final NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
         
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {

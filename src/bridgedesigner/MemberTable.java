@@ -178,7 +178,7 @@ public class MemberTable extends JTable {
 
         private void setValueForNullableDouble(Object value) {
             double x = (Double)value;
-            setText(x < 0 ? "--" : String.format(Locale.US, "%.2f", x));
+            setText(x < 0 ? "--" : String.format(Locale.FRANCE, "%.2f", x));
         }
 
         @Override

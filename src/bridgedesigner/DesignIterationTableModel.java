@@ -33,7 +33,7 @@ public class DesignIterationTableModel extends AbstractTableModel {
     private final BridgeModel cartoonBridge;
     private final BridgeDraftingView cartoonView;
     private int iterationCount;
-    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);        
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
     private final String [] headers;
     
     /**

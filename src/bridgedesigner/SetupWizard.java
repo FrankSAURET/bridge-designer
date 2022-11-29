@@ -336,7 +336,7 @@ public class SetupWizard extends JDialog {
     }
     
     // Cost calculations always in US dollars.
-    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.US);        
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
 
     private void updateDependencies() {
         String val = projectIdPrefixLabel.getText();
@@ -394,7 +394,7 @@ public class SetupWizard extends JDialog {
             update();
         } else {
             showDetailPane(false);
-            siteCostLabel.setText("$0.0");
+            siteCostLabel.setText("0,0 €");
             siteConditionsLabel.setText("");
         }
     }
