@@ -403,7 +403,7 @@ public class SetupWizard extends JDialog {
         if (visible != siteCostDetailTable.isVisible()) {
             siteCostDetailTable.setVisible(visible);
             dropRaiseButton.setIcon(BDApp.getApplication().getIconResource(visible ? "undrop.png" : "drop.png"));
-            pack();
+            //pack();
         }
     }
 
@@ -1656,6 +1656,7 @@ public class SetupWizard extends JDialog {
 
         tipPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Conseil de conception :"));
         tipPanel.setName("tipPanel"); // NOI18N
+        tipPanel.setOpaque(false);
 
         tipPane.setName("tipPane"); // NOI18N
 
@@ -1665,7 +1666,7 @@ public class SetupWizard extends JDialog {
             tipPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tipPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tipPane, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                .addComponent(tipPane, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
                 .addContainerGap())
         );
         tipPanelLayout.setVerticalGroup(
@@ -1684,6 +1685,7 @@ public class SetupWizard extends JDialog {
         siteCostDetailTable.setFocusable(false);
         siteCostDetailTable.setIntercellSpacing(new java.awt.Dimension(6, 1));
         siteCostDetailTable.setName("siteCostDetailTable"); // NOI18N
+        siteCostDetailTable.setOpaque(false);
         siteCostDetailTable.setRowSelectionAllowed(false);
         siteCostDetailTable.getTableHeader().setReorderingAllowed(false);
 
@@ -1715,11 +1717,11 @@ public class SetupWizard extends JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, siteCostPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(siteCostPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(siteCostDetailTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 806, Short.MAX_VALUE)
+                    .addComponent(siteCostDetailTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 866, Short.MAX_VALUE)
                     .addGroup(siteCostPanelLayout.createSequentialGroup()
-                        .addComponent(siteCostLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                        .addComponent(siteCostLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(costNoteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(costNoteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(siteConditionsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1803,7 +1805,7 @@ public class SetupWizard extends JDialog {
                         .addComponent(pageNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pageTitle)
-                        .addGap(0, 745, Short.MAX_VALUE))
+                        .addGap(0, 805, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(widgetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
