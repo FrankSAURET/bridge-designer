@@ -30,7 +30,10 @@ public class CostReportTableModel extends DefaultTableModel {
     private static String [] columnIds;
     private static final ResourceMap resourceMap = BDApp.getResourceMap(CostReportTableModel.class);
     private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
-    private final NumberFormat intFormat = NumberFormat.getIntegerInstance(); // Locale-specific will be fine...
+    private final NumberFormat intFormat = NumberFormat.getIntegerInstance(Locale.FRANCE); // Locale-specific will be fine...
+    private final NumberFormat doubleFormat = NumberFormat.getNumberInstance(Locale.FRENCH);
+
+
 
     /**
      * Construct a new cost report table model.
@@ -72,8 +75,11 @@ public class CostReportTableModel extends DefaultTableModel {
             // Column 2
             double weight = costs.materialSectionPairs.get(pair);
             double cost = pair.material.getCost(pair.section);
-            setValueAt(resourceMap.getString("materialCostNote.text", weight, currencyFormat.format(cost)), row, 2);
-            // Column 3
+            doubleFormat.setMinimumFractionDigits(1);
+            doubleFormat.setMaximumFractionDigits(1);
+            setValueAt(resourceMap.getString("materialCostNote.text", doubleFormat.format(weight), currencyFormat.format(cost)), row, 2);
+            // Column 3 String.format(Locale.FRANCE, "%.2f", m.getLength())
+            //String.format(Locale.FRANCE, "%.1f", weight)
             double mtlCost = 2 * weight * cost;
             setValueAt(mtlCost, row, 3);
             totalMtlCost += mtlCost;
@@ -89,7 +95,7 @@ public class CostReportTableModel extends DefaultTableModel {
         setValueAt(null, row, 1);
         int nConnections = costs.nConnections;
         final double connectionFee = costs.inventory.getConnectionFee();
-        setValueAt(resourceMap.getString("connectionCostNote.text", nConnections, connectionFee), row, 2);
+        setValueAt(resourceMap.getString("connectionCostNote.text", nConnections, currencyFormat.format(connectionFee)), row, 2);
         final double connectionCost = 2 * nConnections * connectionFee;
         setValueAt(connectionCost, row, 3);
         row++;

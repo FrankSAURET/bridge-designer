@@ -1380,7 +1380,7 @@ public final class BDView extends FrameView
         titleBlockPanel = new TitleBlockPanel();
         titleLabel = new javax.swing.JLabel();
         designedByLabel = new javax.swing.JLabel();
-        designedByField = new javax.swing.JTextField();
+        designedByField = new javax.swing.JTextArea();
         projectIDLabel = new javax.swing.JLabel();
         scenarioIDLabel = new javax.swing.JLabel();
         projectIDField = new javax.swing.JTextField();
@@ -2320,48 +2320,54 @@ public final class BDView extends FrameView
         titleLabel.setBackground(resourceMap.getColor("titleLabel.background")); // NOI18N
         titleLabel.setFont(resourceMap.getFont("titleLabel.font")); // NOI18N
         titleLabel.setForeground(resourceMap.getColor("titleLabel.foreground")); // NOI18N
-        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         titleLabel.setText(resourceMap.getString("titleLabel.text")); // NOI18N
+        titleLabel.setFocusable(false);
+        titleLabel.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         titleLabel.setName("titleLabel"); // NOI18N
         titleLabel.setPreferredSize(new java.awt.Dimension(258, 17));
-        titleBlockPanel.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 248, -1));
+        titleBlockPanel.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 5, 200, -1));
 
         designedByLabel.setFont(resourceMap.getFont("designedByLabel.font")); // NOI18N
         designedByLabel.setText(resourceMap.getString("designedByLabel.text")); // NOI18N
         designedByLabel.setName("designedByLabel"); // NOI18N
-        titleBlockPanel.add(designedByLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 28, -1, -1));
+        titleBlockPanel.add(designedByLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 30, -1, -1));
 
+        designedByField.setFont(resourceMap.getFont("designedByField.font")); // NOI18N
         designedByField.setForeground(resourceMap.getColor("designedByField.foreground")); // NOI18N
+        designedByField.setLineWrap(true);
         designedByField.setText(resourceMap.getString("designedByField.text")); // NOI18N
         designedByField.setBorder(null);
         designedByField.setName("designedByField"); // NOI18N
-        titleBlockPanel.add(designedByField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 28, 180, -1));
+        titleBlockPanel.add(designedByField, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 30, 327, 35));
 
         projectIDLabel.setFont(resourceMap.getFont("projectIDLabel.font")); // NOI18N
         projectIDLabel.setText(resourceMap.getString("projectIDLabel.text")); // NOI18N
         projectIDLabel.setName("projectIDLabel"); // NOI18N
-        titleBlockPanel.add(projectIDLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 49, -1, -1));
+        titleBlockPanel.add(projectIDLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 8, -1, -1));
 
+        scenarioIDLabel.setBackground(resourceMap.getColor("scenarioIDLabel.background")); // NOI18N
         scenarioIDLabel.setForeground(resourceMap.getColor("scenarioIDLabel.foreground")); // NOI18N
         scenarioIDLabel.setText(resourceMap.getString("scenarioIDLabel.text")); // NOI18N
         scenarioIDLabel.setName("scenarioIDLabel"); // NOI18N
-        titleBlockPanel.add(scenarioIDLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 49, -1, -1));
+        titleBlockPanel.add(scenarioIDLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 60, 20));
 
+        projectIDField.setFont(resourceMap.getFont("projectIDField.font")); // NOI18N
         projectIDField.setForeground(resourceMap.getColor("projectIDField.foreground")); // NOI18N
         projectIDField.setText(resourceMap.getString("projectIDField.text")); // NOI18N
         projectIDField.setBorder(null);
         projectIDField.setName("projectIDField"); // NOI18N
-        titleBlockPanel.add(projectIDField, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 49, 140, -1));
+        titleBlockPanel.add(projectIDField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 8, 60, -1));
 
         javax.swing.GroupLayout draftingJPanelLayout = new javax.swing.GroupLayout(draftingJPanel);
         draftingJPanel.setLayout(draftingJPanelLayout);
         draftingJPanelLayout.setHorizontalGroup(
             draftingJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(draftingJPanelLayout.createSequentialGroup()
-                .addContainerGap(390, Short.MAX_VALUE)
+                .addContainerGap(247, Short.MAX_VALUE)
                 .addGroup(draftingJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(openMemberTableButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(titleBlockPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(titleBlockPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         draftingJPanelLayout.setVerticalGroup(
             draftingJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2469,10 +2475,10 @@ public final class BDView extends FrameView
         materialPropertiesTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         materialPropertiesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Matériau", null},
-                {"Limite d'élasticité (Fy)", null},
-                {"Module d'Young (E)", null},
-                {"Masse volumique", null}
+                {"Material", null},
+                {"Yield Stress (Fy)", null},
+                {"Modulus of Elasticity (E)", null},
+                {"Mass Density", null}
             },
             new String [] {
                 "Title 1", "Title 2"
@@ -2497,11 +2503,11 @@ public final class BDView extends FrameView
         dimensionsTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         dimensionsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Type de section", null},
-                {"Taille de la section", null},
-                {"Surface", null},
-                {"Moment quadratique", null},
-                {"Longueur de la membrure", null}
+                {"Cross-Section Type", null},
+                {"Cross-Section Size", null},
+                {"Area", null},
+                {"Moment of Inertia", null},
+                {"Member Length", null}
             },
             new String [] {
                 "Title 1", "Title 2"
@@ -2525,8 +2531,8 @@ public final class BDView extends FrameView
         memberCostTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         memberCostTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Coût unitaire", null},
-                {"Coût de la membrure", null}
+                {"Unit Cost", null},
+                {"Member Cost", null}
             },
             new String [] {
                 "Title 1", "Title 2"
@@ -2589,19 +2595,19 @@ public final class BDView extends FrameView
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, memberDetailPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(memberDetailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(strengthCurveLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
-                    .addComponent(materialPropertiesTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+                    .addComponent(strengthCurveLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
+                    .addComponent(materialPropertiesTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
                     .addComponent(materialPropertiesLabel, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(memberCostLabel, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, memberDetailPanelLayout.createSequentialGroup()
                         .addGroup(memberDetailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(dimensionsLabel)
-                            .addComponent(dimensionsTable, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE))
+                            .addComponent(dimensionsTable, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(memberDetailPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(sketchLabel)
                             .addComponent(crossSectionSketchLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(memberCostTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+                    .addComponent(memberCostTable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 532, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, memberDetailPanelLayout.createSequentialGroup()
                         .addComponent(curveLabel)
                         .addGap(18, 18, 18)
@@ -3121,6 +3127,7 @@ private void keyCodeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) 
     }
 
     @Action
+    // Sauvegarde Frank SAURET
     public void save() {
         if (!bridge.getUndoManager().isStored()) {
             int okCancel = fileChooser.showSaveDialog(mainPanel);
@@ -3623,7 +3630,7 @@ private void keyCodeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) 
     private javax.swing.JMenuItem deleteItem;
     private javax.swing.JPanel designPanel;
     private javax.swing.ButtonGroup designTestGroup;
-    private javax.swing.JTextField designedByField;
+    private javax.swing.JTextArea designedByField;
     private javax.swing.JLabel designedByLabel;
     private javax.swing.JLabel dimensionsLabel;
     private javax.swing.JTable dimensionsTable;

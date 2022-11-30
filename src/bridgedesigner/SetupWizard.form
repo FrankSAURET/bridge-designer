@@ -1215,20 +1215,22 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Component id="projectIdPrefixLabel" alignment="0" pref="210" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="projectIdPrefixLabel" pref="57" max="32767" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="projectIdEdit" min="-2" pref="129" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="designedByEdit" alignment="0" pref="190" max="32767" attributes="0"/>
                               <Component id="projectNameEdit" alignment="1" pref="0" max="32767" attributes="0"/>
-                              <Component id="projectIdLabel" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
                               <Component id="projectNameLabel" alignment="0" min="-2" pref="142" max="-2" attributes="0"/>
-                              <Component id="designedByLabel" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="designedByLabel" alignment="0" pref="190" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="projectIdLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="projectIdEdit" pref="64" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1243,15 +1245,14 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="designedByLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="designedByEdit" min="-2" max="-2" attributes="0"/>
+                          <Component id="designedByEdit" min="-2" pref="101" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="projectIdLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="projectIdLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="projectIdEdit" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="projectIdPrefixLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="329" max="32767" attributes="0"/>
+                          <EmptySpace pref="248" max="32767" attributes="0"/>
+                          <Component id="projectIdPrefixLabel" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1276,8 +1277,10 @@
                     <Property name="name" type="java.lang.String" value="designedByLabel" noResource="true"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="designedByEdit">
+                <Component class="javax.swing.JTextArea" name="designedByEdit">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" resourceKey="designedByEdit.font"/>
+                    <Property name="lineWrap" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" resourceKey="designedByEdit.text"/>
                     <Property name="name" type="java.lang.String" value="designedByEdit" noResource="true"/>
                   </Properties>

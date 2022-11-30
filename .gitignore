@@ -4,6 +4,7 @@
 *.class
 *.jnilib
 *.dll
+*.log
 
 # Mac 
 .DS_Store

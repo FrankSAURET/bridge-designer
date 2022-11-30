@@ -719,7 +719,7 @@ public class SetupWizard extends JDialog {
         projectNameLabel = new javax.swing.JLabel();
         projectNameEdit = new javax.swing.JTextField();
         designedByLabel = new javax.swing.JLabel();
-        designedByEdit = new javax.swing.JTextField();
+        designedByEdit = new javax.swing.JTextArea();
         projectIdLabel = new javax.swing.JLabel();
         projectIdEdit = new javax.swing.JTextField();
         projectIdPrefixLabel = new javax.swing.JLabel();
@@ -1417,6 +1417,8 @@ public class SetupWizard extends JDialog {
         designedByLabel.setText(resourceMap.getString("designedByLabel.text")); // NOI18N
         designedByLabel.setName("designedByLabel"); // NOI18N
 
+        designedByEdit.setFont(resourceMap.getFont("designedByEdit.font")); // NOI18N
+        designedByEdit.setLineWrap(true);
         designedByEdit.setText(resourceMap.getString("designedByEdit.text")); // NOI18N
         designedByEdit.setName("designedByEdit"); // NOI18N
 
@@ -1435,18 +1437,20 @@ public class SetupWizard extends JDialog {
         titleBlockInfoPanel.setLayout(titleBlockInfoPanelLayout);
         titleBlockInfoPanelLayout.setHorizontalGroup(
             titleBlockInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titleBlockInfoPanelLayout.createSequentialGroup()
+            .addComponent(projectIdPrefixLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titleBlockInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(titleBlockInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titleBlockInfoPanelLayout.createSequentialGroup()
-                        .addComponent(projectIdPrefixLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(projectIdEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(designedByEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                    .addComponent(projectNameEdit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(projectIdLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projectNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(designedByLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(titleBlockInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(designedByEdit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                    .addComponent(projectNameEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(projectNameLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(designedByLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titleBlockInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(projectIdLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(projectIdEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
                 .addContainerGap())
         );
         titleBlockInfoPanelLayout.setVerticalGroup(
@@ -1459,14 +1463,13 @@ public class SetupWizard extends JDialog {
                 .addGap(18, 18, 18)
                 .addComponent(designedByLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(designedByEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(designedByEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(projectIdLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(titleBlockInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(projectIdEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(projectIdPrefixLabel))
-                .addContainerGap(329, Short.MAX_VALUE))
+                    .addComponent(projectIdLabel)
+                    .addComponent(projectIdEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 248, Short.MAX_VALUE)
+                .addComponent(projectIdPrefixLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout card6Layout = new javax.swing.GroupLayout(card6);
@@ -2031,7 +2034,7 @@ private void localContest4YesButtonItemStateChanged(java.awt.event.ItemEvent evt
     private javax.swing.ButtonGroup deckMaterialGroup;
     private javax.swing.JPanel deckMaterialPanel;
     private javax.swing.JPanel designPanel;
-    private javax.swing.JTextField designedByEdit;
+    private javax.swing.JTextArea designedByEdit;
     private javax.swing.JLabel designedByLabel;
     private javax.swing.JButton dropRaiseButton;
     private javax.swing.JLabel elevationViewLabel;
