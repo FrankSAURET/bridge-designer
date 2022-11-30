@@ -301,7 +301,7 @@ public class BDApp extends SingleFrameApplication {
             return null;
         }
     }
-    
+    // Frank SAURET
     public static boolean saveToLocalStorage(Object item, String name) {
         try {
             getApplication().getContext().getLocalStorage().save(item, name);

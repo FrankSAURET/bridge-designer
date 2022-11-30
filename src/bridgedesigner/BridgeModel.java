@@ -866,9 +866,9 @@ public class BridgeModel {
      */
     public void read(File f) throws IOException {
         byte [] bytes = Utility.getBytesFromFile(f);
-        RC4 rc4 = new RC4();
-        rc4.setKey(RC4Key.getScrambleKey());
-        rc4.endecrypt(bytes);
+        RC4 rc4 = new RC4(); //SAURET Ces 3 lignes décryptes le fichier
+        rc4.setKey(RC4Key.getScrambleKey());//SAURET à decommenter
+        rc4.endecrypt(bytes);//SAURET à decommenter
         // System.out.println(new String(bytes));
         parseBytes(bytes);
     }
@@ -882,10 +882,10 @@ public class BridgeModel {
     public void write(File f) throws IOException {
         // Build up the result as a string.  Get bytes. Scramble.  Write to file.
         byte[] rtn = toBytes();
-        RC4 rc4 = new RC4();
-        rc4.setKey(RC4Key.getScrambleKey());
-        rc4.endecrypt(rtn);
-        OutputStream os = new FileOutputStream(f);
+        RC4 rc4 = new RC4(); //SAURET Ces 3 lignes cryptes le fichier
+        rc4.setKey(RC4Key.getScrambleKey()); //SAURET à decommenter
+        rc4.endecrypt(rtn); //SAURET à decommenter
+        OutputStream os = new FileOutputStream(f); 
         os.write(rtn);
         os.close();
     }
@@ -1050,7 +1050,7 @@ public class BridgeModel {
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
-        Formatter f = new Formatter(s, Locale.FRANCE);
+        Formatter f = new Formatter(s, Locale.US);// Ne pas changer le code locale
         DraftingGrid grid = new DraftingGrid(DraftingGrid.FINE_GRID);
         f.format("%" + YEAR_LEN + "d", version);
         f.format("%" + SCENARIO_CODE_LEN + "d", designConditions.getCodeLong());

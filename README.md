@@ -27,5 +27,5 @@
 
     Les librairies NetBeans doivent être ok. Le dossier **lib** est celui sous la racine du projet. 
     
-    ![Alt text](../../../../../H:/OneDrive/4%20Programation/-%20VS%20Code/bridge-designer/LiensLib.png)
+    ![Alt text](LiensLib.png)
         
