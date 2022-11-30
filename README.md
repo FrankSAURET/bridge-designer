@@ -9,4 +9,4 @@
 * [Vidéo de présentation](https://bridgedesigner.org/tutorial/)
 
 ## Comment compiler  
-* 
+* Récupérer le projet sur github
