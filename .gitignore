@@ -1,10 +1,9 @@
 # Don't archive compilation results
-*.exe
-*.jar
-*.class
-*.jnilib
-*.dll
 *.log
+*.class
+
+# Skip temp files
+/Modif annulés
 
 # Mac 
 .DS_Store
