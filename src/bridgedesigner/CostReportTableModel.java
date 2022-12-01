@@ -31,7 +31,7 @@ public class CostReportTableModel extends DefaultTableModel {
     private static final ResourceMap resourceMap = BDApp.getResourceMap(CostReportTableModel.class);
     private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
     private final NumberFormat intFormat = NumberFormat.getIntegerInstance(Locale.FRANCE); // Locale-specific will be fine...
-    private final NumberFormat doubleFormat = NumberFormat.getNumberInstance(Locale.FRENCH);
+    private final NumberFormat doubleFormat = NumberFormat.getNumberInstance(Locale.FRANCE);
 
 
 

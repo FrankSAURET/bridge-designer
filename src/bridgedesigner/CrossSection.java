@@ -39,9 +39,12 @@ public abstract class CrossSection {
         30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80,                /* 0 to 10 */
         90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, /* 11 to 22 */
         220, 240, 260, 280, 300,                                   /* 23 to 27 */
-        320, 340, 360, 400, 500                                    /* 28 to 32 */
+        320, 340, 360, 400, 500,                                   /* 28 to 32 */
+        350, 400, 450,500                                          /*Carton échelle 50*/
     };
-
+    protected int[] bielleWidths = new int[]{
+        350, 400, 450,500                                          /*Carton échelle 50*/
+    };
     /**
      * Construct a cross section object.
      * 

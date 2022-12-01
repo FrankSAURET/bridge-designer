@@ -29,6 +29,7 @@ public class Shape {
     private final double inverseRadiusOfGyration;
     private final double thickness;
 
+
     /**
      * Construct a new solid bar shape with given parameters.
      * 
@@ -42,8 +43,6 @@ public class Shape {
     public Shape(CrossSection section, int sizeIndex, String name, double width, double area, double moment) {
         this(section, sizeIndex, name, width, area, moment, width);
     }
-    
-   
     /**
      * Construct a new hollow tube shape with given parameters.
      * 
