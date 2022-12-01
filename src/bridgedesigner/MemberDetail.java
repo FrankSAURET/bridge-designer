@@ -23,6 +23,9 @@ import javax.swing.JTable;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import org.jdesktop.application.ResourceMap;
+//Ajout Frank SAURET
+import java.util.Locale;
+import java.text.NumberFormat;
 
 /**
  * A composite pattern implementation of components representing a member detail.
@@ -44,6 +47,11 @@ public class MemberDetail implements ChangeListener {
     private final StrengthCurve strengthCurve;
     private final ResourceMap resourceMap;
     private Member [] [] memberLists;
+    //Ajout Frank SAURET
+    private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
+    private final NumberFormat intFormat = NumberFormat.getIntegerInstance(Locale.FRANCE); // Locale-specific will be fine...
+    private final NumberFormat doubleFormat = NumberFormat.getNumberInstance(Locale.FRENCH);
+
 
     /**
      * Construct a fresh member detail.
@@ -157,10 +165,15 @@ public class MemberDetail implements ChangeListener {
                 }
             }
             else {
+                // Ajout Frank SAURET 3 lignes
+                double Fy= material.getFy();
+                double Elas=material.getE();
+                double MassV=material.getDensity();
                 materialTable.setValueAt(material.getName(), 0, 1);
-                materialTable.setValueAt(resourceMap.getString("fyFormat.text", material.getFy()), 1, 1);
-                materialTable.setValueAt(resourceMap.getString("eFormat.text", material.getE()), 2, 1);
-                materialTable.setValueAt(resourceMap.getString("densityFormat.text", material.getDensity()), 3, 1); 
+                // Modif Frank SAURET
+                materialTable.setValueAt(resourceMap.getString("fyFormat.text",doubleFormat.format(Fy)), 1, 1);
+                materialTable.setValueAt(resourceMap.getString("eFormat.text", doubleFormat.format(Elas)), 2, 1);
+                materialTable.setValueAt(resourceMap.getString("densityFormat.text", doubleFormat.format(MassV)), 3, 1); 
             }
             if (shape == null) {
                 for (int i = 0; i < 4; i++) {

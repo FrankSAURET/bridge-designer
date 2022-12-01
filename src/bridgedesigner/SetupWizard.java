@@ -335,7 +335,7 @@ public class SetupWizard extends JDialog {
         }
     }
     
-    // Cost calculations always in US dollars.
+    // Cost calculations always in Euros.
     private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.FRANCE);        
 
     private void updateDependencies() {

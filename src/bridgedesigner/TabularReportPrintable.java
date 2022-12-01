@@ -140,7 +140,7 @@ public class TabularReportPrintable implements Printable {
         this.subheaderText = subheaderText;
         this.footerFormat = footerFormat;
 
-        // derive fonts from the table's font
+        // derive fonts from the table's font // Modif Frank SAURET
         headerFont = table.getFont().deriveFont(Font.BOLD, HEADER_FONT_SIZE);
         subheaderFont = table.getFont().deriveFont(Font.PLAIN, SUBHEADER_FONT_SIZE);
         footerFont = table.getFont().deriveFont(Font.PLAIN, FOOTER_FONT_SIZE);

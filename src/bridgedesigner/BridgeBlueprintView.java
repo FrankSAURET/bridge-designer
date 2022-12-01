@@ -134,14 +134,14 @@ public class BridgeBlueprintView extends BridgeView {
             Utility.drawDoubleArrow(g, xDimension, y0Viewport, xDimension, yDeckViewport, arrowHalfWidth, arrowLength);
             Utility.drawDoubleArrow(g, xDimension, yDeckViewport, xDimension, y1Viewport, arrowHalfWidth, arrowLength);
             g.drawLine(xDimension - tickOutside, yDeckViewport, xDimension + tickInside, yDeckViewport);
-            paintLabel(g, String.format(Locale.FRANCE, "%.2fm", -y0World), xDimension, (y0Viewport + yDeckViewport) / 2);
-            paintLabel(g, String.format(Locale.FRANCE, "%.2fm", y1World), xDimension, (yDeckViewport + y1Viewport) / 2);
+            paintLabel(g, String.format(Locale.US, "%.2fm", -y0World), xDimension, (y0Viewport + yDeckViewport) / 2);
+            paintLabel(g, String.format(Locale.US, "%.2fm", y1World), xDimension, (yDeckViewport + y1Viewport) / 2);
             xDimension -= dimensionOffset;
         }
         Utility.drawDoubleArrow(g, xDimension, y0Viewport, xDimension, y1Viewport, arrowHalfWidth, arrowLength);
         g.drawLine(xDimension - tickOutside, y0Viewport, x0Viewport - dimensionOffset + tickInside, y0Viewport);
         g.drawLine(xDimension - tickOutside, y1Viewport, x0Viewport - dimensionOffset + tickInside, y1Viewport);
-        paintLabel(g, String.format(Locale.FRANCE, "%.2fm", preferredDrawingWindow.height), xDimension, (y0Viewport + y1Viewport) / 2);
+        paintLabel(g, String.format(Locale.US, "%.2fm", preferredDrawingWindow.height), xDimension, (y0Viewport + y1Viewport) / 2);
         
         // Draw the horizontal dimensions.
         int yDimension = y0Viewport + dimensionOffset;
@@ -150,6 +150,7 @@ public class BridgeBlueprintView extends BridgeView {
         final DesignConditions dc = bridge.getDesignConditions();
         if (dc.isLeftAnchorage()) {
             // If there are anchorages, draw sub-dimensions to left and (possibly) right banks of the gap.
+            // Garder les locale en US - Frank SAURET
             double x0DeckWorld = dc.getXLeftmostDeckJoint();
             double x1DeckWorld = dc.getXRightmostDeckJoint();
             final int x0DeckViewport = viewportTransform.worldToViewportX(x0DeckWorld);
@@ -157,17 +158,17 @@ public class BridgeBlueprintView extends BridgeView {
             
             Utility.drawDoubleArrow(g, x0Viewport, yDimension, x0DeckViewport, yDimension, arrowHalfWidth, arrowLength);
             g.drawLine(x0Viewport, yDimension + tickOutside, x0Viewport, yTickInside);
-            paintLabel(g, String.format(Locale.FRANCE, "%.2fm", x0DeckWorld - x0World), (x0Viewport + x0DeckViewport) / 2, yDimension);
+            paintLabel(g, String.format(Locale.US, "%.2fm", x0DeckWorld - x0World), (x0Viewport + x0DeckViewport) / 2, yDimension);
             
             Utility.drawDoubleArrow(g, x0DeckViewport, yDimension, x1DeckViewport, yDimension, arrowHalfWidth, arrowLength);
             g.drawLine(x0DeckViewport, yDimension + tickOutside, x0DeckViewport, yTickInside);
             g.drawLine(x1DeckViewport, yDimension + tickOutside, x1DeckViewport, yTickInside);
-            paintLabel(g, String.format(Locale.FRANCE, "%.2fm", x1DeckWorld - x0DeckWorld), (x0DeckViewport + x1DeckViewport) / 2, yDimension);
+            paintLabel(g, String.format(Locale.US, "%.2fm", x1DeckWorld - x0DeckWorld), (x0DeckViewport + x1DeckViewport) / 2, yDimension);
             
             if (dc.isRightAnchorage()) {
                 Utility.drawDoubleArrow(g, x1DeckViewport, yDimension, x1Viewport, yDimension, arrowHalfWidth, arrowLength);
                 g.drawLine(x1Viewport, yDimension + tickOutside, x1Viewport, yTickInside);
-                paintLabel(g, String.format(Locale.FRANCE, "%.2fm", x1World - x1DeckWorld), (x1DeckViewport + x1Viewport) / 2, yDimension);
+                paintLabel(g, String.format(Locale.US, "%.2fm", x1World - x1DeckWorld), (x1DeckViewport + x1Viewport) / 2, yDimension);
             }
 
             yDimension += dimensionOffset;
@@ -175,7 +176,7 @@ public class BridgeBlueprintView extends BridgeView {
         Utility.drawDoubleArrow(g, x0Viewport, yDimension, x1Viewport, yDimension, arrowHalfWidth, arrowLength);
         g.drawLine(x0Viewport, yDimension + tickOutside, x0Viewport, yTickInside);
         g.drawLine(x1Viewport, yDimension + tickOutside, x1Viewport, yTickInside);
-        paintLabel(g, String.format(Locale.FRANCE, "%.2fm", preferredDrawingWindow.width), (x0Viewport + x1Viewport) / 2, yDimension);
+        paintLabel(g, String.format(Locale.US, "%.2fm", preferredDrawingWindow.width), (x0Viewport + x1Viewport) / 2, yDimension);
     }
 
     /**

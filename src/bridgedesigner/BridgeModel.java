@@ -364,7 +364,7 @@ public class BridgeModel {
         String toTabDelimitedText() {
             ResourceMap resourceMap = BDApp.getResourceMap(CostReportTableModel.class);
             StringBuilder str = new StringBuilder();
-            Formatter formatter = new Formatter(str, Locale.FRANCE);
+            Formatter formatter = new Formatter(str, Locale.FRANCE);// Modif Frank SAURET
             if (notes != null) {
                 for (int i = 0; i < notes.length; i++) {
                     formatter.format("%s\n", notes[i]);
@@ -942,7 +942,7 @@ public class BridgeModel {
         designedBy = scanToDelimiter("name of designer");
         projectId = scanToDelimiter("project ID");
         iterationNumber = Integer.parseInt(scanToDelimiter("iteration"));
-        labelPosition = Double.parseDouble(scanToDelimiter("label position"));
+        labelPosition = Double.parseDouble(scanToDelimiter("label position"));//Modif Frank SSAURET
     }
 
     /*

@@ -60,7 +60,7 @@ OutFile "../release/setupbdv${YEAR}j.exe"
 InstallDirRegKey HKCU "Software\${BD}" ""
 BrandingText "Engineering Encounters"
 
-DirText "Choose a folder for the Bridge Designer."
+DirText ""
 
 Var StartMenuFolder
 
@@ -81,10 +81,10 @@ Var StartMenuFolder
 
 ; Welcome page settings.
 !define MUI_WELCOMEPAGE_TITLE "${BD}"
-!define MUI_WELCOMEPAGE_TEXT "Welcome to the ${BD} installer.$\r$\n$\r$\nThe Bridge Designer is designed to run \
-on any computer capable of running Java. This installer includes a copy of the Java runtime.$\r$\n$\r$\n\
-If you have any other programs running, please close them before proceeding with this \
-installation.$\r$\n$\r$\nClick Next to continue."
+!define MUI_WELCOMEPAGE_TEXT "Bienvenue dans l'installateur de ${BD}.$\r$\n$\r$\nBridge Designer est conçu pour fonctionner \
+sur n'importe quel ordinateur capable d'exécuter Java. Ce programme d'installation comprend une copie du runtime Java.$\r$\n$\r$\n\
+Si vous avez d'autres programmes en cours d'exécution, veuillez les fermer avant de procéder à cette \
+installation.$\r$\n$\r$\nCliquer sur Suivant pour continuer."
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_LICENSE "${RESOURCE_DIR}\license.txt"
 !insertmacro MUI_PAGE_COMPONENTS
@@ -94,11 +94,11 @@ installation.$\r$\n$\r$\nClick Next to continue."
 !insertmacro MUI_PAGE_INSTFILES
 ; Finish page settings.
 !define MUI_FINISHPAGE_TITLE "${BD} installation complete"
-!define MUI_FINISHPAGE_TEXT "Installation is complete! Thanks for choosing to \
-use our software. Check http://bridgecontest.org for information \
-about the original bridgedesigner and https://github.com/FrankSAURET/bridge-designer for this copy."
+!define MUI_FINISHPAGE_TEXT "L'installation est terminée! Merci d'avoir choisi d' \
+utiliser notre logiciel. Aller sur http://bridgecontest.org pour avoir des information \
+sur la version originale de Bridge designer et https://github.com/FrankSAURET/bridge-designer pour cette version."
 !define MUI_FINISHPAGE_RUN "$INSTDIR\${EXE}"
-!define MUI_FINISHPAGE_RUN_TEXT "Run the ${BD}."
+!define MUI_FINISHPAGE_RUN_TEXT "Lancer ${BD}."
 !define MUI_FINISHPAGE_RUN_NOTCHECKED
 !insertmacro MUI_PAGE_FINISH
 
@@ -106,9 +106,8 @@ about the original bridgedesigner and https://github.com/FrankSAURET/bridge-desi
 !insertmacro MUI_UNPAGE_WELCOME
 !insertmacro MUI_UNPAGE_CONFIRM
 !insertmacro MUI_UNPAGE_INSTFILES
-!define MUI_FINISHPAGE_TITLE "${BD} is uninstalled"
-!define MUI_FINISHPAGE_TEXT "Uninstallation is complete! Check http://bridgecontest.org for information \
-about the original bridgedesigner and https://github.com/FrankSAURET/bridge-designer for this copy."
+!define MUI_FINISHPAGE_TITLE "${BD} est désinstallé"
+!define MUI_FINISHPAGE_TEXT "La désinstallation est terminée. Aller sur http://bridgecontest.org pour avoir des information sur la version originale de Bridge designer et https://github.com/FrankSAURET/bridge-designer pour cette version."
 !insertmacro MUI_UNPAGE_FINISH
 
 !insertmacro MUI_LANGUAGE "French"

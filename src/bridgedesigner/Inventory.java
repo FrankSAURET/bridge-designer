@@ -60,7 +60,8 @@ public class Inventory {
     /**
      * Table of materials in this inventory.
      * index, nom, nom court, module d'élasticité (E) en kPa, limite d'élasticité (Fy) kPa, masse volumique (rho), cout
-     *  Carton Canson C200704250, CN, E= 3 à 9 GPa, Fy=15 à 34 MPa, ρ=618 kg/m³, 18 €/kg ou 11 €/m²
+     *  Carton Canson C200704250, Car, E= 3 à 9 GPa, Fy=15 à 34 MPa, ρ=618 kg/m³, 21,6 €/kg ou 13,2 €/m² TTC
+   *  Médium , MDF, E= 2,5 GPa, Fy=650 kPa, ρ=740 kg/m³, 3,3 €/kg ou 7,35 €/m² (en 3 mm) TTC
      */
     private final Material materials[] = new Material[]{
         new Material(0, "Acier carboné", "CS",  200000000, 250000, 7850, new double[]{4.30, 6.30}),
