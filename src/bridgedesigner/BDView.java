@@ -1527,6 +1527,7 @@ public final class BDView extends FrameView
         exitMenuItem.setAction(actionMap.get("quit")); // NOI18N
         exitMenuItem.setIcon(resourceMap.getIcon("exitMenuItem.icon")); // NOI18N
         exitMenuItem.setName("exitMenuItem"); // NOI18N
+        exitMenuItem.setPreferredSize(new java.awt.Dimension(155, 30));
         fileMenu.add(exitMenuItem);
         exitMenuItem.getAccessibleContext().setAccessibleDescription(resourceMap.getString("exitMenuItem.AccessibleContext.accessibleDescription")); // NOI18N
 
@@ -2475,10 +2476,10 @@ public final class BDView extends FrameView
         materialPropertiesTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         materialPropertiesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Matériau", null},
-                {"Limite d'élasticité (Fy)", null},
-                {"Module d'élasticité (E)", null},
-                {"Masse volumique", null}
+                {"Material", null},
+                {"Yield Stress (Fy)", null},
+                {"Modulus of Elasticity (E)", null},
+                {"Mass Density", null}
             },
             new String [] {
                 "Title 1", "Title 2"
@@ -2503,11 +2504,11 @@ public final class BDView extends FrameView
         dimensionsTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         dimensionsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Section", null},
-                {"Dimensions de la section", null},
-                {"Surface", null},
-                {"Moment d'inertie", null},
-                {"Longueur de la membrure", null}
+                {"Cross-Section Type", null},
+                {"Cross-Section Size", null},
+                {"Area", null},
+                {"Moment of Inertia", null},
+                {"Member Length", null}
             },
             new String [] {
                 "Title 1", "Title 2"
@@ -2531,8 +2532,8 @@ public final class BDView extends FrameView
         memberCostTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         memberCostTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Tarif unitaire", null},
-                {"Côut de la membrure", null}
+                {"Unit Cost", null},
+                {"Member Cost", null}
             },
             new String [] {
                 "Title 1", "Title 2"
