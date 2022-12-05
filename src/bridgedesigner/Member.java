@@ -526,11 +526,11 @@ public class Member implements HotEditableItem<BridgePaintContext> {
      */
     private static Color[] getMemberColors(float dBright, float dBlue) {
         Color[] colors = new Color[5];
-        colors[0] = getColor(128, 128, 128, dBright, dBlue);
-        colors[1] = getColor(64, 64, 64, dBright, dBlue);
-        colors[2] = getColor(192, 192, 192, dBright, dBlue);
-        colors[3] = getColor(255,181,22, dBright, dBlue);
-        colors[4] = getColor(0,104,74, dBright, dBlue);
+        colors[0] = getColor(128, 128, 128, dBright, dBlue);//Acier
+        colors[1] = getColor(64, 64, 64, dBright, dBlue);//Acier
+        colors[2] = getColor(192, 192, 192, dBright, dBlue);//Acier
+        colors[3] = getColor(255,222,35, dBright, dBlue);
+        colors[4] = getColor(175,154,75, dBright, dBlue);
         return colors;
     }
     
@@ -543,11 +543,11 @@ public class Member implements HotEditableItem<BridgePaintContext> {
      */
     private static Color[] getInnerColors(float dBright, float dBlue) {
         Color[] colors = new Color[5];
-        colors[0] = getColor(192, 192, 192, dBright, dBlue);
-        colors[1] = getColor(128, 128, 128, dBright, dBlue);
-        colors[2] = getColor(224, 224, 224, dBright, dBlue);
-        colors[3] = getColor(234,166,21, dBright, dBlue);
-        colors[4] = getColor(0,183,131, dBright, dBlue);         
+        colors[0] = getColor(192, 192, 192, dBright, dBlue);//Acier
+        colors[1] = getColor(128, 128, 128, dBright, dBlue);//Acier
+        colors[2] = getColor(224, 224, 224, dBright, dBlue);//Acier
+        colors[3] = getColor(255,245,191, dBright, dBlue);
+        colors[4] = getColor(249,219,107, dBright, dBlue);         
         return colors;
     }
 
