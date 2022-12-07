@@ -37,20 +37,11 @@ class TubeCrossSection extends CrossSection {
         Shape[] s = new Shape[nSizes];
         for (int sizeIndex = 0; sizeIndex < nSizes; sizeIndex++) {
             int width = widths[sizeIndex];
-            /*
-            double width = 0;
-            if (sizeIndex < 15) { // 0 -> 10
-                width = 5 * (2 - 0 + sizeIndex);
-            } else if (sizeIndex < 32) { // 15 -> 90
-                width = 10 * (9 - 15 + sizeIndex);
-            } else { // 32 -> 300
-                width = 100 * (3 - 32 + sizeIndex);
-            }
-            */
+            int height = width;
             int thickness = Math.max(width / 20, 2);
             double area = (Utility.sqr(width) - Utility.sqr(width - 2 * thickness)) * 1e-6;
             double moment = (Utility.p4(width) - Utility.p4(width - 2 * thickness)) / 12 * 1e-12;
-            s[sizeIndex] = new Shape(this, sizeIndex, String.format("%dx%dx%d", width, width, thickness), width, area, moment, thickness);
+            s[sizeIndex] = new Shape(this, sizeIndex, String.format("%dx%dx%d", width, width, thickness), width, height, area, moment, thickness);
         }
         return s;
     }

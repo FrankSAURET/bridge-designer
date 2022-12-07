@@ -37,9 +37,10 @@ class BarCrossSection extends CrossSection {
         Shape[] s = new Shape[nSizes];
         for (int sizeIndex = 0; sizeIndex < nSizes; sizeIndex++) {
             int width = widths[sizeIndex];
+            int height = width;
             double area = Utility.sqr(width) * 1e-6;
             double moment = Utility.p4(width) / 12 * 1e-12;
-            s[sizeIndex] = new Shape(this, sizeIndex, String.format("%dx%d", width, width), width, area, moment);
+            s[sizeIndex] = new Shape(this, sizeIndex, String.format("%dx%d", width, width), width, height, area, moment);
         }
         return s;
     }

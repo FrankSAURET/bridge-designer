@@ -41,7 +41,7 @@ public class CrossSectionSketch extends JLabel {
     private static final String longestString = "888";
     private static final float minMargin = 12;
     private static final float labelSep = 4;
-    private static final float aspectRatio = 1;
+    private float aspectRatio = 1;
     private static final int tickSep = 4;
     private static final int tickSize = 9;
     private static final int halfTickSize = tickSize / 2;
@@ -58,10 +58,17 @@ public class CrossSectionSketch extends JLabel {
             message = resourceMap.getString("noCurrent.text");
         }
         else {
-            heightDimension = widthDimension = shape.getNominalWidth();
+            widthDimension = shape.getNominalWidth();
+            heightDimension = shape.getNominalHeight();
             thicknessDimension = (int)Math.round(shape.getThickness());
             tube = shape.getSection() instanceof TubeCrossSection;
-            message = null;        
+            message = null; 
+            if (widthDimension/heightDimension==1){
+                aspectRatio=1;
+            }
+            else{
+                aspectRatio = widthDimension/heightDimension/3; 
+            }
         }
         repaint();
     }
@@ -111,6 +118,7 @@ public class CrossSectionSketch extends JLabel {
     protected void paintComponent(Graphics g0) {
         Graphics2D g = (Graphics2D) g0;
         Color savedColor = g.getColor();
+        // Dessin du cadre
         int w = getWidth();
         int h = getHeight();
         g.setColor(Color.WHITE);
@@ -142,8 +150,9 @@ public class CrossSectionSketch extends JLabel {
             widthSection = widthAvailable;
             heightSection = widthAvailable / aspectRatio;
         }
+        // Dessin de la section
         float xSection = xMargin + labelWidth + labelSep;
-        float ySection = yMargin;
+        float ySection = yMargin+5-(5*aspectRatio);
         g.setColor(Color.GRAY);
         final int tubeThickness = 5;
         g.fillRoundRect(Math.round(xSection), Math.round(ySection), 
@@ -165,18 +174,21 @@ public class CrossSectionSketch extends JLabel {
         else {
             g.setColor(Color.BLACK);
         }
+        // Frank SAURET Dessin des dimensions
         hTick(g, xSection, ySection);
         hTick(g, xSection, ySection + heightSection);
         vDim(g, xSection, ySection, ySection + heightSection);
+        //heightDimension
         Labeler.drawJustified(g, 
                 Integer.toString(heightDimension), 
                 Math.round(xSection - labelSep), Math.round(ySection + heightSection / 2), 
                 Labeler.JUSTIFY_RIGHT, Labeler.JUSTIFY_CENTER, 
                 Color.WHITE, // white fill
                 null); // no border
-        vTick(g, xSection, ySection + heightAvailable);
-        vTick(g, xSection + widthSection, ySection + heightSection);
+        vTick(g, xSection, ySection + heightSection); // Trait à gauche de la largeur
+        vTick(g, xSection + widthSection, ySection + heightSection ); // Trait à droite de la largeur
         hDim(g, xSection, xSection + widthSection, ySection + heightSection);
+        //widthDimension
         Labeler.drawJustified(g, 
                 Integer.toString(widthDimension),
                 Math.round(xSection + widthSection / 2), Math.round(ySection + heightSection + labelSep + tickSize),

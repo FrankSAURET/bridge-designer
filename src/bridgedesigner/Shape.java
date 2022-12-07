@@ -24,6 +24,7 @@ public class Shape {
     private final CrossSection section;
     private final String name;
     private final double width;
+    private final double height;
     private final double area;
     private final double moment;
     private final double inverseRadiusOfGyration;
@@ -40,8 +41,8 @@ public class Shape {
      * @param area cross-sectional area
      * @param moment moment
      */
-    public Shape(CrossSection section, int sizeIndex, String name, double width, double area, double moment) {
-        this(section, sizeIndex, name, width, area, moment, width);
+    public Shape(CrossSection section, int sizeIndex, String name, double width, double height, double area, double moment) {
+        this(section, sizeIndex, name, width, height, area, moment, width);
     }
     /**
      * Construct a new hollow tube shape with given parameters.
@@ -54,11 +55,12 @@ public class Shape {
      * @param moment moment
      * @param thickness wall thickness
      */
-    public Shape(CrossSection section, int sizeIndex, String name, double width, double area, double moment, double thickness) {
+    public Shape(CrossSection section, int sizeIndex, String name, double width, double height, double area, double moment, double thickness) {
         this.section = section;
         this.sizeIndex = sizeIndex;
         this.name = name;
         this.width = width;
+        this.height = height;
         this.area = area;
         this.moment = moment;
         this.inverseRadiusOfGyration = Math.sqrt(area / moment);
@@ -136,6 +138,7 @@ public class Shape {
     public double getWidth() {
         return width;
     }
+    
 
     /**
      * Return a nominal width for the shape for text display (not calculation) purposes.
@@ -145,7 +148,14 @@ public class Shape {
     int getNominalWidth() {
         return (int) Math.round(width);
     }
-
+    /**
+     * Return a nominal height for the shape for text display (not calculation) purposes.
+     * 
+     * @return nominal height
+     */
+    int getNominalHeight() {
+        return (int) Math.round(height);
+    }
     /**
      * Return the wall thickness if this is a tube or width if a solid bar.
      * 

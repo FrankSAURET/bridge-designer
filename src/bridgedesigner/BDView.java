@@ -2476,10 +2476,10 @@ public final class BDView extends FrameView
         materialPropertiesTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         materialPropertiesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Material", null},
-                {"Yield Stress (Fy)", null},
-                {"Modulus of Elasticity (E)", null},
-                {"Mass Density", null}
+                {"Matériau", null},
+                {"Limite d'élasticité (Fy)", null},
+                {"Module d'élasticité (E)", null},
+                {"Masse volumique", null}
             },
             new String [] {
                 "Title 1", "Title 2"
@@ -2504,11 +2504,11 @@ public final class BDView extends FrameView
         dimensionsTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         dimensionsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Cross-Section Type", null},
-                {"Cross-Section Size", null},
-                {"Area", null},
-                {"Moment of Inertia", null},
-                {"Member Length", null}
+                {"Section", null},
+                {"Dimensions de la section", null},
+                {"Surface de la section", null},
+                {"Moment quadratique", null},
+                {"Longueur de la membrure", null}
             },
             new String [] {
                 "Title 1", "Title 2"
@@ -2532,8 +2532,8 @@ public final class BDView extends FrameView
         memberCostTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         memberCostTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Unit Cost", null},
-                {"Member Cost", null}
+                {"Coût unitaire", null},
+                {"Coût de la membrure", null}
             },
             new String [] {
                 "Title 1", "Title 2"

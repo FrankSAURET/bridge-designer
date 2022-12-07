@@ -2092,10 +2092,10 @@
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                       <Table columnCount="2" rowCount="4">
                                         <Column editable="false" title="Title 1" type="java.lang.Object">
-                                          <Data value="Material"/>
-                                          <Data value="Yield Stress (Fy)"/>
-                                          <Data value="Modulus of Elasticity (E)"/>
-                                          <Data value="Mass Density"/>
+                                          <Data value="Matériau"/>
+                                          <Data value="Limite d'élasticité (Fy)"/>
+                                          <Data value="Module d'élasticité (E)"/>
+                                          <Data value="Masse volumique"/>
                                         </Column>
                                         <Column editable="false" title="Title 2" type="java.lang.Object"/>
                                       </Table>
@@ -2141,11 +2141,11 @@
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                       <Table columnCount="2" rowCount="5">
                                         <Column editable="true" title="Title 1" type="java.lang.Object">
-                                          <Data value="Cross-Section Type"/>
-                                          <Data value="Cross-Section Size"/>
-                                          <Data value="Area"/>
-                                          <Data value="Moment of Inertia"/>
-                                          <Data value="Member Length"/>
+                                          <Data value="Section"/>
+                                          <Data value="Dimensions de la section"/>
+                                          <Data value="Surface de la section"/>
+                                          <Data value="Moment quadratique"/>
+                                          <Data value="Longueur de la membrure"/>
                                         </Column>
                                         <Column editable="true" title="Title 2" type="java.lang.Object"/>
                                       </Table>
@@ -2213,8 +2213,8 @@
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                       <Table columnCount="2" rowCount="2">
                                         <Column editable="false" title="Title 1" type="java.lang.Object">
-                                          <Data value="Unit Cost"/>
-                                          <Data value="Member Cost"/>
+                                          <Data value="Coût unitaire"/>
+                                          <Data value="Coût de la membrure"/>
                                         </Column>
                                         <Column editable="false" title="Title 2" type="java.lang.Object"/>
                                       </Table>
