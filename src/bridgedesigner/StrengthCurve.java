@@ -28,7 +28,7 @@ import javax.swing.JLabel;
 import org.jdesktop.application.ResourceMap;
 
 /**
- * Drawing of stength curves for either one set of members all made of the same stock or
+ * Drawing of strength curves for either one set of members all made of the same stock or
  * of all such sets at the same time.  Includes lots of fussy heuristics to make things look nice.
  * 
  * @author Eugene K. Ressler
@@ -283,14 +283,14 @@ public class StrengthCurve extends JLabel {
         g.setStroke(plotStroke);
         double yTensile = Inventory.tensileStrength(material, shape);
         final int iy = yPlotAreaBottom - (int) Math.round((yTensile / yMax) * heightPlotArea);
-        g.setColor(subdued ? subduedBlue : Color.BLUE);
+        g.setColor(subdued ? subduedBlue : Color.cyan);
         g.drawLine(xPlotAreaLeft, iy, xPlotAreaRight, iy);
 
         final int nPlotPoints = 32;
         double yCompressive = Inventory.compressiveStrength(material, shape, 0.0);
         int iy0 = yPlotAreaBottom - (int) Math.round((yCompressive / yMax) * heightPlotArea);
         int ix0 = xPlotAreaLeft;
-        g.setColor(subdued ? subduedRed : Color.RED);
+        g.setColor(subdued ? subduedRed : Color.PINK);
         for (int i = 1; i <= nPlotPoints; i++) {
             double t = (double) i / nPlotPoints;
             double x = t * xMax;

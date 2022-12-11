@@ -212,7 +212,7 @@ public class MemberTable extends JTable {
                 case 7:
                     setHorizontalAlignment(JLabel.CENTER);
                     if (((MemberTableModel) getModel()).isAnalysisValid()) {
-                        setBackground(getMember(table, row).getCompressionForceStrengthRatio() <= 1 ? table.getBackground() : Color.RED);
+                        setBackground(getMember(table, row).getCompressionForceStrengthRatio() <= 1 ? table.getBackground() : Color.PINK);
                         setForeground(table.getForeground());
                     }
                     else {
@@ -224,7 +224,7 @@ public class MemberTable extends JTable {
                 case 8:
                     setHorizontalAlignment(JLabel.CENTER);
                     if (((MemberTableModel) getModel()).isAnalysisValid()) {
-                        setBackground(getMember(table, row).getTensionForceStrengthRatio() <= 1 ? table.getBackground() : Color.BLUE);
+                        setBackground(getMember(table, row).getTensionForceStrengthRatio() <= 1 ? table.getBackground() : Color.CYAN);
                         setForeground(table.getForeground());                    
                     }
                     else {

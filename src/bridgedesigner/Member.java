@@ -29,7 +29,7 @@ public class Member implements HotEditableItem<BridgePaintContext> {
     private boolean selected = false;
     private double compressionForceStrengthRatio = -1;
     private double tensionForceStrengthRatio = -1;
-
+        
     /**
      * Normal unselected, unhot colors of member, indexed by material.
      */
@@ -106,6 +106,7 @@ public class Member implements HotEditableItem<BridgePaintContext> {
          0.152526f,0.108068f,0.076484f,0.054105f,
          0.000000f,};
 
+    
     /**
      * This tells us how high a parabola should result if a a member with getLength <code>arcLen</code>
      * buckles to a parabola with getLength <code>width</code>.
@@ -460,13 +461,26 @@ public class Member implements HotEditableItem<BridgePaintContext> {
      * @param inventory stock inventory
      */
     public static void initializeDrawing(Inventory inventory) {
-        // Assume all sections have same number of shapes.  Okay for current inventory.
-        memberStrokes = new BasicStroke[1 + inventory.getNShapes(0)];
+        // Assume all sections 0 and 1 have same number of shapes and 3 other number.  Okay for current inventory.
+        memberStrokes = new BasicStroke[ inventory.getNShapes(0)+ inventory.getNShapes(2)];
         innerStrokes = new BasicStroke[memberStrokes.length];
         memberStrokes[0] = new BasicStroke(0.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10.0f, centerLine, 0.0f);
-        for (int i = 1; i < memberStrokes.length; i++) {
+        // Section 0 and 1
+        for (int i = 1; i < inventory.getNShapes(0); i++) {
             float width = getStrokeWidth(inventory.getShape(0, i - 1));
             memberStrokes[i] = new BasicStroke(width,
+                    (width <= 2 * Joint.pixelRadius) ? BasicStroke.CAP_BUTT : BasicStroke.CAP_ROUND,
+                    BasicStroke.JOIN_MITER);
+            float widthInner = .6f * width;
+            if (width - widthInner < 2) {
+                widthInner = Math.max(1, width - 2);
+            }
+            innerStrokes[i] = new BasicStroke(widthInner, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER);
+        }
+        // Section 2
+        for (int i = 0; i < inventory.getNShapes(2); i++) {
+            float width = getStrokeWidth(inventory.getShape(2, i));
+            memberStrokes[i+inventory.getNShapes(0)] = new BasicStroke(width,
                     (width <= 2 * Joint.pixelRadius) ? BasicStroke.CAP_BUTT : BasicStroke.CAP_ROUND,
                     BasicStroke.JOIN_MITER);
             float widthInner = .6f * width;
@@ -588,7 +602,16 @@ public class Member implements HotEditableItem<BridgePaintContext> {
      * @param innerColor tube member inner color or null or null if not a tube
      * @param markColor color to use for member failure marks or null if none
      */
-    public static void draw(Graphics2D g, Point a, Point b, int number, int sizeIndex, Color color, Color innerColor, Color markColor) {
+       
+    public static void draw(Graphics2D g, Point a, Point b, int number, int sizeIndex, Color color, Color innerColor, Color markColor, CrossSection section) {
+        
+        // Ajout Frank SAURET pour la section rectangulaire
+        
+        if(section instanceof BielleCrossSection){
+            Inventory inventory = new Inventory();
+            sizeIndex+=inventory.getNShapes(0)-1;
+        }
+        
         Stroke savedStroke = g.getStroke();
         g.setColor(color);
         final BasicStroke stroke = memberStrokes[sizeIndex];
@@ -634,7 +657,7 @@ public class Member implements HotEditableItem<BridgePaintContext> {
     private void draw(Graphics2D g, ViewportTransform viewportTransform, boolean label, Color color, Color innerColor, Color markColor) {
         viewportTransform.worldToViewport(ptA, jointA.getPointWorld());
         viewportTransform.worldToViewport(ptB, jointB.getPointWorld());
-        draw(g, ptA, ptB, label ? getNumber() : -1, 1 + shape.getSizeIndex(), color, innerColor, markColor);
+        draw(g, ptA, ptB, label ? getNumber() : -1, 1 + shape.getSizeIndex(), color, innerColor, markColor,shape.getSection());
     }
 
     /**

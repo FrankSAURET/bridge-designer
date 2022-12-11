@@ -67,7 +67,7 @@ public class CrossSectionSketch extends JLabel {
                 aspectRatio=1;
             }
             else{
-                aspectRatio = widthDimension/heightDimension/3; 
+                aspectRatio = widthDimension/heightDimension; 
             }
         }
         repaint();
@@ -123,6 +123,7 @@ public class CrossSectionSketch extends JLabel {
         int h = getHeight();
         g.setColor(Color.WHITE);
         g.fillRect(0, 0, w, h);
+        
         if (labelWidth < 0) {
             FontRenderContext frc = g.getFontRenderContext();
             Font font = Labeler.getFont();
@@ -134,6 +135,7 @@ public class CrossSectionSketch extends JLabel {
             Labeler.drawJustified(g0, message, w/2, h/2, Labeler.JUSTIFY_CENTER, Labeler.JUSTIFY_CENTER, null);
             return;
         }
+        
         float widthAvailable = w - (minMargin + labelWidth + labelSep + thicknessDimSize + minMargin);
         float heightAvailable = h - (minMargin + labelSep + labelHeight + minMargin);
         float xMargin = minMargin;
@@ -146,14 +148,16 @@ public class CrossSectionSketch extends JLabel {
             heightSection = heightAvailable;
         }
         else {
-            yMargin += (aspectRatio * heightAvailable - widthAvailable) / 2;
+            //yMargin += (aspectRatio * heightAvailable - widthAvailable) / 2;
+            widthAvailable+=thicknessDimSize;
             widthSection = widthAvailable;
             heightSection = widthAvailable / aspectRatio;
+           
         }
         // Dessin de la section
         float xSection = xMargin + labelWidth + labelSep;
-        float ySection = yMargin+5-(5*aspectRatio);
-        g.setColor(Color.GRAY);
+        float ySection = yMargin;
+        g.setColor(Color.getHSBColor((float)43,(float)0.99,(float)0.47));
         final int tubeThickness = 5;
         g.fillRoundRect(Math.round(xSection), Math.round(ySection), 
                 1 + Math.round(widthSection), 1 + Math.round(heightSection), 

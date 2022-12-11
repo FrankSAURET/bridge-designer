@@ -24,7 +24,7 @@ class BielleCrossSection extends CrossSection {
      * Construct a bielle cross section object.
      */
     public BielleCrossSection() {
-        super(2, "Barre pleine rectangulaire", "Bielle");
+        super(2, "Barre pleine rectangulaire", "Rect");
     }
 
     /**
@@ -34,14 +34,17 @@ class BielleCrossSection extends CrossSection {
      */
     @Override
     public Shape[] getShapes() {
-        int nSizes = bielleWidths.length; //Nombre de valeurs
+        int nSizes = bielleHeights.length; //Nombre de valeurs
         Shape[] s = new Shape[nSizes];
         for (int sizeIndex = 0; sizeIndex < nSizes; sizeIndex++) {
-            int width = bielleWidths[sizeIndex];
-            int height = 50;
+            int height = bielleHeights[sizeIndex];
+            int width = 50;
             double area = height * width * 1e-6;// Section en m²
-            double moment = (width* width* width * height)/12 * 1e-12; //Moment quadratique section rectangulaire en mètre cube
-            s[sizeIndex] = new Shape(this, sizeIndex, String.format("%dx%d", width, height), width, height, area, moment);
+            double quadra=height* height;
+            quadra=quadra*height;
+            quadra=quadra*width;
+            double moment = (quadra/12) * 1e-12; //Moment quadratique section rectangulaire en mètre puissance 4
+            s[sizeIndex] = new Shape(this, sizeIndex, String.format("%dx%d", width, height), height, width, area, moment);
         }
         return s;
     }

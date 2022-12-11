@@ -1171,7 +1171,7 @@ public class DraftingPanel extends JPanel implements RulerHost {
                     jointB = null;
                     ptBViewport.setLocation(ptViewport);
                     Graphics2D g = (Graphics2D) getGraphics();
-                    Member.draw(g, ptAViewport, ptBViewport, -1, 0, Color.BLUE, null, null);
+                    Member.draw(g, ptAViewport, ptBViewport, -1, 0, Color.BLUE, null, null,null);
                     jointA.paintHot(g, viewportTransform, null);
                     g.dispose();
                 } else if (joint != jointA && joint != jointB) {
@@ -1179,7 +1179,7 @@ public class DraftingPanel extends JPanel implements RulerHost {
                     jointB = joint;
                     viewportTransform.worldToViewport(ptBViewport, jointB.getPointWorld());
                     Graphics2D g = (Graphics2D) getGraphics();
-                    Member.draw(g, ptAViewport, ptBViewport, -1, 0, Color.BLUE, null, null);
+                    Member.draw(g, ptAViewport, ptBViewport, -1, 0, Color.BLUE, null, null,null);
                     jointA.paintHot(g, viewportTransform, null);
                     jointB.paintHot(g, viewportTransform, null);
                     g.dispose();

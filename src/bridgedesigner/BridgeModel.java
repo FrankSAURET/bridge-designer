@@ -47,7 +47,7 @@ public class BridgeModel {
     /**
      * Current bridge designer version year.
      */
-    public static final int version = 2016;
+    public static final int version = 2023;
     /**
      * Field separator in text bridge representation.
      */
@@ -901,7 +901,7 @@ public class BridgeModel {
         readPtr = 0;
         DraftingGrid grid = new DraftingGrid(DraftingGrid.FINE_GRID);
         clearStructure();
-        if (scanUnsigned(YEAR_LEN, "bridge designer version") != version) {
+        if (scanUnsigned(YEAR_LEN, "bridge designer version") > version) {
             throw new IOException("bridge design file version is not " + version);
         }
         long scenarioCode = scanUnsignedLong(SCENARIO_CODE_LEN, "scenario code");
