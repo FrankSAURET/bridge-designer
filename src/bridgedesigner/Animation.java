@@ -51,7 +51,7 @@ abstract public class Animation {
      * Factor multiplied by deflections when exaggeration is turned on.
      * Exported for animation options dialog (WPBDView).
      */
-    public static final double standardExaggeration = 30.0;
+    public static final double standardExaggeration = 10.0;
     /**
      * Default load speed in kilometers per hour.
      */

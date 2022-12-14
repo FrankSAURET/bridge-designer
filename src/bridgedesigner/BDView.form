@@ -387,6 +387,7 @@
           <Properties>
             <Property name="mnemonic" type="int" value="115"/>
             <Property name="text" type="java.lang.String" resourceKey="testMenu.text"/>
+            <Property name="disabledIcon" type="javax.swing.Icon" resourceKey="testMenu.disabledIcon"/>
             <Property name="name" type="java.lang.String" value="testMenu" noResource="true"/>
           </Properties>
           <SubComponents>
@@ -404,6 +405,7 @@
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
                   <action class="bridgedesigner.WPBDView" id="runLoadTest" methodName="runLoadTest"/>
                 </Property>
+                <Property name="text" type="java.lang.String" resourceKey="loadTestMenuItem.text"/>
                 <Property name="name" type="java.lang.String" value="loadTestMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>
@@ -418,15 +420,19 @@
                   <action class="bridgedesigner.WPBDView" id="toggleShowAnimation" methodName="toggleShowAnimation"/>
                 </Property>
                 <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="toggleAnimationMenuItem.text"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="toggleAnimationMenuItem.icon"/>
                 <Property name="name" type="java.lang.String" value="toggleAnimationMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JCheckBoxMenuItem" name="toggleLegacyGraphicsMenuItem">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="bridgedesigner.WPBDView" id="toggleLegacyGraphics" methodName="toggleLegacyGraphics"/>
+                  <action class="bridgedesigner.BDView" id="toggleLegacyGraphics" methodName="toggleLegacyGraphics"/>
                 </Property>
-                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" resourceKey="toggleLegacyGraphicsMenuItem.text"/>
+                <Property name="disabledIcon" type="javax.swing.Icon" resourceKey="toggleLegacyGraphicsMenuItem.disabledIcon"/>
+                <Property name="icon" type="javax.swing.Icon" resourceKey="toggleLegacyGraphicsMenuItem.icon"/>
                 <Property name="name" type="java.lang.String" value="toggleLegacyGraphicsMenuItem" noResource="true"/>
               </Properties>
             </MenuItem>
@@ -2092,9 +2098,9 @@
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                       <Table columnCount="2" rowCount="4">
                                         <Column editable="false" title="Title 1" type="java.lang.Object">
-                                          <Data value="Matériau"/>
-                                          <Data value="Limite d'élasticité (Fy)"/>
-                                          <Data value="Module d'élasticité (E)"/>
+                                          <Data value="Mat&#xe9;riau"/>
+                                          <Data value="Limite d&apos;&#xe9;lasticit&#xe9; (Fy)"/>
+                                          <Data value="Module d&apos;&#xe9;lasticit&#xe9; (E)"/>
                                           <Data value="Masse volumique"/>
                                         </Column>
                                         <Column editable="false" title="Title 2" type="java.lang.Object"/>
@@ -2213,8 +2219,8 @@
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                       <Table columnCount="2" rowCount="2">
                                         <Column editable="false" title="Title 1" type="java.lang.Object">
-                                          <Data value="Coût unitaire"/>
-                                          <Data value="Coût de la membrure"/>
+                                          <Data value="Co&#xfb;t unitaire"/>
+                                          <Data value="Co&#xfb;t de la membrure"/>
                                         </Column>
                                         <Column editable="false" title="Title 2" type="java.lang.Object"/>
                                       </Table>

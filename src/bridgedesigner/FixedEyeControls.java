@@ -84,6 +84,7 @@ public final class FixedEyeControls extends JDialog implements AnimationControls
                     animation.getCanvas().requestFocusInWindow();
                 }
             });
+            toggleAnimationDrop();
         } else {
             // Just start the animation.
             animation.start();

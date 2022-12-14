@@ -1666,6 +1666,7 @@ public final class BDView extends FrameView
 
         testMenu.setMnemonic('s');
         testMenu.setText(resourceMap.getString("testMenu.text")); // NOI18N
+        testMenu.setDisabledIcon(resourceMap.getIcon("testMenu.disabledIcon")); // NOI18N
         testMenu.setName("testMenu"); // NOI18N
 
         drawingBoardMenuItem.setAction(actionMap.get("showDrawingBoard")); // NOI18N
@@ -1674,6 +1675,7 @@ public final class BDView extends FrameView
         testMenu.add(drawingBoardMenuItem);
 
         loadTestMenuItem.setAction(actionMap.get("runLoadTest")); // NOI18N
+        loadTestMenuItem.setText(resourceMap.getString("loadTestMenuItem.text")); // NOI18N
         loadTestMenuItem.setName("loadTestMenuItem"); // NOI18N
         testMenu.add(loadTestMenuItem);
 
@@ -1682,11 +1684,15 @@ public final class BDView extends FrameView
 
         toggleAnimationMenuItem.setAction(actionMap.get("toggleShowAnimation")); // NOI18N
         toggleAnimationMenuItem.setSelected(true);
+        toggleAnimationMenuItem.setText(resourceMap.getString("toggleAnimationMenuItem.text")); // NOI18N
+        toggleAnimationMenuItem.setIcon(resourceMap.getIcon("toggleAnimationMenuItem.icon")); // NOI18N
         toggleAnimationMenuItem.setName("toggleAnimationMenuItem"); // NOI18N
         testMenu.add(toggleAnimationMenuItem);
 
         toggleLegacyGraphicsMenuItem.setAction(actionMap.get("toggleLegacyGraphics")); // NOI18N
-        toggleLegacyGraphicsMenuItem.setSelected(true);
+        toggleLegacyGraphicsMenuItem.setText(resourceMap.getString("toggleLegacyGraphicsMenuItem.text")); // NOI18N
+        toggleLegacyGraphicsMenuItem.setDisabledIcon(resourceMap.getIcon("toggleLegacyGraphicsMenuItem.disabledIcon")); // NOI18N
+        toggleLegacyGraphicsMenuItem.setIcon(resourceMap.getIcon("toggleLegacyGraphicsMenuItem.icon")); // NOI18N
         toggleLegacyGraphicsMenuItem.setName("toggleLegacyGraphicsMenuItem"); // NOI18N
         testMenu.add(toggleLegacyGraphicsMenuItem);
 
@@ -3186,6 +3192,7 @@ private void keyCodeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) 
     @Action
     public void runLoadTest() {
         // Fixup might be needed due certain joint move edge cases.
+
         FixupCommand ruleEnforcer = new FixupCommand(bridge);
         int revisedMemberCount = ruleEnforcer.revisedMemberCount();
         if (revisedMemberCount > 0) {
@@ -3543,6 +3550,15 @@ private void keyCodeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) 
     @Action
     public void toggleShowAnimation() {
         setLoadTestButtonEnabled();
+        String CtIcon=toggleAnimationMenuItem.getIcon().toString();
+        String Non=BDApp.getApplication().getIconResource("animateNO.png").toString();
+        
+        if (CtIcon.equalsIgnoreCase(Non)){
+        toggleAnimationMenuItem.setIcon(BDApp.getApplication().getIconResource("animate.png"));
+       }
+        else{
+            toggleAnimationMenuItem.setIcon(BDApp.getApplication().getIconResource("animateNO.png"));
+        }
     }
 
     private void setLegacyGraphics()
@@ -3583,9 +3599,11 @@ private void keyCodeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) 
         boolean selected = isSelected(toggleLegacyGraphicsMenuItem);
         if (selected) {
             setLegacyGraphics();
+            toggleLegacyGraphicsMenuItem.setIcon(BDApp.getApplication().getIconResource("legacygraphicsNO.png"));
         }
         else {
             setStandardGraphics();
+            toggleLegacyGraphicsMenuItem.setIcon(BDApp.getApplication().getIconResource("legacygraphics.png"));
         }
     }
 

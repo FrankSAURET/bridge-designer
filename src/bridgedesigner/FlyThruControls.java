@@ -42,6 +42,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         initComponents();
         playIcon = BDApp.getApplication().getIconResource("play.png");
         pauseIcon = BDApp.getApplication().getIconResource("pause.png");
+      
     }
 
     /**
@@ -70,7 +71,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
             if (!initialized) {
                 setLocation(animation.getCanvas().getLocationOnScreen());
                 panelHeight = animationControlsPanel.getHeight();
-                setSize(getWidth(), getHeight() - panelHeight);
+                setSize(getWidth(), getHeight()-panelHeight);
                 dropped = false;
                 visibleState = true;
                 restoreState();
@@ -85,6 +86,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
                     animation.getCanvas().requestFocusInWindow();
                 }
             });
+            toggleAnimationDrop();
         } else {
             // Just start the animation.
             animation.start();
@@ -234,6 +236,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
 
         animationControlsPanel.setName("animationControlsPanel"); // NOI18N
 
+        shadowsCheckBox.setSelected(true);
         shadowsCheckBox.setText(resourceMap.getString("shadowsCheckBox.text")); // NOI18N
         shadowsCheckBox.setName("shadowsCheckBox"); // NOI18N
         shadowsCheckBox.addItemListener(new java.awt.event.ItemListener() {
@@ -312,6 +315,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         });
 
         brightnessSlider.setOrientation(javax.swing.JSlider.VERTICAL);
+        brightnessSlider.setValue(100);
         brightnessSlider.setName("brightnessSlider"); // NOI18N
         brightnessSlider.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -434,7 +438,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
 }//GEN-LAST:event_colorsCheckBoxItemStateChanged
 
     private void exaggerationCheckBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_exaggerationCheckBoxItemStateChanged
-        animation.getConfig().displacementExaggeration = (evt.getStateChange() == ItemEvent.SELECTED) ? FlyThruAnimation.standardExaggeration : 1;
+        animation.getConfig().displacementExaggeration = (evt.getStateChange() == ItemEvent.SELECTED) ? Animation.standardExaggeration : 1;
 }//GEN-LAST:event_exaggerationCheckBoxItemStateChanged
 
     private void abutmentsCheckBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_abutmentsCheckBoxItemStateChanged

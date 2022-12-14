@@ -241,6 +241,7 @@
       <SubComponents>
         <Component class="javax.swing.JCheckBox" name="shadowsCheckBox">
           <Properties>
+            <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" resourceKey="shadowsCheckBox.text"/>
             <Property name="name" type="java.lang.String" value="shadowsCheckBox" noResource="true"/>
           </Properties>
@@ -336,6 +337,7 @@
         <Component class="javax.swing.JSlider" name="brightnessSlider">
           <Properties>
             <Property name="orientation" type="int" value="1"/>
+            <Property name="value" type="int" value="100"/>
             <Property name="name" type="java.lang.String" value="brightnessSlider" noResource="true"/>
           </Properties>
           <Events>
