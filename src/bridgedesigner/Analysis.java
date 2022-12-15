@@ -252,14 +252,14 @@ public class Analysis {
                 pointLoads[ilc][dof] -= load;
             }
         }
-        // Masse des camions ici Frank SAURET
+        // Poids Masse charge des camions ici Frank SAURET
         // Standard (light) truck.
         double frontAxleLoad = 44;//44
         double rearAxleLoad = 181;//181
         if (conditions.getLoadType() != DesignConditions.STANDARD_TRUCK) {
             // Heavy truck. Modifié 1/5 devant le reste derrière.
-            frontAxleLoad = 124;//124-96
-            rearAxleLoad = 124;//124-384
+            frontAxleLoad = 96;//124-96
+            rearAxleLoad = 384;//124-384
         }
         for (int ilc = 1; ilc < nLoadInstances; ilc++) {
             int iFront = 2 * ilc + 1;
