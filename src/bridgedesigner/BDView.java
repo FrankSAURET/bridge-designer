@@ -3237,7 +3237,7 @@ private void keyCodeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) 
             selectCard(animationPanelCardName);
         }
         else {
-            // Otherwise back to the drwing board.
+            // Otherwise back to the drawing board.
             setSelected(drawingBoardButton, true);
         }
         if (!bridge.isPassing()) {

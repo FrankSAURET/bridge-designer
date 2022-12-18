@@ -25,8 +25,8 @@ import java.util.Iterator;
  * @author Eugene K. Ressler
  */
 public class Analysis {
-
-    /**
+    private static final String animationDialogStorage = "flyThruAnimationControlsState.xml";
+     /**
      * Steel code factors.
      */
     private static final double deadLoadFactor = 1.35;
@@ -91,6 +91,9 @@ public class Analysis {
     private double[] maxMemberTensileForces;
     private int status = NO_STATUS;
 
+    
+
+    
     /**
      * Return the analysis status.
      * <pre>
@@ -252,15 +255,33 @@ public class Analysis {
                 pointLoads[ilc][dof] -= load;
             }
         }
-        // Poids Masse charge des camions ici Frank SAURET
-        // Standard (light) truck.
-        double frontAxleLoad = 44;//44
-        double rearAxleLoad = 181;//181
-        if (conditions.getLoadType() != DesignConditions.STANDARD_TRUCK) {
-            // Heavy truck. Modifié 1/5 devant le reste derrière.
-            frontAxleLoad = 96;//124-96
-            rearAxleLoad = 384;//124-384
+        /* Poids Masse charge des camions ici Frank SAURET
+        * Si charge libre elle est répartie 50% à l'avant et 50% à l'arrière
+        * Si camion est répartie 20% à l'avant et 80% à l'arrière
+        */
+        ComponentStateLocalStorable s = ComponentStateLocalStorable.load(animationDialogStorage);
+        int charge=s.getSpinnerValues()[0];
+        double frontAxleLoad = charge/2;
+        double rearAxleLoad = charge-frontAxleLoad;
+        
+        if (s.getRadioButtonStates()[1]){
+            charge=480;
+            frontAxleLoad = charge/5;
+            rearAxleLoad = charge-frontAxleLoad;
         }
+        if (s.getRadioButtonStates()[2]){
+            charge=225;
+            frontAxleLoad = charge/5;
+            rearAxleLoad = charge-frontAxleLoad;
+        }
+//        double frontAxleLoad = 44;//44
+//        double rearAxleLoad = 181;//181
+//        if (conditions.getLoadType() != DesignConditions.STANDARD_TRUCK) {
+//            // Heavy truck. Modifié 1/5 devant le reste derrière.
+//            frontAxleLoad = 96;//124-96
+//            rearAxleLoad = 384;//124-384
+//        }
+        
         for (int ilc = 1; ilc < nLoadInstances; ilc++) {
             int iFront = 2 * ilc + 1;
             int iRear = iFront - 2;
@@ -441,6 +462,7 @@ public class Analysis {
         }
     }
 
+   
     // This is about 50 times faster than Math.hypot() !.
     private static double hypot(double x, double y) {
         return Math.sqrt(x * x + y * y);
@@ -950,6 +972,7 @@ public class Analysis {
 
         private BridgeModel bridge = new BridgeModel();
         private Analysis analysis = new Analysis();
+       
 
         private void run(String fileName) {
             try {

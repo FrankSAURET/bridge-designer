@@ -821,7 +821,7 @@
             <Component class="javax.swing.JToggleButton" name="loadTestButton">
               <Properties>
                 <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
-                  <action class="bridgedesigner.WPBDView" id="runLoadTest" methodName="runLoadTest"/>
+                  <action class="bridgedesigner.BDView" id="runLoadTest" methodName="runLoadTest"/>
                 </Property>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="designTestGroup"/>

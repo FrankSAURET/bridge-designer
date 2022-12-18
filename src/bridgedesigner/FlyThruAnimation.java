@@ -136,6 +136,8 @@ public class FlyThruAnimation extends Animation {
         public boolean showTerrain = true;
         public boolean showAbutments = true;
         public boolean showErrosion = false;
+
+        public int freeCharge=480;
     }
     /**
      * FlyThruAnimation configuration for access by control dialog.

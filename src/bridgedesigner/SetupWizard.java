@@ -885,7 +885,9 @@ public class SetupWizard extends JDialog {
                             .addComponent(localContestCodeField, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                             .addComponent(localContestCodeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
                             .addComponent(localContest4charOKMsgLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)))
-                    .addComponent(localContestMsgLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
+                    .addGroup(localContestCodePanelLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(localContestMsgLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))))
         );
         localContestCodePanelLayout.setVerticalGroup(
             localContestCodePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

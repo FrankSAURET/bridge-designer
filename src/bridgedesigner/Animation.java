@@ -90,6 +90,7 @@ abstract public class Animation {
 
     public void reset() {
         resetState();
+        
     }
 
     /**
@@ -273,6 +274,8 @@ abstract public class Animation {
         double stateElapsed = (time - lastStateChangeTime) * 1e-9;
         switch (state) {
             case UNLOADED_STATE:
+                // Analyze the bridge the first time.
+                bridge.analyze();
                 if (stateElapsed >= initialPauseDuration) {
                     state = DEAD_LOADING_STATE;
                     lastStateChangeTime = time;
