@@ -93,6 +93,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
                 visibleState = true;
                 restoreState();
                 initialized = true;
+                toggleAnimationDrop();
             }
             // Make visible and start animation later so that JOGL initializes first.
             SwingUtilities.invokeLater(new Runnable() {
@@ -103,7 +104,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
                     animation.getCanvas().requestFocusInWindow();
                 }
             });
-            toggleAnimationDrop();
+            
         } else {
             // Just start the animation.
             animation.start();
@@ -181,27 +182,28 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         playButton = new javax.swing.JToggleButton();
         sep100 = new javax.swing.JToolBar.Separator();
         speedSlider = new javax.swing.JSlider();
-        animationControlsSep02 = new javax.swing.JToolBar.Separator();
-        animationControlsDialogDropButton = new javax.swing.JButton();
-        animationControlsPanel = new javax.swing.JPanel();
-        shadowsCheckBox = new javax.swing.JCheckBox();
-        terrainCheckBox = new javax.swing.JCheckBox();
-        skyCheckBox = new javax.swing.JCheckBox();
         speedLabel = new javax.swing.JLabel();
-        colorsCheckBox = new javax.swing.JCheckBox();
-        exaggerationCheckBox = new javax.swing.JCheckBox();
-        abutmentsCheckBox = new javax.swing.JCheckBox();
-        truckCheckBox = new javax.swing.JCheckBox();
-        erosionCheckbox = new javax.swing.JCheckBox();
-        brightnessSlider = new JSlider(JSlider.VERTICAL);
-        lightLabel = new javax.swing.JLabel();
+        animationControlsSep02 = new javax.swing.JToolBar.Separator();
         dimLabel = new javax.swing.JLabel();
+        brightnessSlider = new JSlider(JSlider.HORIZONTAL);
         brightLabel = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JToolBar.Separator();
         chargePanel = new javax.swing.JPanel();
         chargeSpinner = new javax.swing.JSpinner();
         chargeFreeRadioButton = new javax.swing.JRadioButton();
         chargeHeavyRadioButton = new javax.swing.JRadioButton();
         chargeLightRadioButton = new javax.swing.JRadioButton();
+        animationControlsPanel = new javax.swing.JPanel();
+        shadowsCheckBox = new javax.swing.JCheckBox();
+        terrainCheckBox = new javax.swing.JCheckBox();
+        skyCheckBox = new javax.swing.JCheckBox();
+        colorsCheckBox = new javax.swing.JCheckBox();
+        exaggerationCheckBox = new javax.swing.JCheckBox();
+        abutmentsCheckBox = new javax.swing.JCheckBox();
+        truckCheckBox = new javax.swing.JCheckBox();
+        erosionCheckbox = new javax.swing.JCheckBox();
+        compteChargeLabel = new javax.swing.JLabel();
+        animationControlsDialogDropButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(bridgedesigner.BDApp.class).getContext().getResourceMap(FlyThruControls.class);
@@ -209,6 +211,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         setIconImage(bridgedesigner.BDApp.getApplication().getImageResource("animate.png"));
         setName("Form"); // NOI18N
         setResizable(false);
+        setUndecorated(true);
 
         animationControlsToolbar.setFloatable(false);
         animationControlsToolbar.setRollover(true);
@@ -247,7 +250,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         speedSlider.setSnapToTicks(true);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("bridgedesigner/resources/BDView"); // NOI18N
         speedSlider.setToolTipText(bundle.getString("animationSpeedTip")); // NOI18N
-        speedSlider.setMaximumSize(new java.awt.Dimension(220, 34));
+        speedSlider.setMaximumSize(new java.awt.Dimension(32767, 26));
         speedSlider.setMinimumSize(new java.awt.Dimension(120, 34));
         speedSlider.setName("speedSlider"); // NOI18N
         speedSlider.setPreferredSize(new java.awt.Dimension(120, 34));
@@ -258,101 +261,25 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         });
         animationControlsToolbar.add(speedSlider);
 
-        animationControlsSep02.setMaximumSize(new java.awt.Dimension(8, 32767));
-        animationControlsSep02.setMinimumSize(new java.awt.Dimension(8, 0));
-        animationControlsSep02.setName("animationControlsSep02"); // NOI18N
-        animationControlsSep02.setPreferredSize(new java.awt.Dimension(8, 0));
-        animationControlsToolbar.add(animationControlsSep02);
-
-        animationControlsDialogDropButton.setAction(actionMap.get("toggleAnimationDrop")); // NOI18N
-        animationControlsDialogDropButton.setHideActionText(true);
-        animationControlsDialogDropButton.setMaximumSize(new java.awt.Dimension(37, 37));
-        animationControlsDialogDropButton.setMinimumSize(new java.awt.Dimension(37, 37));
-        animationControlsDialogDropButton.setName("animationControlsDialogDropButton"); // NOI18N
-        animationControlsDialogDropButton.setPreferredSize(new java.awt.Dimension(37, 37));
-        animationControlsToolbar.add(animationControlsDialogDropButton);
-
-        animationControlsPanel.setName("animationControlsPanel"); // NOI18N
-
-        shadowsCheckBox.setSelected(true);
-        shadowsCheckBox.setText(resourceMap.getString("shadowsCheckBox.text")); // NOI18N
-        shadowsCheckBox.setName("shadowsCheckBox"); // NOI18N
-        shadowsCheckBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                shadowsCheckBoxItemStateChanged(evt);
-            }
-        });
-
-        terrainCheckBox.setSelected(true);
-        terrainCheckBox.setText(resourceMap.getString("terrainCheckBox.text")); // NOI18N
-        terrainCheckBox.setName("terrainCheckBox"); // NOI18N
-        terrainCheckBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                terrainCheckBoxItemStateChanged(evt);
-            }
-        });
-
-        skyCheckBox.setSelected(true);
-        skyCheckBox.setText(resourceMap.getString("skyCheckBox.text")); // NOI18N
-        skyCheckBox.setName("skyCheckBox"); // NOI18N
-        skyCheckBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                skyCheckBoxItemStateChanged(evt);
-            }
-        });
-
         speedLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         speedLabel.setText(resourceMap.getString("speedLabel.text")); // NOI18N
         speedLabel.setMaximumSize(new java.awt.Dimension(64, 16));
         speedLabel.setMinimumSize(new java.awt.Dimension(64, 16));
         speedLabel.setName("speedLabel"); // NOI18N
         speedLabel.setPreferredSize(new java.awt.Dimension(64, 16));
+        animationControlsToolbar.add(speedLabel);
 
-        colorsCheckBox.setSelected(true);
-        colorsCheckBox.setText(resourceMap.getString("colorsCheckBox.text")); // NOI18N
-        colorsCheckBox.setName("colorsCheckBox"); // NOI18N
-        colorsCheckBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                colorsCheckBoxItemStateChanged(evt);
-            }
-        });
+        animationControlsSep02.setMaximumSize(new java.awt.Dimension(8, 32767));
+        animationControlsSep02.setMinimumSize(new java.awt.Dimension(8, 0));
+        animationControlsSep02.setName("animationControlsSep02"); // NOI18N
+        animationControlsSep02.setPreferredSize(new java.awt.Dimension(8, 0));
+        animationControlsToolbar.add(animationControlsSep02);
 
-        exaggerationCheckBox.setSelected(true);
-        exaggerationCheckBox.setText(resourceMap.getString("exaggerationCheckBox.text")); // NOI18N
-        exaggerationCheckBox.setName("exaggerationCheckBox"); // NOI18N
-        exaggerationCheckBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                exaggerationCheckBoxItemStateChanged(evt);
-            }
-        });
+        dimLabel.setIcon(resourceMap.getIcon("dimLabel.icon")); // NOI18N
+        dimLabel.setName("dimLabel"); // NOI18N
+        animationControlsToolbar.add(dimLabel);
 
-        abutmentsCheckBox.setSelected(true);
-        abutmentsCheckBox.setText(resourceMap.getString("abutmentsCheckBox.text")); // NOI18N
-        abutmentsCheckBox.setName("abutmentsCheckBox"); // NOI18N
-        abutmentsCheckBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                abutmentsCheckBoxItemStateChanged(evt);
-            }
-        });
-
-        truckCheckBox.setSelected(true);
-        truckCheckBox.setText(resourceMap.getString("truckCheckBox.text")); // NOI18N
-        truckCheckBox.setName("truckCheckBox"); // NOI18N
-        truckCheckBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                truckCheckBoxItemStateChanged(evt);
-            }
-        });
-
-        erosionCheckbox.setText(resourceMap.getString("erosionCheckbox.text")); // NOI18N
-        erosionCheckbox.setName("erosionCheckbox"); // NOI18N
-        erosionCheckbox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                erosionCheckboxItemStateChanged(evt);
-            }
-        });
-
-        brightnessSlider.setOrientation(javax.swing.JSlider.VERTICAL);
+        brightnessSlider.setToolTipText(resourceMap.getString("brightnessSlider.toolTipText")); // NOI18N
         brightnessSlider.setValue(100);
         brightnessSlider.setName("brightnessSlider"); // NOI18N
         brightnessSlider.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -360,82 +287,15 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
                 brightnessSliderStateChanged(evt);
             }
         });
-
-        lightLabel.setText(resourceMap.getString("lightLabel.text")); // NOI18N
-        lightLabel.setName("lightLabel"); // NOI18N
-
-        dimLabel.setIcon(resourceMap.getIcon("dimLabel.icon")); // NOI18N
-        dimLabel.setName("dimLabel"); // NOI18N
+        animationControlsToolbar.add(brightnessSlider);
 
         brightLabel.setIcon(resourceMap.getIcon("brightLabel.icon")); // NOI18N
         brightLabel.setName("brightLabel"); // NOI18N
+        animationControlsToolbar.add(brightLabel);
 
-        javax.swing.GroupLayout animationControlsPanelLayout = new javax.swing.GroupLayout(animationControlsPanel);
-        animationControlsPanel.setLayout(animationControlsPanelLayout);
-        animationControlsPanelLayout.setHorizontalGroup(
-            animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(animationControlsPanelLayout.createSequentialGroup()
-                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(animationControlsPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(truckCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(shadowsCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(skyCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(terrainCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(erosionCheckbox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(abutmentsCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(colorsCheckBox)
-                            .addComponent(exaggerationCheckBox)
-                            .addGroup(animationControlsPanelLayout.createSequentialGroup()
-                                .addComponent(brightnessSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dimLabel)
-                                    .addComponent(lightLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(brightLabel)))))
-                    .addGroup(animationControlsPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(speedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(72, Short.MAX_VALUE))
-        );
-        animationControlsPanelLayout.setVerticalGroup(
-            animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, animationControlsPanelLayout.createSequentialGroup()
-                .addComponent(speedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(animationControlsPanelLayout.createSequentialGroup()
-                        .addComponent(shadowsCheckBox)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(skyCheckBox)
-                            .addComponent(exaggerationCheckBox)))
-                    .addComponent(colorsCheckBox))
-                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(animationControlsPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(terrainCheckBox)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(erosionCheckbox)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(abutmentsCheckBox)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(truckCheckBox))
-                    .addGroup(animationControlsPanelLayout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(brightLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lightLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dimLabel))
-                    .addComponent(brightnessSlider, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+        jSeparator1.setName("jSeparator1"); // NOI18N
+        animationControlsToolbar.add(jSeparator1);
 
-        chargePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(resourceMap.getString("chargePanel.border.title"))); // NOI18N
         chargePanel.setName("chargePanel"); // NOI18N
 
         chargeSpinner.setModel(new javax.swing.SpinnerNumberModel(480,0,99999,10));
@@ -481,67 +341,207 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
             }
         });
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel1.setName("jLabel1"); // NOI18N
-
         javax.swing.GroupLayout chargePanelLayout = new javax.swing.GroupLayout(chargePanel);
         chargePanel.setLayout(chargePanelLayout);
         chargePanelLayout.setHorizontalGroup(
             chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chargePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chargeFreeRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
-                    .addComponent(chargeHeavyRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
-                    .addComponent(chargeLightRadioButton)
-                    .addGroup(chargePanelLayout.createSequentialGroup()
+                .addGroup(chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, chargePanelLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(chargeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addComponent(chargeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(chargeHeavyRadioButton))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, chargePanelLayout.createSequentialGroup()
+                        .addComponent(chargeFreeRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(chargeLightRadioButton)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         chargePanelLayout.setVerticalGroup(
             chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chargePanelLayout.createSequentialGroup()
-                .addComponent(chargeLightRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(chargeHeavyRadioButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(chargeFreeRadioButton)
+                .addGroup(chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chargeFreeRadioButton)
+                    .addComponent(chargeLightRadioButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chargeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addGroup(chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chargeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chargeHeavyRadioButton))
+                .addGap(32, 32, 32))
         );
 
         chargeSpinner.getAccessibleContext().setAccessibleName(resourceMap.getString("chargeSpinner.AccessibleContext.accessibleName")); // NOI18N
         chargeLightRadioButton.getAccessibleContext().setAccessibleName(resourceMap.getString("chargeLightRadioButton.AccessibleContext.accessibleName")); // NOI18N
-        jLabel1.getAccessibleContext().setAccessibleName(resourceMap.getString("jLabel1.AccessibleContext.accessibleName")); // NOI18N
+
+        animationControlsToolbar.add(chargePanel);
+        chargePanel.getAccessibleContext().setAccessibleName(resourceMap.getString("chargePanel.AccessibleContext.accessibleName")); // NOI18N
+
+        animationControlsPanel.setAlignmentX(10.0F);
+        animationControlsPanel.setName("animationControlsPanel"); // NOI18N
+        animationControlsPanel.setPreferredSize(new java.awt.Dimension(151, 120));
+
+        shadowsCheckBox.setSelected(true);
+        shadowsCheckBox.setText(resourceMap.getString("shadowsCheckBox.text")); // NOI18N
+        shadowsCheckBox.setName("shadowsCheckBox"); // NOI18N
+        shadowsCheckBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                shadowsCheckBoxItemStateChanged(evt);
+            }
+        });
+
+        terrainCheckBox.setSelected(true);
+        terrainCheckBox.setText(resourceMap.getString("terrainCheckBox.text")); // NOI18N
+        terrainCheckBox.setName("terrainCheckBox"); // NOI18N
+        terrainCheckBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                terrainCheckBoxItemStateChanged(evt);
+            }
+        });
+
+        skyCheckBox.setSelected(true);
+        skyCheckBox.setText(resourceMap.getString("skyCheckBox.text")); // NOI18N
+        skyCheckBox.setName("skyCheckBox"); // NOI18N
+        skyCheckBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                skyCheckBoxItemStateChanged(evt);
+            }
+        });
+
+        colorsCheckBox.setSelected(true);
+        colorsCheckBox.setText(resourceMap.getString("colorsCheckBox.text")); // NOI18N
+        colorsCheckBox.setName("colorsCheckBox"); // NOI18N
+        colorsCheckBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                colorsCheckBoxItemStateChanged(evt);
+            }
+        });
+
+        exaggerationCheckBox.setSelected(true);
+        exaggerationCheckBox.setText(resourceMap.getString("exaggerationCheckBox.text")); // NOI18N
+        exaggerationCheckBox.setName("exaggerationCheckBox"); // NOI18N
+        exaggerationCheckBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                exaggerationCheckBoxItemStateChanged(evt);
+            }
+        });
+
+        abutmentsCheckBox.setSelected(true);
+        abutmentsCheckBox.setText(resourceMap.getString("abutmentsCheckBox.text")); // NOI18N
+        abutmentsCheckBox.setName("abutmentsCheckBox"); // NOI18N
+        abutmentsCheckBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                abutmentsCheckBoxItemStateChanged(evt);
+            }
+        });
+
+        truckCheckBox.setSelected(true);
+        truckCheckBox.setText(resourceMap.getString("truckCheckBox.text")); // NOI18N
+        truckCheckBox.setName("truckCheckBox"); // NOI18N
+        truckCheckBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                truckCheckBoxItemStateChanged(evt);
+            }
+        });
+
+        erosionCheckbox.setText(resourceMap.getString("erosionCheckbox.text")); // NOI18N
+        erosionCheckbox.setName("erosionCheckbox"); // NOI18N
+        erosionCheckbox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                erosionCheckboxItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout animationControlsPanelLayout = new javax.swing.GroupLayout(animationControlsPanel);
+        animationControlsPanel.setLayout(animationControlsPanelLayout);
+        animationControlsPanelLayout.setHorizontalGroup(
+            animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(animationControlsPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(shadowsCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(skyCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(terrainCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(erosionCheckbox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(exaggerationCheckBox)
+                    .addGroup(animationControlsPanelLayout.createSequentialGroup()
+                        .addComponent(abutmentsCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                        .addGap(29, 29, 29))
+                    .addComponent(truckCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                    .addComponent(colorsCheckBox))
+                .addContainerGap())
+        );
+        animationControlsPanelLayout.setVerticalGroup(
+            animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(animationControlsPanelLayout.createSequentialGroup()
+                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(shadowsCheckBox)
+                    .addComponent(abutmentsCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(skyCheckBox)
+                    .addComponent(truckCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(terrainCheckBox)
+                    .addComponent(colorsCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(erosionCheckbox)
+                    .addComponent(exaggerationCheckBox))
+                .addContainerGap(3, Short.MAX_VALUE))
+        );
+
+        compteChargeLabel.setText(resourceMap.getString("compteChargeLabel.text")); // NOI18N
+        compteChargeLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        compteChargeLabel.setName("compteChargeLabel"); // NOI18N
+
+        animationControlsDialogDropButton.setAction(actionMap.get("toggleAnimationDrop")); // NOI18N
+        animationControlsDialogDropButton.setHideActionText(true);
+        animationControlsDialogDropButton.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        animationControlsDialogDropButton.setMaximumSize(new java.awt.Dimension(37, 37));
+        animationControlsDialogDropButton.setMinimumSize(new java.awt.Dimension(37, 37));
+        animationControlsDialogDropButton.setName("animationControlsDialogDropButton"); // NOI18N
+        animationControlsDialogDropButton.setPreferredSize(new java.awt.Dimension(37, 37));
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel1.setName("jLabel1"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(animationControlsToolbar, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(animationControlsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(animationControlsToolbar, javax.swing.GroupLayout.DEFAULT_SIZE, 793, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chargePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(animationControlsDialogDropButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(animationControlsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(360, 360, 360)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(compteChargeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(animationControlsDialogDropButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(animationControlsToolbar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(animationControlsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(chargePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(animationControlsToolbar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(compteChargeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(animationControlsPanel, 0, 95, Short.MAX_VALUE)))
         );
 
-        chargePanel.getAccessibleContext().setAccessibleName(resourceMap.getString("chargePanel.AccessibleContext.accessibleName")); // NOI18N
+        jLabel1.getAccessibleContext().setAccessibleName(resourceMap.getString("jLabel1.AccessibleContext.accessibleName")); // NOI18N
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -666,11 +666,12 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
     private javax.swing.JSpinner chargeSpinner;
     private javax.swing.ButtonGroup chargebuttonGroup;
     private javax.swing.JCheckBox colorsCheckBox;
+    private javax.swing.JLabel compteChargeLabel;
     private javax.swing.JLabel dimLabel;
     private javax.swing.JCheckBox erosionCheckbox;
     private javax.swing.JCheckBox exaggerationCheckBox;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lightLabel;
+    private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToggleButton playButton;
     private javax.swing.JButton resetButton;
     private javax.swing.JToolBar.Separator sep100;
