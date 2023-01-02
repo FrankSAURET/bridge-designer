@@ -2,7 +2,7 @@
 *.log
 *.class
 
-# Skip temp files
+# Tests perso
 /Modif annulés
 
 # Mac 
@@ -15,9 +15,18 @@
 /eg/
 /src/bridgedesigner/help/
 /release/
+/Advanced installer/Bridge Designer 2023-cache/
 
 # Class files for DetectJVM.java
 /nsis/classes/
+
+# jre
+/jre7/
+
+#fichiers locaux
+BD2023.lnk
+Demande.docx
+temp.*
 
 # Omit the RC4 key
 #/src/bridgedesigner/RC4Key.java
