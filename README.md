@@ -27,6 +27,7 @@ L'objectif de ces modifications (outre le français) est de produire une simulat
 ## Comment compiler  
 * Récupérer le projet sur github.
 * Installer JDK 1.7 (jdk-7u80-windows-x64).
+* Copier le jre7 dans le dossier racine du projet pour l'installation ou modifier le fichier nsis pour qu'il le trouve.
 * Installer NetBean 7.0.
 * Ouvrir Netbean et de lui, le projet WPBD.
 * Restaurer le lien vers JDK 1.7 :
@@ -34,7 +35,7 @@ L'objectif de ces modifications (outre le français) est de produire une simulat
     * Dans la fenêtre à gauche choisir libraries,
     * Choisir le jdk 1.7 que vous venez d’installer,
 * Restaurer les liens vers les librairies (Tools > Libraries).
-* Copier le jre7 dans le dossier racine du projet pour l'installation ou modifier le fichier nsis pour qu'il le trouve.
+
 
     Les librairies NetBeans doivent être ok. Le dossier **lib** est celui sous la racine du projet. 
     
