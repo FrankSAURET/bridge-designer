@@ -70,8 +70,10 @@ public class Inventory {
         new Material(0, "Acier au carbone", "CS",  200000000, 250000, 7850, new double[]{1.44, 1.55, 1.44}),
         new Material(1, "Acier rapide", "HSS", 200000000, 345000, 7850, new double[]{1.55, 1.76, 1.55}),
         new Material(2, "Acier trempé", "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70, 6.00}),
-        new Material(3, "Carton 1mm", "Car", 15000000, 200000, 618, new double[]{21.6, 21.6,21.6}),
-        new Material(4, "MDF 3mm", "MDF", 2500000, 650, 740, new double[]{3.30, 3.30,3.30}),
+        // Valeurs de teste (E et Fi) empiriquement correspondant aux maquettes
+        // E valeur élevé et Fi par dichotomie
+        new Material(3, "Carton 1mm", "Car", 60000000, 150000, 618, new double[]{21.6, 21.6,21.6}),
+        new Material(4, "MDF 3mm", "MDF", 25000000, 200000, 740, new double[]{3.30, 3.30,3.30}),
     };
 
     /**

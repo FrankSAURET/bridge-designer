@@ -32,35 +32,40 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <Component id="animationControlsToolbar" pref="793" max="32767" attributes="3"/>
+          <Group type="102" alignment="0" attributes="1">
+              <Component id="animationControlsPanel" min="-2" pref="290" max="-2" attributes="3"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="164" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Component id="compteChargeLabel1" min="-2" pref="143" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="compteChargeLabel" min="-2" pref="175" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="animationControlsToolbar" min="-2" pref="757" max="-2" attributes="3"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="animationControlsDialogDropButton" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <Component id="animationControlsPanel" min="-2" pref="174" max="-2" attributes="3"/>
-              <EmptySpace min="-2" pref="360" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" pref="132" max="-2" attributes="1"/>
-                  <Component id="compteChargeLabel" pref="292" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="animationControlsDialogDropButton" min="-2" max="-2" attributes="0"/>
           <Group type="102" attributes="0">
-              <Component id="animationControlsToolbar" min="-2" pref="49" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="animationControlsToolbar" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="animationControlsDialogDropButton" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="compteChargeLabel" min="-2" max="-2" attributes="1"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="compteChargeLabel1" alignment="3" min="-2" pref="37" max="-2" attributes="1"/>
+                          <Component id="compteChargeLabel" alignment="3" pref="46" max="32767" attributes="1"/>
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="animationControlsPanel" min="0" pref="95" max="32767" attributes="1"/>
+                  <Component id="animationControlsPanel" pref="57" max="32767" attributes="1"/>
               </Group>
           </Group>
       </Group>
@@ -183,6 +188,9 @@
             <Property name="toolTipText" type="java.lang.String" resourceKey="brightnessSlider.toolTipText"/>
             <Property name="value" type="int" value="100"/>
             <Property name="name" type="java.lang.String" value="brightnessSlider" noResource="true"/>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[150, 26]"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="brightnessSliderStateChanged"/>
@@ -214,18 +222,17 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="chargeFreeRadioButton" alignment="0" min="-2" pref="129" max="-2" attributes="2"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="21" pref="21" max="21" attributes="0"/>
                               <Component id="chargeSpinner" min="-2" pref="90" max="-2" attributes="2"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="chargeHeavyRadioButton" min="-2" max="-2" attributes="2"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="chargeFreeRadioButton" min="-2" pref="129" max="-2" attributes="2"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="chargeLightRadioButton" min="-2" max="-2" attributes="2"/>
-                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="chargeHeavyRadioButton" min="-2" max="-2" attributes="2"/>
+                          <Component id="chargeLightRadioButton" min="-2" max="-2" attributes="2"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -243,7 +250,7 @@
                           <Component id="chargeSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="chargeHeavyRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -273,6 +280,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="chargebuttonGroup"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" resourceKey="chargeFreeRadioButton.foreground"/>
                 <Property name="text" type="java.lang.String" resourceKey="chargeFreeRadioButton.text"/>
                 <Property name="actionCommand" type="java.lang.String" resourceKey="chargeFreeRadioButton.actionCommand"/>
                 <Property name="name" type="java.lang.String" value="chargeFreeRadioButton" noResource="true"/>
@@ -287,6 +295,8 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="chargebuttonGroup"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" resourceKey="chargeLightRadioButton.foreground"/>
+                <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" resourceKey="chargeHeavyRadioButton.text"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
                 <Property name="name" type="java.lang.String" value="chargeHeavyRadioButton" noResource="true"/>
@@ -300,6 +310,7 @@
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="chargebuttonGroup"/>
                 </Property>
+                <Property name="foreground" type="java.awt.Color" resourceKey="chargeLightRadioButton.foreground"/>
                 <Property name="text" type="java.lang.String" resourceKey="chargeLightRadioButton.text"/>
                 <Property name="alignmentX" type="float" value="0.5"/>
                 <Property name="name" type="java.lang.String" value="chargeLightRadioButton" noResource="true"/>
@@ -321,7 +332,7 @@
         <Property name="alignmentX" type="float" value="10.0"/>
         <Property name="name" type="java.lang.String" value="animationControlsPanel" noResource="true"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[151, 120]"/>
+          <Dimension value="[151, 80]"/>
         </Property>
       </Properties>
 
@@ -333,20 +344,23 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="shadowsCheckBox" alignment="0" max="32767" attributes="1"/>
                       <Component id="skyCheckBox" alignment="0" max="32767" attributes="1"/>
-                      <Component id="terrainCheckBox" alignment="0" max="32767" attributes="1"/>
-                      <Component id="erosionCheckbox" alignment="0" min="-2" max="-2" attributes="1"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="exaggerationCheckBox" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="abutmentsCheckBox" pref="68" max="32767" attributes="1"/>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="truckCheckBox" alignment="0" pref="97" max="32767" attributes="1"/>
-                      <Component id="colorsCheckBox" min="-2" max="-2" attributes="0"/>
+                      <Component id="abutmentsCheckBox" alignment="0" min="-2" pref="65" max="-2" attributes="1"/>
+                      <Component id="truckCheckBox" alignment="0" min="-2" max="-2" attributes="1"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="erosionCheckbox" alignment="0" min="-2" max="-2" attributes="1"/>
+                      <Component id="terrainCheckBox" alignment="0" pref="61" max="32767" attributes="1"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="colorsCheckBox" min="-2" max="-2" attributes="0"/>
+                      <Component id="exaggerationCheckBox" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -356,23 +370,17 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="shadowsCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="abutmentsCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="skyCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="truckCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="terrainCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="colorsCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="skyCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="truckCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="erosionCheckbox" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="exaggerationCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="3" max="32767" attributes="0"/>
+                  <EmptySpace pref="11" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -461,9 +469,17 @@
     </Container>
     <Component class="javax.swing.JLabel" name="compteChargeLabel">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" resourceKey="compteChargeLabel.foreground"/>
         <Property name="text" type="java.lang.String" resourceKey="compteChargeLabel.text"/>
         <Property name="verticalAlignment" type="int" value="1"/>
         <Property name="name" type="java.lang.String" value="compteChargeLabel" noResource="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="compteChargeLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" resourceKey="compteChargeLabel1.text"/>
+        <Property name="verticalAlignment" type="int" value="1"/>
+        <Property name="name" type="java.lang.String" value="compteChargeLabel1" noResource="true"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="animationControlsDialogDropButton">
@@ -489,14 +505,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="2"/>
+        <Property name="foreground" type="java.awt.Color" resourceKey="jLabel1.foreground"/>
+        <Property name="icon" type="javax.swing.Icon" resourceKey="jLabel1.icon"/>
         <Property name="text" type="java.lang.String" resourceKey="jLabel1.text"/>
-        <Property name="verticalAlignment" type="int" value="1"/>
         <Property name="name" type="java.lang.String" value="jLabel1" noResource="true"/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" resourceKey="jLabel1.AccessibleContext.accessibleName"/>
-      </AccessibilityProperties>
     </Component>
   </SubComponents>
 </Form>

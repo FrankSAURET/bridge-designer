@@ -353,8 +353,8 @@ public class Joint implements HotEditableItem<BridgePaintContext> {
      * @param pt displaced joint location
      */
     public void paint(GL2 gl, Affine.Vector disp, float halfWidth, Gusset gusset, Affine.Point pt) {
-        gl.glPushMatrix();
         
+        gl.glPushMatrix();
         // Find displaced joint location available to caller.
         pt.x = ptWorld.x + disp.x;
         pt.y = ptWorld.y + disp.y;

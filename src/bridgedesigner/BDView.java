@@ -28,6 +28,7 @@ import java.awt.Window;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ItemEvent;
 import java.awt.event.KeyEvent;
+import java.awt.Font;
 import java.io.File;
 import javax.swing.event.ChangeEvent;
 import org.jdesktop.application.Action;
@@ -307,6 +308,8 @@ public final class BDView extends FrameView
         fileChooserSize.width = Math.min(maxSize.width, fileChooserSize.width + accessorySize.width);
         fileChooser.setPreferredSize(fileChooserSize);
         fileChooser.addChoosableFileFilter(new BDCFileFilter());
+        FileFilter[] fileFilter = fileChooser.getChoosableFileFilters();
+        fileChooser.setFileFilter(fileFilter[1]);
         restoreFileChooserState();
         
         // Build stock selector and connect it to the drafting panel.  
@@ -862,6 +865,9 @@ public final class BDView extends FrameView
         // Virtually press the edit joints button.
         setSelected(editJointsMenuItem, true);
         editJoints();
+        // Initialise la simulation HQ
+        setStandardGraphics();
+        
     }
 
     private void recordRecentFileUse(File file) {
@@ -3554,7 +3560,7 @@ private void keyCodeCancelButtonActionPerformed(java.awt.event.ActionEvent evt) 
         String Non=BDApp.getApplication().getIconResource("animateNO.png").toString();
         
         if (CtIcon.equalsIgnoreCase(Non)){
-        toggleAnimationMenuItem.setIcon(BDApp.getApplication().getIconResource("animate.png"));
+            toggleAnimationMenuItem.setIcon(BDApp.getApplication().getIconResource("animate.png"));
        }
         else{
             toggleAnimationMenuItem.setIcon(BDApp.getApplication().getIconResource("animateNO.png"));

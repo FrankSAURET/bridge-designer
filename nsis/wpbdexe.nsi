@@ -13,7 +13,7 @@
 !include "FileAssociation.nsh"
 !include "FileFunc.nsh"
 
-!define JRE_VERSION "1.6"
+!define JRE_VERSION "1.7"
 ; Last tested Java Runtime download.
 !define JRE_URL "http://javadl.sun.com/webapps/download/AutoDL?BundleId=62321"
 !include "JREDyna.nsh"
@@ -70,7 +70,7 @@ before proceeding with this installation.$\r$\n$\r$\nClick Next to continue."
 !insertmacro CUSTOM_PAGE_JREINFO
 !insertmacro MUI_PAGE_INSTFILES
 ; Finish page settings.
-!define MUI_FINISHPAGE_TITLE "${BD} installation complete"
+!define MUI_FINISHPAGE_TITLE "L'installation de ${BD} est terminée"
 !define MUI_FINISHPAGE_TEXT "Installation is complete! Thanks for choosing to use our \
 software. Check http://bridgecontest.org for information and updates \
 about the Bridge Design Contest."

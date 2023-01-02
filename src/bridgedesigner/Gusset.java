@@ -130,7 +130,7 @@ public class Gusset {
         public Affine.Point p0, p1, p2;
         public Affine.Vector u, uPerp;
         public double halfWidth;
-        
+        public double halfHeight;
         /**
          * Construct geometry information for one member.
          * 
@@ -138,7 +138,8 @@ public class Gusset {
          */
         public MemberGeometry(Member member) {
             Joint otherJoint = member.otherJoint(joint);
-            halfWidth =  0.5 * member.getWidthInMeters() + gussetMaterialThickness;
+            halfWidth =  0.5 * member.getWidthInMeters() + gussetMaterialThickness;// Modif avec le height réel frank SAURET
+            halfHeight =  0.5 * member.getHeightInMeters() + gussetMaterialThickness;// Modif avec le height réel frank SAURET
             Affine.Vector v = otherJoint.getPointWorld().minus(joint.getPointWorld());
             u = v.unit(halfWidth);
             uPerp = u.perp();
@@ -169,7 +170,7 @@ public class Gusset {
             
             // Update the half-depth of the gusset to accomodate this member.
             if (mgLeft.halfWidth > halfDepth) {
-                halfDepth = mgLeft.halfWidth;
+                halfDepth = mgLeft.halfHeight;//Frank SAURET
             }
             
             // Add the joint box.

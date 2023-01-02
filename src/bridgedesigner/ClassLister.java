@@ -79,7 +79,6 @@ public class ClassLister {
             }
             while (iter.hasNext()) {
                 String name = iter.next().toString();
-                // Voir dollars ici Frank SAURET
                 if (name.indexOf('$') >= 0) {
                     continue;
                 }

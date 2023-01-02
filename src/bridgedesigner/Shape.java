@@ -139,6 +139,14 @@ public class Shape {
         return width;
     }
     
+        /**
+     * Return the height of the section millimeters.
+     * 
+     * @return height of the section in millimeters Frank SAURET
+     */
+    public double getHeight() {
+        return height;
+    }
 
     /**
      * Return a nominal width for the shape for text display (not calculation) purposes.

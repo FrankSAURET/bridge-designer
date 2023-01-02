@@ -24,6 +24,10 @@ public class BridgeDraftingView extends BridgeView {
      */
     protected final Color earthColor = new Color(128, 64, 64);
     /**
+     * Couleur du fond de la feuille de dessin Frank SAURET Bleu ciel pour voir tous les matériaux
+     */
+    protected final Color sheetColor = new Color(229, 245, 255);
+    /**
      * Color used to draw concrete objects: abutments, pier, deck.
      */
     protected final Color concreteColor = new Color(128, 128, 0);
@@ -119,7 +123,7 @@ public class BridgeDraftingView extends BridgeView {
     public void paint(Graphics2D g, ViewportTransform viewportTransform) {
         final int w = viewportTransform.getAbsWidthViewport();
         final int h = viewportTransform.getAbsHeightViewport();
-        g.setColor(Color.WHITE);
+        g.setColor(sheetColor);//Couleur du fond de la feuille de dessin
         g.fillRect(0, 0, w, h);
         if (conditions != null) {
             paintDeck(g, viewportTransform);

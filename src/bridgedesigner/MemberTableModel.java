@@ -128,7 +128,8 @@ class MemberTableModel extends AbstractTableModel {
                 return member.getShape().getSection().getShortName();
             case 3:
                 // size
-                return member.getShape().getNominalWidth();
+                String formatShape=member.getShape().getNominalWidth()+" x "+member.getShape().getNominalHeight();
+                return formatShape;
             case 4:
                 // getLength
                 return member.getLength();

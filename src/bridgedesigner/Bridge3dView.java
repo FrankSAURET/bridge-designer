@@ -34,6 +34,7 @@ public class Bridge3dView extends BridgeView {
     public static final Color gray50 = Color.GRAY;
     public static final Color gray75 = Color.LIGHT_GRAY;
     public static final Color gray99 = Color.WHITE;
+    public static final Color bois = new Color(224,191, 42);
     private final int [] vpXmember = new int[4];
     private final int [] vpYmember = new int[4];
     private static final float deckHalfWidth = (float)FlyThruAnimation.deckHalfWidth;

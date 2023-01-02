@@ -543,8 +543,8 @@ public class Member implements HotEditableItem<BridgePaintContext> {
         colors[0] = getColor(128, 128, 128, dBright, dBlue);//Acier
         colors[1] = getColor(64, 64, 64, dBright, dBlue);//Acier
         colors[2] = getColor(192, 192, 192, dBright, dBlue);//Acier
-        colors[3] = getColor(255,222,35, dBright, dBlue);
-        colors[4] = getColor(175,154,75, dBright, dBlue);
+        colors[3] = getColor(255,250,247, dBright, dBlue);// Carton
+        colors[4] = getColor(212,187,157, dBright, dBlue);// MDF
         return colors;
     }
     
@@ -560,8 +560,8 @@ public class Member implements HotEditableItem<BridgePaintContext> {
         colors[0] = getColor(192, 192, 192, dBright, dBlue);//Acier
         colors[1] = getColor(128, 128, 128, dBright, dBlue);//Acier
         colors[2] = getColor(224, 224, 224, dBright, dBlue);//Acier
-        colors[3] = getColor(255,245,191, dBright, dBlue);
-        colors[4] = getColor(249,219,107, dBright, dBlue);         
+        colors[3] = getColor(255,255,255, dBright, dBlue);// Carton
+        colors[4] = getColor(211,205,198, dBright, dBlue); // MDF        
         return colors;
     }
 
@@ -798,6 +798,14 @@ public class Member implements HotEditableItem<BridgePaintContext> {
     public float getWidthInMeters() {
         return (float)shape.getWidth() * 0.001f; // millimeter correction
     }
+        /**
+     * Get the 3D drawing height of this member in meters. 
+     * 
+     * @return member height in meters Frank SAURET
+     */
+    public float getHeightInMeters() {
+        return (float)shape.getHeight() * 0.001f; // millimeter correction
+    }
     
     /**
      * Prototypical cube to stretch and rotate to form 3D member.
@@ -835,13 +843,14 @@ public class Member implements HotEditableItem<BridgePaintContext> {
      */
     private void paint(GL2 gl, float xa, float ya, float xb, float yb, float z) {
         final float width = getWidthInMeters();
+        final float height = getHeightInMeters();// Récupère la largeur de la membrure Frank SAURET
         final float dx = xb - xa;
         final float dy = yb - ya;
         final float len = (float)Math.sqrt(dx * dx + dy * dy);
         gl.glPushMatrix();
         gl.glTranslatef(xa, ya, z);
         gl.glMultMatrixf(Utility.rotateAboutZ(dx / len, dy / len), 0);
-        gl.glScaled(len, width, width);
+        gl.glScaled(len, width, height);//Mette height ici Frank SAURET
         gl.glBegin(GL2.GL_QUADS);
         for (int i = 0; i < cubeNormals.length; i += 3) {
             gl.glNormal3fv(cubeNormals, i);
@@ -920,14 +929,17 @@ public class Member implements HotEditableItem<BridgePaintContext> {
      */
     private void paintParabola(GL2 gl, float xa, float ya, float xb, float yb, float z, float arcLen) {
         final float wHalf = 0.5f * getWidthInMeters() + 0.005f;
+        final float hHalf=0.5f * getHeightInMeters() + 0.005f;
         final float dx = xb - xa;
         final float dy = yb - ya;
         final float len = (float)Math.sqrt(dx * dx + dy * dy);
+        float sensDeformation=1.0f;
+        
         makeParabola(pts, normals, len, getParabolaHeight(len, arcLen));
         for (int i = 0; i < pts.length; i += 2) {
             float px = pts[i + 0];
             float py = pts[i + 1];
-            float nx = normals[i + 0] * wHalf;
+            float nx = normals[i + 0] * hHalf;
             float ny = normals[i + 1] * wHalf;
             topChord[i + 0] = px + nx;
             topChord[i + 1] = py + ny;
@@ -938,38 +950,43 @@ public class Member implements HotEditableItem<BridgePaintContext> {
         gl.glTranslatef(xa, ya, z);
         gl.glMultMatrixf(Utility.rotateAboutZ(dx / len, dy / len), 0);
         
+        // Treillis aval
+        if (z<0){// Treillis amont
+            sensDeformation=-1.0f;
+        }
+        // W1
         gl.glBegin(GL2.GL_QUAD_STRIP);
         gl.glNormal3f(0f, 0f, 1f);
         for (int i = 0; i < pts.length; i += 2) {
-            gl.glVertex3f(topChord[i + 0],    topChord[i + 1],    wHalf);
-            gl.glVertex3f(bottomChord[i + 0], bottomChord[i + 1], wHalf);
+            gl.glVertex3f(topChord[i + 0],    hHalf,    sensDeformation*topChord[i + 1]);
+            gl.glVertex3f(bottomChord[i + 0], wHalf, sensDeformation*bottomChord[i + 1]);
         }
         gl.glEnd();
-        
+        //W2
         gl.glBegin(GL2.GL_QUAD_STRIP);
         gl.glNormal3f(0f, 0f, -1f);
         for (int i = 0; i < pts.length; i += 2) {
-            gl.glVertex3f(bottomChord[i + 0], bottomChord[i + 1], -wHalf);
-            gl.glVertex3f(topChord[i + 0],    topChord[i + 1],    -wHalf);
+            gl.glVertex3f(bottomChord[i + 0], -hHalf, sensDeformation*bottomChord[i + 1]);
+            gl.glVertex3f(topChord[i + 0],    -wHalf,    sensDeformation*topChord[i + 1]);
         }
         gl.glEnd();
-        
+        //H1
         gl.glBegin(GL2.GL_QUAD_STRIP);
         for (int i = 0; i < pts.length; i += 2) {
             gl.glNormal3f(normals[i + 0], normals[i + 1], 0f);
-            gl.glVertex3f(topChord[i + 0], topChord[i + 1], -wHalf);
-            gl.glVertex3f(topChord[i + 0], topChord[i + 1],  wHalf);
+            gl.glVertex3f(topChord[i + 0], -hHalf, sensDeformation*topChord[i + 1]);
+            gl.glVertex3f(topChord[i + 0],  wHalf, sensDeformation*topChord[i + 1]);
         }
         gl.glEnd();
-        
+        //H2
         gl.glBegin(GL2.GL_QUAD_STRIP);
         for (int i = 0; i < pts.length; i += 2) {
             gl.glNormal3f(-normals[i + 0], -normals[i + 1], 0f);
-            gl.glVertex3f(bottomChord[i + 0], bottomChord[i + 1],  wHalf);
-            gl.glVertex3f(bottomChord[i + 0], bottomChord[i + 1], -wHalf);
+            gl.glVertex3f(bottomChord[i + 0],  hHalf, sensDeformation*bottomChord[i + 1]);
+            gl.glVertex3f(bottomChord[i + 0], -wHalf, sensDeformation*bottomChord[i + 1]);
         }
         gl.glEnd();
- 
+       
         gl.glPopMatrix();
     }
     
@@ -1048,6 +1065,7 @@ public class Member implements HotEditableItem<BridgePaintContext> {
      */
     private void paintBroken(GL2 gl, float xa, float ya, float xb, float yb, float z, float baseLength) {
         final float wHalf = 0.5f * getWidthInMeters();
+        final float hHalf = 0.5f * getHeightInMeters();
         float dx = xb - xa;
         float dy = yb - ya;
         final float len = (float)Math.sqrt(dx * dx + dy * dy);
@@ -1073,13 +1091,13 @@ public class Member implements HotEditableItem<BridgePaintContext> {
         gl.glPushMatrix();
         gl.glTranslatef(xa, ya, z);
         gl.glMultMatrixf(Utility.rotateAboutZ(dx, dy), 0);
-        paintBrokenHalf(gl, wHalf);
+        paintBrokenHalf(gl, hHalf);
         gl.glPopMatrix();
 
         gl.glPushMatrix();
         gl.glTranslatef(xb, yb, z);
         gl.glMultMatrixf(Utility.rotateAboutZ(-dx, -dy), 0);
-        paintBrokenHalf(gl, wHalf);
+        paintBrokenHalf(gl, hHalf);
         gl.glPopMatrix();
     }
     
@@ -1107,20 +1125,42 @@ public class Member implements HotEditableItem<BridgePaintContext> {
         float ybRaw = (float) jointB.getPointWorld().y;
         float yb = (float) (ybRaw + bDisp.y);
         float z = (float) zOffset;
-        if (showColors) {
+        if ((showColors) && (material.getIndex()>2)) {
+            //Matériaux non gris
             if (forceRatio < 0.0) {
+                // Rougification si compression Frank SAURET
                 final float f = -(float)forceRatio;
-                color[0] = 0.5f * (1.0f + f);
-                color[1] = color[2] = 0.5f * (1.0f - f);
+                color[0] = (float)normalColors[material.getIndex()].getRed()/255 * (1.0f + 2*f);
+                color[1]= (float)normalColors[material.getIndex()].getGreen()/255* (1.0f - 2*f);
+                color[2]= (float)normalColors[material.getIndex()].getBlue()/255* (1.0f - 2*f);
+                
             }
             else {
                 final float f = (float)forceRatio;
-                color[0] = color[1] = 0.5f * (1.0f - f);
-                color[2] = 0.5f * (1.0f + f);
+                // Bleuification si traction Frank SAURET
+                color[0]= (float)normalColors[material.getIndex()].getRed()/255* (1.0f - 2*f);
+                color[1]= (float)normalColors[material.getIndex()].getGreen()/255* (1.0f - 2*f);
+                color[2] = (float)normalColors[material.getIndex()].getBlue()/255 * (1.0f + 2*f);
             }
         }
+        else if ((showColors) && (material.getIndex()<3)){
+            //Matériaux gris
+           if (forceRatio < 0.0) {
+                final float f = -(float)forceRatio;
+                color[0] = 0.5f * (1.0f + 2*f);
+                color[1] = color[2] = 0.5f * (1.0f - 2*f);
+            }
+            else {
+                final float f = (float)forceRatio;
+                color[0] = color[1] = 0.5f * (1.0f - 2*f);
+                color[2] = 0.5f * (1.0f + 2*f);
+            } 
+        }
         else {
-            color[0] = color[1] = color[2] = .5f;
+            // Couleur du matériau si les efforts ne sont pas mis en évidence Frank SAURET
+            color[0]= (float)normalColors[material.getIndex()].getRed()/255;
+            color[1]= (float)normalColors[material.getIndex()].getGreen()/255;
+            color[2]= (float)normalColors[material.getIndex()].getBlue()/255;
         }
         gl.glColor3fv(color, 0);
         if (!Analysis.isStatusBaseLength(status)) {

@@ -84,7 +84,8 @@
         <!-- Build target properties. -->
         <property file="build.number" />
         <property file="nbproject/config.properties" />
-        <property name="windows.installer.name" value="setupbdv${year}j.exe" />
+        <property name="windows.installer.name" value="BridgeDesignerSetup-20${year}.${build.number}.exe" />
+        <property name="windows.msi.name" value="BridgeDesignerSetup-20${year}.${build.number}.msi" />
         <property name="mac.installer.name" value="Bridge Designer 20${year} Installation Image" />
         <echo message="Config ${config} (win: ${windows.installer.name}, mac: ${mac.installer.name})." />
 
@@ -200,7 +201,8 @@
         <delete>
             <fileset dir="dist" includes="bd*.exe" />
             <fileset dir="release" includes="setupbd*.exe" />
-        </delete>
+            <fileset dir="release" includes="BridgeDesignerSetup*.exe" />
+       </delete>
         <!-- Run Launch4j on the custom spec we just created to build the executable. -->
         <taskdef name="launch4j" classname="net.sf.launch4j.ant.Launch4jTask"
             classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
@@ -213,7 +215,8 @@
             <arg value="/DYEAR=${year}" />
             <arg value="nsis/wpbdexe${jre.modifier}.nsi" />
         </exec>
-       
+
+      
     </target>
 
     <target name="compile-mac-bundle" depends="set-config-props">

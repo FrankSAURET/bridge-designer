@@ -622,6 +622,22 @@ public class DesignConditions implements Cloneable {
      *   shape of the river valley.  Thus it is possible to have a deck level above the normal roadway level.  Extreme cases of this (which I have
      *   never bothered to make illegal) push the deck completely off the screen.
      */
+    /* 
+      * Caractère 1 - Scénario du cas de chargement (1 = cas A, 2 = cas b, 3 = cas C, 4 = cas D); L'entrée de tout caractère autre que 1, 2, 3 ou 4 est illégale. 
+      * Caractères 2,3 - Longueur de portée, exprimée comme le nombre de panneaux de 4 mètres; Tout entier de 1 à 20 est autorisé 
+      * Caractères 4,5 - hauteur supérieure de l'espace de conception, exprimée en nombre de mètres sur le niveau du pont; Tout entier de 0 à 40 est autorisé 
+      * Caractères 6,7 - hauteur inférieure de l'espace de conception, exprimée en nombre de mètres sous le niveau du pont; Tout entier de 0 à 32 est autorisé 
+      * Caractère 8 - Arc & Anchorage Status (0 = pas d'arc, pas d'ancrage; 1 = Arch, pas d'ancrage; 2 = pas d'arc, anchorage unique à gauche; 3 = pas d'arc, 
+      * Deux ancrages). La base d'arc est toujours au fond de l'espace de dessin. 
+      * Caractère 9 - Emplacement de la jetée intermédiaire, exprimée comme le joint au niveau du pont numéroté (c'est-à-dire 1 = extrémité gauche du pont; 2 = 4 mètres de l'extrémité gauche; 3 = 8 mètres de l'extrémité gauche ...) 
+      * Caractère 10 - HI INTERNIER PIER (0 = pas une jetée haute, élévation du haut de la jetée est le bas de l'espace de dessin; 1 = Haut Pier, l'altitude est au niveau du pont) 
+      * Quelques nuances: 
+      * - Il est possible d'avoir des supports d'arc et une jetée intermédiaire, même s'il n'y a pas de scénario standard qui inclut les deux. 
+      * - Il est possible de mettre une jetée intermédiaire à l'extrémité gauche du pont (même si cela n'a pas vraiment de sens) 
+      * - Pour une arche, la hauteur du pont est entraînée par la longueur de portée spécifiée (char 2-3), la hauteur inférieure de l'espace de conception (char 6,7) et le 
+      * Forme de la vallée de la rivière. Ainsi, il est possible d'avoir un niveau de pont au-dessus du niveau de route normal. Cas extrêmes de cela (que j'ai 
+      * Jamais pris la peine de rendre illégal) poussez complètement le pont de l'écran. 
+    */
     private static int getCodeError(byte [] code) {
         if (code == null) {
             return -1;

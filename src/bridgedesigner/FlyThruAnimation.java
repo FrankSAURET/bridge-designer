@@ -336,7 +336,7 @@ public class FlyThruAnimation extends Animation {
         /**
          * Color of the deck beams.
          */
-        private final float[] beamMaterial = {0.3f, .2f, 0.1f, 1.0f};
+        private final float[] beamMaterial = {0.77f, 0.64f, 0.45f, 1.0f};//Marron carton ondulé plus visible et prépare le carton ondulé Frank SAURET
         /**
          * Color of the fog.
          */

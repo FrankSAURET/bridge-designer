@@ -866,10 +866,10 @@ public class BridgeModel {
      */
     public void read(File f) throws IOException {
         byte [] bytes = Utility.getBytesFromFile(f);
-        RC4 rc4 = new RC4(); //SAURET Ces 3 lignes décryptes le fichier
-        rc4.setKey(RC4Key.getScrambleKey());//SAURET à decommenter
-        rc4.endecrypt(bytes);//SAURET à decommenter
-        // System.out.println(new String(bytes));
+        //SAURET Ces 3 lignes décryptes le fichier
+        RC4 rc4 = new RC4(); 
+        rc4.setKey(RC4Key.getScrambleKey());
+        rc4.endecrypt(bytes);
         parseBytes(bytes);
     }
 

@@ -260,28 +260,27 @@ public class Analysis {
         * Si camion est répartie 20% à l'avant et 80% à l'arrière
         */
         ComponentStateLocalStorable s = ComponentStateLocalStorable.load(animationDialogStorage);
-        int charge=s.getSpinnerValues()[0];
-        double frontAxleLoad = charge/2;
+        // Valeur par défaut camion de 480kN
+        int charge=480;
+        double frontAxleLoad = charge/5;
         double rearAxleLoad = charge-frontAxleLoad;
         
-        if (s.getRadioButtonStates()[1]){
-            charge=480;
-            frontAxleLoad = charge/5;
+        if (s!=null){
+            charge=s.getSpinnerValues()[0];
+            frontAxleLoad = charge/2;
             rearAxleLoad = charge-frontAxleLoad;
+
+            if (s.getRadioButtonStates()[1]){
+                charge=480;
+                frontAxleLoad = charge/5;
+                rearAxleLoad = charge-frontAxleLoad;
+            }
+            if (s.getRadioButtonStates()[2]){
+                charge=225;
+                frontAxleLoad = charge/5;
+                rearAxleLoad = charge-frontAxleLoad;
+            }
         }
-        if (s.getRadioButtonStates()[2]){
-            charge=225;
-            frontAxleLoad = charge/5;
-            rearAxleLoad = charge-frontAxleLoad;
-        }
-//        double frontAxleLoad = 44;//44
-//        double rearAxleLoad = 181;//181
-//        if (conditions.getLoadType() != DesignConditions.STANDARD_TRUCK) {
-//            // Heavy truck. Modifié 1/5 devant le reste derrière.
-//            frontAxleLoad = 96;//124-96
-//            rearAxleLoad = 384;//124-384
-//        }
-        
         for (int ilc = 1; ilc < nLoadInstances; ilc++) {
             int iFront = 2 * ilc + 1;
             int iRear = iFront - 2;

@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="20.2" version="20.2" Modules="simple" RootPath="." Language="en" Id="{6F02ABBB-5C58-4084-BF39-65D09D6E2652}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_CURRENT_YEAR" Value="2023" ValueLocId="-"/>
+    <ROW Property="AI_PACKAGING_TOOL" Value="Advanced Installer 20.2 build 2c3f1cf9" ValueLocId="-"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_ADMIN_USER"/>
+    <ROW Property="ALLUSERS" Value="1" MultiBuildValue="DefaultBuild:2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPHELPLINK" Value="https://github.com/FrankSAURET/bridge-designer"/>
+    <ROW Property="ARPPRODUCTICON" Value="appiconnew.exe" Type="8"/>
+    <ROW Property="ARPURLINFOABOUT" Value="https://github.com/FrankSAURET/bridge-designer"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="https://github.com/FrankSAURET/bridge-designer"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="IAgree" Value="No" Type="4"/>
+    <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="Manufacturer" Value="Electropol"/>
+    <ROW Property="ProductCode" Value="1033:{C62690E9-ECF5-452E-8EAE-2427EB5E68B7} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Bridge Designer"/>
+    <ROW Property="ProductVersion" Value="2023.0.1"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{679A0051-BAFC-468F-A48E-1246A3F6B85F}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Africa_Dir" Directory_Parent="zi_Dir" DefaultDir="Africa"/>
+    <ROW Directory="America_Dir" Directory_Parent="zi_Dir" DefaultDir="America"/>
+    <ROW Directory="Antarctica_Dir" Directory_Parent="zi_Dir" DefaultDir="ANTARC~1|Antarctica"/>
+    <ROW Directory="Argentina_Dir" Directory_Parent="America_Dir" DefaultDir="ARGENT~1|Argentina"/>
+    <ROW Directory="Asia_Dir" Directory_Parent="zi_Dir" DefaultDir="Asia"/>
+    <ROW Directory="Atlantic_Dir" Directory_Parent="zi_Dir" DefaultDir="Atlantic"/>
+    <ROW Directory="Australia_Dir" Directory_Parent="zi_Dir" DefaultDir="AUSTRA~1|Australia"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="Etc_Dir" Directory_Parent="zi_Dir" DefaultDir="Etc"/>
+    <ROW Directory="Europe_Dir" Directory_Parent="zi_Dir" DefaultDir="Europe"/>
+    <ROW Directory="Indian_Dir" Directory_Parent="zi_Dir" DefaultDir="Indian"/>
+    <ROW Directory="Indiana_Dir" Directory_Parent="America_Dir" DefaultDir="Indiana"/>
+    <ROW Directory="Kentucky_Dir" Directory_Parent="America_Dir" DefaultDir="Kentucky"/>
+    <ROW Directory="North_Dakota_Dir" Directory_Parent="America_Dir" DefaultDir="NORTH_~1|North_Dakota"/>
+    <ROW Directory="Pacific_Dir" Directory_Parent="zi_Dir" DefaultDir="Pacific"/>
+    <ROW Directory="StartMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="STARTM~1|StartMenuFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SystemV_Dir" Directory_Parent="zi_Dir" DefaultDir="SystemV"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="amd64_Dir" Directory_Parent="lib_1_Dir" DefaultDir="amd64"/>
+    <ROW Directory="bin_Dir" Directory_Parent="jre7_Dir" DefaultDir="bin"/>
+    <ROW Directory="cmm_Dir" Directory_Parent="lib_1_Dir" DefaultDir="cmm"/>
+    <ROW Directory="cursors_Dir" Directory_Parent="images_Dir" DefaultDir="cursors"/>
+    <ROW Directory="deploy_Dir" Directory_Parent="lib_1_Dir" DefaultDir="deploy"/>
+    <ROW Directory="dtplugin_Dir" Directory_Parent="bin_Dir" DefaultDir="dtplugin"/>
+    <ROW Directory="ext_Dir" Directory_Parent="lib_1_Dir" DefaultDir="ext"/>
+    <ROW Directory="fonts_Dir" Directory_Parent="lib_1_Dir" DefaultDir="fonts"/>
+    <ROW Directory="images_Dir" Directory_Parent="lib_1_Dir" DefaultDir="images"/>
+    <ROW Directory="jfr_Dir" Directory_Parent="lib_1_Dir" DefaultDir="jfr"/>
+    <ROW Directory="jre7_Dir" Directory_Parent="APPDIR" DefaultDir="jre7"/>
+    <ROW Directory="lib_1_Dir" Directory_Parent="jre7_Dir" DefaultDir="lib"/>
+    <ROW Directory="lib_Dir" Directory_Parent="APPDIR" DefaultDir="lib"/>
+    <ROW Directory="management_Dir" Directory_Parent="lib_1_Dir" DefaultDir="MANAGE~1|management"/>
+    <ROW Directory="plugin2_Dir" Directory_Parent="bin_Dir" DefaultDir="plugin2"/>
+    <ROW Directory="security_Dir" Directory_Parent="lib_1_Dir" DefaultDir="security"/>
+    <ROW Directory="server_Dir" Directory_Parent="bin_Dir" DefaultDir="server"/>
+    <ROW Directory="zi_Dir" Directory_Parent="lib_1_Dir" DefaultDir="zi"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_INSTALLPERUSER" ComponentId="{30A038A5-BAE8-4E69-A2F0-01BA67CAF5A5}" Directory_="APPDIR" Attributes="4" KeyPath="AI_INSTALLPERUSER" Options="1"/>
+    <ROW Component="APPDIR" ComponentId="{B4F8C7AD-A7C5-49C4-847F-18193E89ECC7}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="AST4" ComponentId="{FADDFCC2-1173-47D7-B96B-5E4807B111AA}" Directory_="SystemV_Dir" Attributes="0" KeyPath="AST4" Type="0"/>
+    <ROW Component="Abidjan" ComponentId="{5EF630CB-E7AF-406C-9541-8F193BB86858}" Directory_="Africa_Dir" Attributes="0" KeyPath="Abidjan" Type="0"/>
+    <ROW Component="AbsoluteLayout.jar" ComponentId="{455169C3-F0C4-42EF-BA00-9C2BF1880D5F}" Directory_="lib_Dir" Attributes="0" KeyPath="AbsoluteLayout.jar" Type="0"/>
+    <ROW Component="Adak" ComponentId="{84752259-74DB-42C7-B0B5-93754A9C58EE}" Directory_="America_Dir" Attributes="0" KeyPath="Adak" Type="0"/>
+    <ROW Component="Adelaide" ComponentId="{56F8CF9B-DD08-4A22-93BE-DDF3B77F0F04}" Directory_="Australia_Dir" Attributes="0" KeyPath="Adelaide" Type="0"/>
+    <ROW Component="Almaty" ComponentId="{EC945D0D-6393-438A-BAAD-DC678FCDA9CF}" Directory_="Asia_Dir" Attributes="0" KeyPath="Almaty" Type="0"/>
+    <ROW Component="Amsterdam" ComponentId="{9A42DE1D-11D1-4A3E-8F15-B2FB77682C0E}" Directory_="Europe_Dir" Attributes="0" KeyPath="Amsterdam" Type="0"/>
+    <ROW Component="Apia" ComponentId="{627EFB2D-8F2E-4264-BEAD-E7F34C3C0666}" Directory_="Pacific_Dir" Attributes="0" KeyPath="Apia" Type="0"/>
+    <ROW Component="Azores" ComponentId="{795300DE-275F-43F4-8129-740C5119B62B}" Directory_="Atlantic_Dir" Attributes="0" KeyPath="Azores" Type="0"/>
+    <ROW Component="Beulah" ComponentId="{C98CA4BE-4E7C-4E9C-BC7E-31F72B6760C3}" Directory_="North_Dakota_Dir" Attributes="0" KeyPath="Beulah" Type="0"/>
+    <ROW Component="Buenos_Aires" ComponentId="{8C7C4B22-AA51-4ACB-899C-4F32F7708124}" Directory_="Argentina_Dir" Attributes="0" KeyPath="Buenos_Aires" Type="0"/>
+    <ROW Component="CET" ComponentId="{86BC5801-7EDC-45CE-AA9E-508194846FBD}" Directory_="zi_Dir" Attributes="0" KeyPath="CET" Type="0"/>
+    <ROW Component="CIEXYZ.pf" ComponentId="{055D1023-0317-4A52-B9C4-24C61C01AFAA}" Directory_="cmm_Dir" Attributes="0" KeyPath="CIEXYZ.pf" Type="0"/>
+    <ROW Component="COPYRIGHT" ComponentId="{9DB43F91-D460-447B-9030-69D2E485734A}" Directory_="jre7_Dir" Attributes="0" KeyPath="COPYRIGHT" Type="0"/>
+    <ROW Component="Casey" ComponentId="{A2E42108-5510-44E6-B8F1-CF0088CE4A41}" Directory_="Antarctica_Dir" Attributes="0" KeyPath="Casey" Type="0"/>
+    <ROW Component="Chagos" ComponentId="{D9FA52EA-6601-42D1-A4DB-C20BE8116348}" Directory_="Indian_Dir" Attributes="0" KeyPath="Chagos" Type="0"/>
+    <ROW Component="GMT" ComponentId="{791DDF72-026C-462A-AB6D-E8838BF5B6AF}" Directory_="Etc_Dir" Attributes="0" KeyPath="GMT" Type="0"/>
+    <ROW Component="Indianapolis" ComponentId="{5F352144-D744-4D56-8CDB-886059CA0965}" Directory_="Indiana_Dir" Attributes="0" KeyPath="Indianapolis" Type="0"/>
+    <ROW Component="JAWTAccessBridge64.dll" ComponentId="{24EE3701-33B0-4855-A1BC-E2FD98F0D40B}" Directory_="bin_Dir" Attributes="256" KeyPath="JAWTAccessBridge64.dll"/>
+    <ROW Component="JavaAccessBridge64.dll" ComponentId="{7E4CE0B9-279B-4800-82C0-694C81D444B4}" Directory_="bin_Dir" Attributes="256" KeyPath="JavaAccessBridge64.dll"/>
+    <ROW Component="JdbcOdbc.dll" ComponentId="{A17ADB93-FA40-4663-B64E-6DC3A28349AF}" Directory_="bin_Dir" Attributes="256" KeyPath="JdbcOdbc.dll"/>
+    <ROW Component="Louisville" ComponentId="{1107AA3A-D267-4304-93AC-2308B50ABA28}" Directory_="Kentucky_Dir" Attributes="0" KeyPath="Louisville" Type="0"/>
+    <ROW Component="LucidaBrightDemiBold.ttf" ComponentId="{2291211C-9F20-41BC-AAF8-302C1846D8A6}" Directory_="fonts_Dir" Attributes="0" Type="0"/>
+    <ROW Component="ProductInformation" ComponentId="{8BEE9F60-C76C-41DB-BE0C-F65B1DC64DA4}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="Shell" ComponentId="{156BDD36-A387-4B27-A270-40819FD6FB99}" Directory_="APPDIR" Attributes="4" KeyPath="Shell"/>
+    <ROW Component="WPBridgeDesignFile" ComponentId="{D015BFA5-092C-4906-BED8-17B442C58B44}" Directory_="APPDIR" Attributes="4" KeyPath="WPBridgeDesignFile"/>
+    <ROW Component="WindowsAccessBridge64.dll" ComponentId="{2523E7FA-15EC-4405-A9BF-6C1C801D77E1}" Directory_="bin_Dir" Attributes="256" KeyPath="WindowsAccessBridge64.dll"/>
+    <ROW Component="_" ComponentId="{8B8C3449-8AAE-4AF0-8B6D-7AA58617F584}" Directory_="APPDIR" Attributes="4" KeyPath="_"/>
+    <ROW Component="__1" ComponentId="{58BEE1E1-FF4F-4164-BD86-409F8C3A8077}" Directory_="APPDIR" Attributes="4" KeyPath="__1"/>
+    <ROW Component="__2" ComponentId="{0AB03F99-ADF4-4EBB-95D4-90356BB36995}" Directory_="APPDIR" Attributes="4" KeyPath="__2"/>
+    <ROW Component="__3" ComponentId="{4B988EDA-C983-41ED-82E1-C9352457D99F}" Directory_="APPDIR" Attributes="4" KeyPath="__3"/>
+    <ROW Component="__4" ComponentId="{34CD6C34-FD94-4E89-8712-F1BD1FF2E7E7}" Directory_="APPDIR" Attributes="4" KeyPath="__4"/>
+    <ROW Component="__5" ComponentId="{098BD7D1-D67D-477F-87F2-BE5262867341}" Directory_="APPDIR" Attributes="4" KeyPath="__5"/>
+    <ROW Component="accessbridge64.jar" ComponentId="{2BFE7A52-67A1-4B59-87A9-465C732C0B3D}" Directory_="ext_Dir" Attributes="0" KeyPath="accessbridge64.jar" Type="0"/>
+    <ROW Component="accessibility.properties" ComponentId="{A894F443-D744-495F-9DC4-86735EE64240}" Directory_="lib_1_Dir" Attributes="0" KeyPath="accessibility.properties" Type="0"/>
+    <ROW Component="awt.dll" ComponentId="{0F09D868-5AA8-4A72-952F-6FA3254BBA55}" Directory_="bin_Dir" Attributes="256" KeyPath="awt.dll"/>
+    <ROW Component="bdv23j1417.exe" ComponentId="{724D4DAE-F06E-4D2A-8209-160FCF451FBA}" Directory_="APPDIR" Attributes="0" KeyPath="bdv23j1417.exe"/>
+    <ROW Component="blacklist" ComponentId="{55DE2A4B-1104-4C1D-A450-2F18036E1E11}" Directory_="security_Dir" Attributes="0" KeyPath="blacklist" Type="0"/>
+    <ROW Component="classes.jsa" ComponentId="{1F4B8A3C-A385-454C-9261-2CEC39788E95}" Directory_="server_Dir" Attributes="0" KeyPath="classes.jsa" Type="0"/>
+    <ROW Component="cursors.properties" ComponentId="{AB331B09-8F18-4E24-97B1-256541AFAF82}" Directory_="cursors_Dir" Attributes="0" KeyPath="cursors.properties" Type="0"/>
+    <ROW Component="dcpr.dll" ComponentId="{934EC142-1AB5-4EF6-86FF-6A1160A5A2C6}" Directory_="bin_Dir" Attributes="256" KeyPath="dcpr.dll"/>
+    <ROW Component="decorasse.dll" ComponentId="{EEED0C86-9B19-4A08-A193-A30AF9292B02}" Directory_="bin_Dir" Attributes="256" KeyPath="decorasse.dll"/>
+    <ROW Component="default.jfc" ComponentId="{540B2BB2-11D6-4FC5-AA53-E04D2D5EA90A}" Directory_="jfr_Dir" Attributes="0" KeyPath="default.jfc" Type="0"/>
+    <ROW Component="deploy.dll" ComponentId="{965E0EB5-6C12-4E89-80D0-6E5E4EE33F3F}" Directory_="bin_Dir" Attributes="256" KeyPath="deploy.dll"/>
+    <ROW Component="deployJava1.dll" ComponentId="{1DFB53DC-85F7-4FC5-9193-E9571775FC39}" Directory_="dtplugin_Dir" Attributes="256" KeyPath="deployJava1.dll"/>
+    <ROW Component="dt_shmem.dll" ComponentId="{AA43F27C-D010-4A3C-BF4A-D2D935546EE2}" Directory_="bin_Dir" Attributes="256" KeyPath="dt_shmem.dll"/>
+    <ROW Component="dt_socket.dll" ComponentId="{EFA87F0F-098B-43DC-B516-793490044576}" Directory_="bin_Dir" Attributes="256" KeyPath="dt_socket.dll"/>
+    <ROW Component="eula.dll" ComponentId="{F41090DB-FC06-44A3-B63B-A39883D59C10}" Directory_="bin_Dir" Attributes="256" KeyPath="eula.dll"/>
+    <ROW Component="ffjcext.zip" ComponentId="{19A46E54-BF4A-42CE-89F9-45A8D0A00259}" Directory_="deploy_Dir" Attributes="0" KeyPath="ffjcext.zip" Type="0"/>
+    <ROW Component="fontmanager.dll" ComponentId="{41409E61-5D8B-40A8-946B-209500AA4793}" Directory_="bin_Dir" Attributes="256" KeyPath="fontmanager.dll"/>
+    <ROW Component="fxplugins.dll" ComponentId="{04442BB7-D3C2-4FA3-88D9-CDA17AB7610C}" Directory_="bin_Dir" Attributes="256" KeyPath="fxplugins.dll"/>
+    <ROW Component="glass.dll" ComponentId="{749803D4-35CC-492D-8E71-FCED58035E38}" Directory_="bin_Dir" Attributes="256" KeyPath="glass.dll"/>
+    <ROW Component="gliblite.dll" ComponentId="{3DB19E7C-9F79-4502-BCFC-5975F0506706}" Directory_="bin_Dir" Attributes="256" KeyPath="gliblite.dll"/>
+    <ROW Component="gstreamerlite.dll" ComponentId="{E9FED698-1077-407D-A553-00CEDA702231}" Directory_="bin_Dir" Attributes="256" KeyPath="gstreamerlite.dll"/>
+    <ROW Component="hprof.dll" ComponentId="{8E60475D-C57C-4686-8399-BBD2C8798103}" Directory_="bin_Dir" Attributes="256" KeyPath="hprof.dll"/>
+    <ROW Component="installer.dll" ComponentId="{B4CAB010-4394-4290-B27E-4DE0D5325EDF}" Directory_="bin_Dir" Attributes="256" KeyPath="installer.dll"/>
+    <ROW Component="instrument.dll" ComponentId="{931C84B1-BF8D-4413-B206-CDC83D930D5E}" Directory_="bin_Dir" Attributes="256" KeyPath="instrument.dll"/>
+    <ROW Component="j2pcsc.dll" ComponentId="{A619D604-9CC9-4D84-B29B-088BE5CDAF75}" Directory_="bin_Dir" Attributes="256" KeyPath="j2pcsc.dll"/>
+    <ROW Component="jaas_nt.dll" ComponentId="{6A8E5382-9EFA-4FBC-ADA6-A57E210E990B}" Directory_="bin_Dir" Attributes="256" KeyPath="jaas_nt.dll"/>
+    <ROW Component="jabswitch.exe" ComponentId="{9262E695-4153-41B2-B2FF-16F316C123F5}" Directory_="bin_Dir" Attributes="256" KeyPath="jabswitch.exe"/>
+    <ROW Component="java.dll" ComponentId="{22A36F3A-1DC8-4652-9541-747DA5342478}" Directory_="bin_Dir" Attributes="256" KeyPath="java.dll"/>
+    <ROW Component="java.exe" ComponentId="{7F0E43C7-C371-40C8-AE43-BB502D834074}" Directory_="bin_Dir" Attributes="256" KeyPath="java.exe"/>
+    <ROW Component="java_crw_demo.dll" ComponentId="{1A5C29BC-2A54-42B2-AAB4-5E2F94C866EE}" Directory_="bin_Dir" Attributes="256" KeyPath="java_crw_demo.dll"/>
+    <ROW Component="javacpl.exe" ComponentId="{D326752C-8193-4BC3-BA2C-79B812C3E50D}" Directory_="bin_Dir" Attributes="256" KeyPath="javacpl.exe"/>
+    <ROW Component="javafxfont.dll" ComponentId="{88695A4F-EB0E-44AA-8F87-68EA243341CD}" Directory_="bin_Dir" Attributes="256" KeyPath="javafxfont.dll"/>
+    <ROW Component="javafxiio.dll" ComponentId="{BEAB52C1-8DAF-4FB9-8A63-303B0553F5C1}" Directory_="bin_Dir" Attributes="256" KeyPath="javafxiio.dll"/>
+    <ROW Component="javarmi.exe" ComponentId="{F80CBD09-482B-4E3F-BAB4-7FE249B8D36D}" Directory_="bin_Dir" Attributes="256" KeyPath="javarmi.exe"/>
+    <ROW Component="javaw.exe" ComponentId="{14BBF353-1DE1-4853-8CC5-4C874D051304}" Directory_="bin_Dir" Attributes="256" KeyPath="javaw.exe"/>
+    <ROW Component="javaws.exe" ComponentId="{198FD93F-73B2-41BD-99A8-15E792FA65C5}" Directory_="bin_Dir" Attributes="256" KeyPath="javaws.exe"/>
+    <ROW Component="jawt.dll" ComponentId="{A0DE4663-324C-4D75-B593-84CF564A1FE0}" Directory_="bin_Dir" Attributes="256" KeyPath="jawt.dll"/>
+    <ROW Component="jdwp.dll" ComponentId="{A4282754-DF89-45B6-A445-67A7E0DD7434}" Directory_="bin_Dir" Attributes="256" KeyPath="jdwp.dll"/>
+    <ROW Component="jfr.dll" ComponentId="{243BD32D-225C-45AB-9E69-8E83002D4637}" Directory_="bin_Dir" Attributes="256" KeyPath="jfr.dll"/>
+    <ROW Component="jfxmedia.dll" ComponentId="{D1FB4541-4414-4D2F-BE92-A635CCEFD7A4}" Directory_="bin_Dir" Attributes="256" KeyPath="jfxmedia.dll"/>
+    <ROW Component="jfxwebkit.dll" ComponentId="{07A5E14B-94CC-4EFB-965A-C1CEA7B11AD4}" Directory_="bin_Dir" Attributes="256" KeyPath="jfxwebkit.dll"/>
+    <ROW Component="jli.dll" ComponentId="{8949AD31-F975-4EB5-8521-1438661FBE60}" Directory_="bin_Dir" Attributes="256" KeyPath="jli.dll"/>
+    <ROW Component="jmxremote.access" ComponentId="{2682367F-2CAF-4107-BE32-67F7F9EC84B2}" Directory_="management_Dir" Attributes="0" KeyPath="jmxremote.access" Type="0"/>
+    <ROW Component="jp2iexp.dll" ComponentId="{4C12263E-685B-4E67-8A44-03053F18EA11}" Directory_="bin_Dir" Attributes="256" KeyPath="jp2iexp.dll"/>
+    <ROW Component="jp2launcher.exe" ComponentId="{EA22392D-38D3-4CA5-AC16-110A8FC4E2F1}" Directory_="bin_Dir" Attributes="256" KeyPath="jp2launcher.exe"/>
+    <ROW Component="jp2native.dll" ComponentId="{E759F328-FE06-4769-A291-0A084CECE86A}" Directory_="bin_Dir" Attributes="256" KeyPath="jp2native.dll"/>
+    <ROW Component="jp2ssv.dll" ComponentId="{B930A945-ED90-4CBF-8704-DD24A5DDB509}" Directory_="bin_Dir" Attributes="256" KeyPath="jp2ssv.dll"/>
+    <ROW Component="jpeg.dll" ComponentId="{0BF5EFAA-E2EF-4251-9B49-520A551D8FC1}" Directory_="bin_Dir" Attributes="256" KeyPath="jpeg.dll"/>
+    <ROW Component="jsdt.dll" ComponentId="{04A550C8-BF21-4041-850F-345C567E173E}" Directory_="bin_Dir" Attributes="256" KeyPath="jsdt.dll"/>
+    <ROW Component="jsound.dll" ComponentId="{BFD124C5-09E4-4F9A-86DE-DB48EB632B92}" Directory_="bin_Dir" Attributes="256" KeyPath="jsound.dll"/>
+    <ROW Component="jsoundds.dll" ComponentId="{0AD2B5AE-9155-4C1D-A1CE-71F810E15C29}" Directory_="bin_Dir" Attributes="256" KeyPath="jsoundds.dll"/>
+    <ROW Component="jvm.cfg" ComponentId="{5FC4F312-345A-4C7C-898F-3904D5A3794E}" Directory_="amd64_Dir" Attributes="0" KeyPath="jvm.cfg" Type="0"/>
+    <ROW Component="jvm.dll" ComponentId="{89EEC8C8-EFA2-434C-AB1E-520D2BAC0161}" Directory_="server_Dir" Attributes="256" KeyPath="jvm.dll"/>
+    <ROW Component="kcms.dll" ComponentId="{7E4BBCE0-C68A-41EB-ACC3-C590B5C6DB25}" Directory_="bin_Dir" Attributes="256" KeyPath="kcms.dll"/>
+    <ROW Component="keytool.exe" ComponentId="{58EDDB39-3770-4FE0-B645-FD2AF4A4B7E6}" Directory_="bin_Dir" Attributes="256" KeyPath="keytool.exe"/>
+    <ROW Component="kinit.exe" ComponentId="{E1AB13D2-5E5E-4A9B-BA37-97A9963C4F6E}" Directory_="bin_Dir" Attributes="256" KeyPath="kinit.exe"/>
+    <ROW Component="klist.exe" ComponentId="{96E1ACF1-2374-48A7-83B2-44DE4C2C5AFD}" Directory_="bin_Dir" Attributes="256" KeyPath="klist.exe"/>
+    <ROW Component="ktab.exe" ComponentId="{4C17BA93-36C8-4984-B595-494D1EAE70C9}" Directory_="bin_Dir" Attributes="256" KeyPath="ktab.exe"/>
+    <ROW Component="libxml2.dll" ComponentId="{525EB0EE-AC09-4816-87CB-A852F84167D0}" Directory_="bin_Dir" Attributes="256" KeyPath="libxml2.dll"/>
+    <ROW Component="libxslt.dll" ComponentId="{57AA2782-D6A3-4FCE-AABD-205B5E78D42E}" Directory_="bin_Dir" Attributes="256" KeyPath="libxslt.dll"/>
+    <ROW Component="license.rtf" ComponentId="{3855FD01-CA10-4789-B836-FA142EDD2B0E}" Directory_="APPDIR" Attributes="0" KeyPath="license.rtf" Type="0"/>
+    <ROW Component="management.dll" ComponentId="{26146F35-A047-44D0-A626-61D4894AC448}" Directory_="bin_Dir" Attributes="256" KeyPath="management.dll"/>
+    <ROW Component="mlib_image.dll" ComponentId="{D7A0A5B5-8C78-4D90-83AE-584A5A9D548C}" Directory_="bin_Dir" Attributes="256" KeyPath="mlib_image.dll"/>
+    <ROW Component="msvcr100.dll" ComponentId="{33B8BB13-EE53-49B8-89F0-015D02AE4B07}" Directory_="bin_Dir" Attributes="256" KeyPath="msvcr100.dll"/>
+    <ROW Component="msvcr100.dll_1" ComponentId="{B6310267-F358-46E7-8CD2-2988C51F73D6}" Directory_="plugin2_Dir" Attributes="256" KeyPath="msvcr100.dll_1"/>
+    <ROW Component="net.dll" ComponentId="{3D3254BF-6EDD-4B6A-B257-0FFFD417E703}" Directory_="bin_Dir" Attributes="256" KeyPath="net.dll"/>
+    <ROW Component="nio.dll" ComponentId="{5D878D04-5F0A-4118-89DE-1331A3883D92}" Directory_="bin_Dir" Attributes="256" KeyPath="nio.dll"/>
+    <ROW Component="npdeployJava1.dll" ComponentId="{59DF0722-D20B-4059-B273-65897A18AABC}" Directory_="dtplugin_Dir" Attributes="256" KeyPath="npdeployJava1.dll"/>
+    <ROW Component="npjp2.dll" ComponentId="{8DAA8BEE-317F-4039-B858-BA7511899714}" Directory_="plugin2_Dir" Attributes="256" KeyPath="npjp2.dll"/>
+    <ROW Component="npt.dll" ComponentId="{8CFF340A-1B78-4836-A2B7-09EE0EE2FFDB}" Directory_="bin_Dir" Attributes="256" KeyPath="npt.dll"/>
+    <ROW Component="open" ComponentId="{5DD069A7-6D88-44C0-A692-804FDFA2D59F}" Directory_="APPDIR" Attributes="4" KeyPath="open"/>
+    <ROW Component="orbd.exe" ComponentId="{6BEBFAAC-9118-43BD-BBA6-D97D5977393E}" Directory_="bin_Dir" Attributes="256" KeyPath="orbd.exe"/>
+    <ROW Component="pack200.exe" ComponentId="{8F2CEDCE-223F-42E4-B61F-E5A62E19BC2A}" Directory_="bin_Dir" Attributes="256" KeyPath="pack200.exe"/>
+    <ROW Component="policytool.exe" ComponentId="{37E5AC5D-9C84-47C4-B6F5-4A03EB116DA6}" Directory_="bin_Dir" Attributes="256" KeyPath="policytool.exe"/>
+    <ROW Component="prismd3d.dll" ComponentId="{FD81066D-0A59-451A-B882-B1158232D6BA}" Directory_="bin_Dir" Attributes="256" KeyPath="prismd3d.dll"/>
+    <ROW Component="rmid.exe" ComponentId="{3CD7F269-132D-4DF8-9A2E-87E7F924F8FA}" Directory_="bin_Dir" Attributes="256" KeyPath="rmid.exe"/>
+    <ROW Component="rmiregistry.exe" ComponentId="{65C468E1-F7F2-41D0-8BBF-973200B39A19}" Directory_="bin_Dir" Attributes="256" KeyPath="rmiregistry.exe"/>
+    <ROW Component="servertool.exe" ComponentId="{7A6CC805-EAAB-454A-B1C3-9005AA812B22}" Directory_="bin_Dir" Attributes="256" KeyPath="servertool.exe"/>
+    <ROW Component="splashscreen.dll" ComponentId="{7A54B446-972C-40D8-ACDD-56A9170EFA13}" Directory_="bin_Dir" Attributes="256" KeyPath="splashscreen.dll"/>
+    <ROW Component="ssv.dll" ComponentId="{7EF87BA3-1E92-48B0-88C7-54186998B28E}" Directory_="bin_Dir" Attributes="256" KeyPath="ssv.dll"/>
+    <ROW Component="ssvagent.exe" ComponentId="{31D6713B-DEE0-4AE6-A14C-1A5A188E47E0}" Directory_="bin_Dir" Attributes="256" KeyPath="ssvagent.exe"/>
+    <ROW Component="sunec.dll" ComponentId="{778AA89D-15CB-4639-9EF5-87BF51391489}" Directory_="bin_Dir" Attributes="256" KeyPath="sunec.dll"/>
+    <ROW Component="sunmscapi.dll" ComponentId="{8F7F53B4-D064-4521-B29D-B665836B5820}" Directory_="bin_Dir" Attributes="256" KeyPath="sunmscapi.dll"/>
+    <ROW Component="t2k.dll" ComponentId="{651AC190-6F63-4A2F-BE7B-05B41FD4CB75}" Directory_="bin_Dir" Attributes="256" KeyPath="t2k.dll"/>
+    <ROW Component="tnameserv.exe" ComponentId="{02AFFCDD-EBBF-4FD1-BA12-CEF263E093F8}" Directory_="bin_Dir" Attributes="256" KeyPath="tnameserv.exe"/>
+    <ROW Component="unpack.dll" ComponentId="{870F7801-2282-47E9-8F49-46DE23127970}" Directory_="bin_Dir" Attributes="256" KeyPath="unpack.dll"/>
+    <ROW Component="unpack200.exe" ComponentId="{51C825F0-9F80-4696-BA6F-E591C810D1A5}" Directory_="bin_Dir" Attributes="256" KeyPath="unpack200.exe"/>
+    <ROW Component="verify.dll" ComponentId="{F2BDD855-98B6-4046-BAA2-A61DD3C69928}" Directory_="bin_Dir" Attributes="256" KeyPath="verify.dll"/>
+    <ROW Component="w2k_lsa_auth.dll" ComponentId="{40C3E6B0-18EF-40D0-BDD5-95B70AE0D8EE}" Directory_="bin_Dir" Attributes="256" KeyPath="w2k_lsa_auth.dll"/>
+    <ROW Component="wsdetect.dll" ComponentId="{77DE3FB7-9D91-4B74-B30D-C86A42A6DA24}" Directory_="bin_Dir" Attributes="256" KeyPath="wsdetect.dll"/>
+    <ROW Component="zip.dll" ComponentId="{AD0A265C-612A-4829-B77C-1EB64DDE2229}" Directory_="bin_Dir" Attributes="256" KeyPath="zip.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AbsoluteLayout.jar" Component_="AbsoluteLayout.jar" FileName="ABSOLU~1.JAR|AbsoluteLayout.jar" Attributes="0" SourcePath="..\dist\lib\AbsoluteLayout.jar" SelfReg="false"/>
+    <ROW File="beansbinding1.2.1.jar" Component_="AbsoluteLayout.jar" FileName="BEANSB~1.JAR|beansbinding-1.2.1.jar" Attributes="0" SourcePath="..\dist\lib\beansbinding-1.2.1.jar" SelfReg="false"/>
+    <ROW File="bsaf1.9.1.jar" Component_="AbsoluteLayout.jar" FileName="BSAF-1~1.JAR|bsaf-1.9.1.jar" Attributes="0" SourcePath="..\dist\lib\bsaf-1.9.1.jar" SelfReg="false"/>
+    <ROW File="gluegenrtnativeswindowsamd64.jar" Component_="AbsoluteLayout.jar" FileName="GLUEGE~1.JAR|gluegen-rt-natives-windows-amd64.jar" Attributes="0" SourcePath="..\dist\lib\gluegen-rt-natives-windows-amd64.jar" SelfReg="false"/>
+    <ROW File="gluegenrt.jar" Component_="AbsoluteLayout.jar" FileName="GLUEGE~2.JAR|gluegen-rt.jar" Attributes="0" SourcePath="..\dist\lib\gluegen-rt.jar" SelfReg="false"/>
+    <ROW File="jh.jar" Component_="AbsoluteLayout.jar" FileName="jh.jar" Attributes="0" SourcePath="..\dist\lib\jh.jar" SelfReg="false"/>
+    <ROW File="joglallnativeswindowsamd64.jar" Component_="AbsoluteLayout.jar" FileName="JOGL-A~1.JAR|jogl-all-natives-windows-amd64.jar" Attributes="0" SourcePath="..\dist\lib\jogl-all-natives-windows-amd64.jar" SelfReg="false"/>
+    <ROW File="joglall.jar" Component_="AbsoluteLayout.jar" FileName="jogl-all.jar" Attributes="0" SourcePath="..\dist\lib\jogl-all.jar" SelfReg="false"/>
+    <ROW File="quaquafilechooseronly.jar" Component_="AbsoluteLayout.jar" FileName="QUAQUA~1.JAR|quaqua-filechooser-only.jar" Attributes="0" SourcePath="..\dist\lib\quaqua-filechooser-only.jar" SelfReg="false"/>
+    <ROW File="swinglayout1.0.4.jar" Component_="AbsoluteLayout.jar" FileName="SWING-~1.JAR|swing-layout-1.0.4.jar" Attributes="0" SourcePath="..\dist\lib\swing-layout-1.0.4.jar" SelfReg="false"/>
+    <ROW File="awt.dll" Component_="awt.dll" FileName="awt.dll" Attributes="0" SourcePath="..\jre7\bin\awt.dll" SelfReg="false"/>
+    <ROW File="dcpr.dll" Component_="dcpr.dll" FileName="dcpr.dll" Attributes="0" SourcePath="..\jre7\bin\dcpr.dll" SelfReg="false"/>
+    <ROW File="decorasse.dll" Component_="decorasse.dll" FileName="DECORA~1.DLL|decora-sse.dll" Attributes="0" SourcePath="..\jre7\bin\decora-sse.dll" SelfReg="false"/>
+    <ROW File="deploy.dll" Component_="deploy.dll" FileName="deploy.dll" Attributes="0" SourcePath="..\jre7\bin\deploy.dll" SelfReg="false"/>
+    <ROW File="deployJava1.dll" Component_="deployJava1.dll" FileName="DEPLOY~1.DLL|deployJava1.dll" Attributes="0" SourcePath="..\jre7\bin\dtplugin\deployJava1.dll" SelfReg="false"/>
+    <ROW File="npdeployJava1.dll" Component_="npdeployJava1.dll" FileName="NPDEPL~1.DLL|npdeployJava1.dll" Attributes="0" SourcePath="..\jre7\bin\dtplugin\npdeployJava1.dll" SelfReg="false"/>
+    <ROW File="dt_shmem.dll" Component_="dt_shmem.dll" FileName="dt_shmem.dll" Attributes="0" SourcePath="..\jre7\bin\dt_shmem.dll" SelfReg="false"/>
+    <ROW File="dt_socket.dll" Component_="dt_socket.dll" FileName="DT_SOC~1.DLL|dt_socket.dll" Attributes="0" SourcePath="..\jre7\bin\dt_socket.dll" SelfReg="false"/>
+    <ROW File="eula.dll" Component_="eula.dll" FileName="eula.dll" Attributes="0" SourcePath="..\jre7\bin\eula.dll" SelfReg="false"/>
+    <ROW File="fontmanager.dll" Component_="fontmanager.dll" FileName="FONTMA~1.DLL|fontmanager.dll" Attributes="0" SourcePath="..\jre7\bin\fontmanager.dll" SelfReg="false"/>
+    <ROW File="fxplugins.dll" Component_="fxplugins.dll" FileName="FXPLUG~1.DLL|fxplugins.dll" Attributes="0" SourcePath="..\jre7\bin\fxplugins.dll" SelfReg="false"/>
+    <ROW File="glass.dll" Component_="glass.dll" FileName="glass.dll" Attributes="0" SourcePath="..\jre7\bin\glass.dll" SelfReg="false"/>
+    <ROW File="gliblite.dll" Component_="gliblite.dll" FileName="GLIB-L~1.DLL|glib-lite.dll" Attributes="0" SourcePath="..\jre7\bin\glib-lite.dll" SelfReg="false"/>
+    <ROW File="gstreamerlite.dll" Component_="gstreamerlite.dll" FileName="GSTREA~1.DLL|gstreamer-lite.dll" Attributes="0" SourcePath="..\jre7\bin\gstreamer-lite.dll" SelfReg="false"/>
+    <ROW File="hprof.dll" Component_="hprof.dll" FileName="hprof.dll" Attributes="0" SourcePath="..\jre7\bin\hprof.dll" SelfReg="false"/>
+    <ROW File="installer.dll" Component_="installer.dll" FileName="INSTAL~1.DLL|installer.dll" Attributes="0" SourcePath="..\jre7\bin\installer.dll" SelfReg="false"/>
+    <ROW File="instrument.dll" Component_="instrument.dll" FileName="INSTRU~1.DLL|instrument.dll" Attributes="0" SourcePath="..\jre7\bin\instrument.dll" SelfReg="false"/>
+    <ROW File="j2pcsc.dll" Component_="j2pcsc.dll" FileName="j2pcsc.dll" Attributes="0" SourcePath="..\jre7\bin\j2pcsc.dll" SelfReg="false"/>
+    <ROW File="jaas_nt.dll" Component_="jaas_nt.dll" FileName="jaas_nt.dll" Attributes="0" SourcePath="..\jre7\bin\jaas_nt.dll" SelfReg="false"/>
+    <ROW File="jabswitch.exe" Component_="jabswitch.exe" FileName="JABSWI~1.EXE|jabswitch.exe" Attributes="0" SourcePath="..\jre7\bin\jabswitch.exe" SelfReg="false"/>
+    <ROW File="javarmi.exe" Component_="javarmi.exe" FileName="java-rmi.exe" Attributes="0" SourcePath="..\jre7\bin\java-rmi.exe" SelfReg="false"/>
+    <ROW File="java.dll" Component_="java.dll" FileName="java.dll" Attributes="0" SourcePath="..\jre7\bin\java.dll" SelfReg="false"/>
+    <ROW File="java.exe" Component_="java.exe" FileName="java.exe" Attributes="0" SourcePath="..\jre7\bin\java.exe" SelfReg="false"/>
+    <ROW File="JavaAccessBridge64.dll" Component_="JavaAccessBridge64.dll" FileName="JAVAAC~1.DLL|JavaAccessBridge-64.dll" Attributes="0" SourcePath="..\jre7\bin\JavaAccessBridge-64.dll" SelfReg="false"/>
+    <ROW File="javacpl.exe" Component_="javacpl.exe" FileName="javacpl.exe" Attributes="0" SourcePath="..\jre7\bin\javacpl.exe" SelfReg="false"/>
+    <ROW File="javafxfont.dll" Component_="javafxfont.dll" FileName="JAVAFX~1.DLL|javafx-font.dll" Attributes="0" SourcePath="..\jre7\bin\javafx-font.dll" SelfReg="false"/>
+    <ROW File="javafxiio.dll" Component_="javafxiio.dll" FileName="JAVAFX~2.DLL|javafx-iio.dll" Attributes="0" SourcePath="..\jre7\bin\javafx-iio.dll" SelfReg="false"/>
+    <ROW File="javaw.exe" Component_="javaw.exe" FileName="javaw.exe" Attributes="0" SourcePath="..\jre7\bin\javaw.exe" SelfReg="false"/>
+    <ROW File="javaws.exe" Component_="javaws.exe" FileName="javaws.exe" Attributes="0" SourcePath="..\jre7\bin\javaws.exe" SelfReg="false"/>
+    <ROW File="java_crw_demo.dll" Component_="java_crw_demo.dll" FileName="JAVA_C~1.DLL|java_crw_demo.dll" Attributes="0" SourcePath="..\jre7\bin\java_crw_demo.dll" SelfReg="false"/>
+    <ROW File="jawt.dll" Component_="jawt.dll" FileName="jawt.dll" Attributes="0" SourcePath="..\jre7\bin\jawt.dll" SelfReg="false"/>
+    <ROW File="JAWTAccessBridge64.dll" Component_="JAWTAccessBridge64.dll" FileName="JAWTAC~1.DLL|JAWTAccessBridge-64.dll" Attributes="0" SourcePath="..\jre7\bin\JAWTAccessBridge-64.dll" SelfReg="false"/>
+    <ROW File="JdbcOdbc.dll" Component_="JdbcOdbc.dll" FileName="JdbcOdbc.dll" Attributes="0" SourcePath="..\jre7\bin\JdbcOdbc.dll" SelfReg="false"/>
+    <ROW File="jdwp.dll" Component_="jdwp.dll" FileName="jdwp.dll" Attributes="0" SourcePath="..\jre7\bin\jdwp.dll" SelfReg="false"/>
+    <ROW File="jfr.dll" Component_="jfr.dll" FileName="jfr.dll" Attributes="0" SourcePath="..\jre7\bin\jfr.dll" SelfReg="false"/>
+    <ROW File="jfxmedia.dll" Component_="jfxmedia.dll" FileName="jfxmedia.dll" Attributes="0" SourcePath="..\jre7\bin\jfxmedia.dll" SelfReg="false"/>
+    <ROW File="jfxwebkit.dll" Component_="jfxwebkit.dll" FileName="JFXWEB~1.DLL|jfxwebkit.dll" Attributes="0" SourcePath="..\jre7\bin\jfxwebkit.dll" SelfReg="false"/>
+    <ROW File="jli.dll" Component_="jli.dll" FileName="jli.dll" Attributes="0" SourcePath="..\jre7\bin\jli.dll" SelfReg="false"/>
+    <ROW File="jp2iexp.dll" Component_="jp2iexp.dll" FileName="jp2iexp.dll" Attributes="0" SourcePath="..\jre7\bin\jp2iexp.dll" SelfReg="false"/>
+    <ROW File="jp2launcher.exe" Component_="jp2launcher.exe" FileName="JP2LAU~1.EXE|jp2launcher.exe" Attributes="0" SourcePath="..\jre7\bin\jp2launcher.exe" SelfReg="false"/>
+    <ROW File="jp2native.dll" Component_="jp2native.dll" FileName="JP2NAT~1.DLL|jp2native.dll" Attributes="0" SourcePath="..\jre7\bin\jp2native.dll" SelfReg="false"/>
+    <ROW File="jp2ssv.dll" Component_="jp2ssv.dll" FileName="jp2ssv.dll" Attributes="0" SourcePath="..\jre7\bin\jp2ssv.dll" SelfReg="false"/>
+    <ROW File="jpeg.dll" Component_="jpeg.dll" FileName="jpeg.dll" Attributes="0" SourcePath="..\jre7\bin\jpeg.dll" SelfReg="false"/>
+    <ROW File="jsdt.dll" Component_="jsdt.dll" FileName="jsdt.dll" Attributes="0" SourcePath="..\jre7\bin\jsdt.dll" SelfReg="false"/>
+    <ROW File="jsound.dll" Component_="jsound.dll" FileName="jsound.dll" Attributes="0" SourcePath="..\jre7\bin\jsound.dll" SelfReg="false"/>
+    <ROW File="jsoundds.dll" Component_="jsoundds.dll" FileName="jsoundds.dll" Attributes="0" SourcePath="..\jre7\bin\jsoundds.dll" SelfReg="false"/>
+    <ROW File="kcms.dll" Component_="kcms.dll" FileName="kcms.dll" Attributes="0" SourcePath="..\jre7\bin\kcms.dll" SelfReg="false"/>
+    <ROW File="keytool.exe" Component_="keytool.exe" FileName="keytool.exe" Attributes="0" SourcePath="..\jre7\bin\keytool.exe" SelfReg="false"/>
+    <ROW File="kinit.exe" Component_="kinit.exe" FileName="kinit.exe" Attributes="0" SourcePath="..\jre7\bin\kinit.exe" SelfReg="false"/>
+    <ROW File="klist.exe" Component_="klist.exe" FileName="klist.exe" Attributes="0" SourcePath="..\jre7\bin\klist.exe" SelfReg="false"/>
+    <ROW File="ktab.exe" Component_="ktab.exe" FileName="ktab.exe" Attributes="0" SourcePath="..\jre7\bin\ktab.exe" SelfReg="false"/>
+    <ROW File="libxml2.dll" Component_="libxml2.dll" FileName="libxml2.dll" Attributes="0" SourcePath="..\jre7\bin\libxml2.dll" SelfReg="false"/>
+    <ROW File="libxslt.dll" Component_="libxslt.dll" FileName="libxslt.dll" Attributes="0" SourcePath="..\jre7\bin\libxslt.dll" SelfReg="false"/>
+    <ROW File="management.dll" Component_="management.dll" FileName="MANAGE~1.DLL|management.dll" Attributes="0" SourcePath="..\jre7\bin\management.dll" SelfReg="false"/>
+    <ROW File="mlib_image.dll" Component_="mlib_image.dll" FileName="MLIB_I~1.DLL|mlib_image.dll" Attributes="0" SourcePath="..\jre7\bin\mlib_image.dll" SelfReg="false"/>
+    <ROW File="msvcr100.dll" Component_="msvcr100.dll" FileName="msvcr100.dll" Attributes="0" SourcePath="..\jre7\bin\msvcr100.dll" SelfReg="false"/>
+    <ROW File="net.dll" Component_="net.dll" FileName="net.dll" Attributes="0" SourcePath="..\jre7\bin\net.dll" SelfReg="false"/>
+    <ROW File="nio.dll" Component_="nio.dll" FileName="nio.dll" Attributes="0" SourcePath="..\jre7\bin\nio.dll" SelfReg="false"/>
+    <ROW File="npt.dll" Component_="npt.dll" FileName="npt.dll" Attributes="0" SourcePath="..\jre7\bin\npt.dll" SelfReg="false"/>
+    <ROW File="orbd.exe" Component_="orbd.exe" FileName="orbd.exe" Attributes="0" SourcePath="..\jre7\bin\orbd.exe" SelfReg="false"/>
+    <ROW File="pack200.exe" Component_="pack200.exe" FileName="pack200.exe" Attributes="0" SourcePath="..\jre7\bin\pack200.exe" SelfReg="false"/>
+    <ROW File="msvcr100.dll_1" Component_="msvcr100.dll_1" FileName="msvcr100.dll" Attributes="0" SourcePath="..\jre7\bin\plugin2\msvcr100.dll" SelfReg="false"/>
+    <ROW File="npjp2.dll" Component_="npjp2.dll" FileName="npjp2.dll" Attributes="0" SourcePath="..\jre7\bin\plugin2\npjp2.dll" SelfReg="false"/>
+    <ROW File="policytool.exe" Component_="policytool.exe" FileName="POLICY~1.EXE|policytool.exe" Attributes="0" SourcePath="..\jre7\bin\policytool.exe" SelfReg="false"/>
+    <ROW File="prismd3d.dll" Component_="prismd3d.dll" FileName="PRISM-~1.DLL|prism-d3d.dll" Attributes="0" SourcePath="..\jre7\bin\prism-d3d.dll" SelfReg="false"/>
+    <ROW File="rmid.exe" Component_="rmid.exe" FileName="rmid.exe" Attributes="0" SourcePath="..\jre7\bin\rmid.exe" SelfReg="false"/>
+    <ROW File="rmiregistry.exe" Component_="rmiregistry.exe" FileName="RMIREG~1.EXE|rmiregistry.exe" Attributes="0" SourcePath="..\jre7\bin\rmiregistry.exe" SelfReg="false"/>
+    <ROW File="classes.jsa" Component_="classes.jsa" FileName="classes.jsa" Attributes="1" SourcePath="..\jre7\bin\server\classes.jsa" SelfReg="false"/>
+    <ROW File="jvm.dll" Component_="jvm.dll" FileName="jvm.dll" Attributes="0" SourcePath="..\jre7\bin\server\jvm.dll" SelfReg="false"/>
+    <ROW File="Xusage.txt" Component_="classes.jsa" FileName="Xusage.txt" Attributes="0" SourcePath="..\jre7\bin\server\Xusage.txt" SelfReg="false"/>
+    <ROW File="servertool.exe" Component_="servertool.exe" FileName="SERVER~1.EXE|servertool.exe" Attributes="0" SourcePath="..\jre7\bin\servertool.exe" SelfReg="false"/>
+    <ROW File="splashscreen.dll" Component_="splashscreen.dll" FileName="SPLASH~1.DLL|splashscreen.dll" Attributes="0" SourcePath="..\jre7\bin\splashscreen.dll" SelfReg="false"/>
+    <ROW File="ssv.dll" Component_="ssv.dll" FileName="ssv.dll" Attributes="0" SourcePath="..\jre7\bin\ssv.dll" SelfReg="false"/>
+    <ROW File="ssvagent.exe" Component_="ssvagent.exe" FileName="ssvagent.exe" Attributes="0" SourcePath="..\jre7\bin\ssvagent.exe" SelfReg="false"/>
+    <ROW File="sunec.dll" Component_="sunec.dll" FileName="sunec.dll" Attributes="0" SourcePath="..\jre7\bin\sunec.dll" SelfReg="false"/>
+    <ROW File="sunmscapi.dll" Component_="sunmscapi.dll" FileName="SUNMSC~1.DLL|sunmscapi.dll" Attributes="0" SourcePath="..\jre7\bin\sunmscapi.dll" SelfReg="false"/>
+    <ROW File="t2k.dll" Component_="t2k.dll" FileName="t2k.dll" Attributes="0" SourcePath="..\jre7\bin\t2k.dll" SelfReg="false"/>
+    <ROW File="tnameserv.exe" Component_="tnameserv.exe" FileName="TNAMES~1.EXE|tnameserv.exe" Attributes="0" SourcePath="..\jre7\bin\tnameserv.exe" SelfReg="false"/>
+    <ROW File="unpack.dll" Component_="unpack.dll" FileName="unpack.dll" Attributes="0" SourcePath="..\jre7\bin\unpack.dll" SelfReg="false"/>
+    <ROW File="unpack200.exe" Component_="unpack200.exe" FileName="UNPACK~1.EXE|unpack200.exe" Attributes="0" SourcePath="..\jre7\bin\unpack200.exe" SelfReg="false"/>
+    <ROW File="verify.dll" Component_="verify.dll" FileName="verify.dll" Attributes="0" SourcePath="..\jre7\bin\verify.dll" SelfReg="false"/>
+    <ROW File="w2k_lsa_auth.dll" Component_="w2k_lsa_auth.dll" FileName="W2K_LS~1.DLL|w2k_lsa_auth.dll" Attributes="0" SourcePath="..\jre7\bin\w2k_lsa_auth.dll" SelfReg="false"/>
+    <ROW File="WindowsAccessBridge64.dll" Component_="WindowsAccessBridge64.dll" FileName="WINDOW~1.DLL|WindowsAccessBridge-64.dll" Attributes="0" SourcePath="..\jre7\bin\WindowsAccessBridge-64.dll" SelfReg="false"/>
+    <ROW File="wsdetect.dll" Component_="wsdetect.dll" FileName="wsdetect.dll" Attributes="0" SourcePath="..\jre7\bin\wsdetect.dll" SelfReg="false"/>
+    <ROW File="zip.dll" Component_="zip.dll" FileName="zip.dll" Attributes="0" SourcePath="..\jre7\bin\zip.dll" SelfReg="false"/>
+    <ROW File="COPYRIGHT" Component_="COPYRIGHT" FileName="COPYRI~1|COPYRIGHT" Attributes="0" SourcePath="..\jre7\COPYRIGHT" SelfReg="false"/>
+    <ROW File="accessibility.properties" Component_="accessibility.properties" FileName="ACCESS~1.PRO|accessibility.properties" Attributes="0" SourcePath="..\jre7\lib\accessibility.properties" SelfReg="false"/>
+    <ROW File="altrt.jar" Component_="accessibility.properties" FileName="alt-rt.jar" Attributes="0" SourcePath="..\jre7\lib\alt-rt.jar" SelfReg="false"/>
+    <ROW File="jvm.cfg" Component_="jvm.cfg" FileName="jvm.cfg" Attributes="0" SourcePath="..\jre7\lib\amd64\jvm.cfg" SelfReg="false"/>
+    <ROW File="calendars.properties" Component_="accessibility.properties" FileName="CALEND~1.PRO|calendars.properties" Attributes="0" SourcePath="..\jre7\lib\calendars.properties" SelfReg="false"/>
+    <ROW File="charsets.jar" Component_="accessibility.properties" FileName="charsets.jar" Attributes="0" SourcePath="..\jre7\lib\charsets.jar" SelfReg="false"/>
+    <ROW File="classlist" Component_="accessibility.properties" FileName="CLASSL~1|classlist" Attributes="0" SourcePath="..\jre7\lib\classlist" SelfReg="false"/>
+    <ROW File="CIEXYZ.pf" Component_="CIEXYZ.pf" FileName="CIEXYZ.pf" Attributes="0" SourcePath="..\jre7\lib\cmm\CIEXYZ.pf" SelfReg="false"/>
+    <ROW File="GRAY.pf" Component_="CIEXYZ.pf" FileName="GRAY.pf" Attributes="0" SourcePath="..\jre7\lib\cmm\GRAY.pf" SelfReg="false"/>
+    <ROW File="LINEAR_RGB.pf" Component_="CIEXYZ.pf" FileName="LINEAR~1.PF|LINEAR_RGB.pf" Attributes="0" SourcePath="..\jre7\lib\cmm\LINEAR_RGB.pf" SelfReg="false"/>
+    <ROW File="PYCC.pf" Component_="CIEXYZ.pf" FileName="PYCC.pf" Attributes="0" SourcePath="..\jre7\lib\cmm\PYCC.pf" SelfReg="false"/>
+    <ROW File="sRGB.pf" Component_="CIEXYZ.pf" FileName="sRGB.pf" Attributes="0" SourcePath="..\jre7\lib\cmm\sRGB.pf" SelfReg="false"/>
+    <ROW File="contenttypes.properties" Component_="accessibility.properties" FileName="CONTEN~1.PRO|content-types.properties" Attributes="0" SourcePath="..\jre7\lib\content-types.properties" SelfReg="false"/>
+    <ROW File="currency.data" Component_="accessibility.properties" FileName="CURREN~1.DAT|currency.data" Attributes="0" SourcePath="..\jre7\lib\currency.data" SelfReg="false"/>
+    <ROW File="ffjcext.zip" Component_="ffjcext.zip" FileName="ffjcext.zip" Attributes="0" SourcePath="..\jre7\lib\deploy\ffjcext.zip" SelfReg="false"/>
+    <ROW File="messages.properties" Component_="ffjcext.zip" FileName="MESSAG~1.PRO|messages.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages.properties" SelfReg="false"/>
+    <ROW File="messages_de.properties" Component_="ffjcext.zip" FileName="MESSAG~2.PRO|messages_de.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_de.properties" SelfReg="false"/>
+    <ROW File="messages_es.properties" Component_="ffjcext.zip" FileName="MESSAG~3.PRO|messages_es.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_es.properties" SelfReg="false"/>
+    <ROW File="messages_fr.properties" Component_="ffjcext.zip" FileName="MESSAG~4.PRO|messages_fr.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_fr.properties" SelfReg="false"/>
+    <ROW File="messages_it.properties" Component_="ffjcext.zip" FileName="MESSAG~5.PRO|messages_it.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_it.properties" SelfReg="false"/>
+    <ROW File="messages_ja.properties" Component_="ffjcext.zip" FileName="MESSAG~6.PRO|messages_ja.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_ja.properties" SelfReg="false"/>
+    <ROW File="messages_ko.properties" Component_="ffjcext.zip" FileName="MESSAG~7.PRO|messages_ko.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_ko.properties" SelfReg="false"/>
+    <ROW File="messages_pt_BR.properties" Component_="ffjcext.zip" FileName="MESSAG~8.PRO|messages_pt_BR.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_pt_BR.properties" SelfReg="false"/>
+    <ROW File="messages_sv.properties" Component_="ffjcext.zip" FileName="MESSAG~9.PRO|messages_sv.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_sv.properties" SelfReg="false"/>
+    <ROW File="messages_zh_CN.properties" Component_="ffjcext.zip" FileName="MESSA~10.PRO|messages_zh_CN.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_zh_CN.properties" SelfReg="false"/>
+    <ROW File="messages_zh_HK.properties" Component_="ffjcext.zip" FileName="MESSA~11.PRO|messages_zh_HK.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_zh_HK.properties" SelfReg="false"/>
+    <ROW File="messages_zh_TW.properties" Component_="ffjcext.zip" FileName="MESSA~12.PRO|messages_zh_TW.properties" Attributes="0" SourcePath="..\jre7\lib\deploy\messages_zh_TW.properties" SelfReg="false"/>
+    <ROW File="splash.gif" Component_="ffjcext.zip" FileName="splash.gif" Attributes="0" SourcePath="..\jre7\lib\deploy\splash.gif" SelfReg="false"/>
+    <ROW File="deploy.jar" Component_="accessibility.properties" FileName="deploy.jar" Attributes="0" SourcePath="..\jre7\lib\deploy.jar" SelfReg="false"/>
+    <ROW File="accessbridge64.jar" Component_="accessbridge64.jar" FileName="ACCESS~1.JAR|access-bridge-64.jar" Attributes="0" SourcePath="..\jre7\lib\ext\access-bridge-64.jar" SelfReg="false"/>
+    <ROW File="dnsns.jar" Component_="accessbridge64.jar" FileName="dnsns.jar" Attributes="0" SourcePath="..\jre7\lib\ext\dnsns.jar" SelfReg="false"/>
+    <ROW File="jaccess.jar" Component_="accessbridge64.jar" FileName="jaccess.jar" Attributes="0" SourcePath="..\jre7\lib\ext\jaccess.jar" SelfReg="false"/>
+    <ROW File="localedata.jar" Component_="accessbridge64.jar" FileName="LOCALE~1.JAR|localedata.jar" Attributes="0" SourcePath="..\jre7\lib\ext\localedata.jar" SelfReg="false"/>
+    <ROW File="metaindex" Component_="accessbridge64.jar" FileName="META-I~1|meta-index" Attributes="0" SourcePath="..\jre7\lib\ext\meta-index" SelfReg="false"/>
+    <ROW File="sunec.jar" Component_="accessbridge64.jar" FileName="sunec.jar" Attributes="0" SourcePath="..\jre7\lib\ext\sunec.jar" SelfReg="false"/>
+    <ROW File="sunjce_provider.jar" Component_="accessbridge64.jar" FileName="SUNJCE~1.JAR|sunjce_provider.jar" Attributes="0" SourcePath="..\jre7\lib\ext\sunjce_provider.jar" SelfReg="false"/>
+    <ROW File="sunmscapi.jar" Component_="accessbridge64.jar" FileName="SUNMSC~1.JAR|sunmscapi.jar" Attributes="0" SourcePath="..\jre7\lib\ext\sunmscapi.jar" SelfReg="false"/>
+    <ROW File="zipfs.jar" Component_="accessbridge64.jar" FileName="zipfs.jar" Attributes="0" SourcePath="..\jre7\lib\ext\zipfs.jar" SelfReg="false"/>
+    <ROW File="flavormap.properties" Component_="accessibility.properties" FileName="FLAVOR~1.PRO|flavormap.properties" Attributes="0" SourcePath="..\jre7\lib\flavormap.properties" SelfReg="false"/>
+    <ROW File="fontconfig.bfc" Component_="accessibility.properties" FileName="FONTCO~1.BFC|fontconfig.bfc" Attributes="0" SourcePath="..\jre7\lib\fontconfig.bfc" SelfReg="false"/>
+    <ROW File="fontconfig.properties.src" Component_="accessibility.properties" FileName="FONTCO~1.SRC|fontconfig.properties.src" Attributes="0" SourcePath="..\jre7\lib\fontconfig.properties.src" SelfReg="false"/>
+    <ROW File="LucidaBrightDemiBold.ttf" Component_="LucidaBrightDemiBold.ttf" FileName="LUCIDA~1.TTF|LucidaBrightDemiBold.ttf" Attributes="0" SourcePath="..\jre7\lib\fonts\LucidaBrightDemiBold.ttf" SelfReg="false"/>
+    <ROW File="LucidaBrightDemiItalic.ttf" Component_="LucidaBrightDemiBold.ttf" FileName="LUCIDA~2.TTF|LucidaBrightDemiItalic.ttf" Attributes="0" SourcePath="..\jre7\lib\fonts\LucidaBrightDemiItalic.ttf" SelfReg="false"/>
+    <ROW File="LucidaBrightItalic.ttf" Component_="LucidaBrightDemiBold.ttf" FileName="LUCIDA~3.TTF|LucidaBrightItalic.ttf" Attributes="0" SourcePath="..\jre7\lib\fonts\LucidaBrightItalic.ttf" SelfReg="false"/>
+    <ROW File="LucidaBrightRegular.ttf" Component_="LucidaBrightDemiBold.ttf" FileName="LUCIDA~4.TTF|LucidaBrightRegular.ttf" Attributes="0" SourcePath="..\jre7\lib\fonts\LucidaBrightRegular.ttf" SelfReg="false"/>
+    <ROW File="LucidaSansDemiBold.ttf" Component_="LucidaBrightDemiBold.ttf" FileName="LUCIDA~5.TTF|LucidaSansDemiBold.ttf" Attributes="0" SourcePath="..\jre7\lib\fonts\LucidaSansDemiBold.ttf" SelfReg="false"/>
+    <ROW File="LucidaSansRegular.ttf" Component_="LucidaBrightDemiBold.ttf" FileName="LUCIDA~6.TTF|LucidaSansRegular.ttf" Attributes="0" SourcePath="..\jre7\lib\fonts\LucidaSansRegular.ttf" SelfReg="false"/>
+    <ROW File="LucidaTypewriterBold.ttf" Component_="LucidaBrightDemiBold.ttf" FileName="LUCIDA~7.TTF|LucidaTypewriterBold.ttf" Attributes="0" SourcePath="..\jre7\lib\fonts\LucidaTypewriterBold.ttf" SelfReg="false"/>
+    <ROW File="LucidaTypewriterRegular.ttf" Component_="LucidaBrightDemiBold.ttf" FileName="LUCIDA~8.TTF|LucidaTypewriterRegular.ttf" Attributes="0" SourcePath="..\jre7\lib\fonts\LucidaTypewriterRegular.ttf" SelfReg="false"/>
+    <ROW File="cursors.properties" Component_="cursors.properties" FileName="CURSOR~1.PRO|cursors.properties" Attributes="0" SourcePath="..\jre7\lib\images\cursors\cursors.properties" SelfReg="false"/>
+    <ROW File="invalid32x32.gif" Component_="cursors.properties" FileName="INVALI~1.GIF|invalid32x32.gif" Attributes="0" SourcePath="..\jre7\lib\images\cursors\invalid32x32.gif" SelfReg="false"/>
+    <ROW File="win32_CopyDrop32x32.gif" Component_="cursors.properties" FileName="WIN32_~1.GIF|win32_CopyDrop32x32.gif" Attributes="0" SourcePath="..\jre7\lib\images\cursors\win32_CopyDrop32x32.gif" SelfReg="false"/>
+    <ROW File="win32_CopyNoDrop32x32.gif" Component_="cursors.properties" FileName="WIN32_~2.GIF|win32_CopyNoDrop32x32.gif" Attributes="0" SourcePath="..\jre7\lib\images\cursors\win32_CopyNoDrop32x32.gif" SelfReg="false"/>
+    <ROW File="win32_LinkDrop32x32.gif" Component_="cursors.properties" FileName="WIN32_~3.GIF|win32_LinkDrop32x32.gif" Attributes="0" SourcePath="..\jre7\lib\images\cursors\win32_LinkDrop32x32.gif" SelfReg="false"/>
+    <ROW File="win32_LinkNoDrop32x32.gif" Component_="cursors.properties" FileName="WIN32_~4.GIF|win32_LinkNoDrop32x32.gif" Attributes="0" SourcePath="..\jre7\lib\images\cursors\win32_LinkNoDrop32x32.gif" SelfReg="false"/>
+    <ROW File="win32_MoveDrop32x32.gif" Component_="cursors.properties" FileName="WIN32_~5.GIF|win32_MoveDrop32x32.gif" Attributes="0" SourcePath="..\jre7\lib\images\cursors\win32_MoveDrop32x32.gif" SelfReg="false"/>
+    <ROW File="win32_MoveNoDrop32x32.gif" Component_="cursors.properties" FileName="WIN32_~6.GIF|win32_MoveNoDrop32x32.gif" Attributes="0" SourcePath="..\jre7\lib\images\cursors\win32_MoveNoDrop32x32.gif" SelfReg="false"/>
+    <ROW File="javafx.properties" Component_="accessibility.properties" FileName="JAVAFX~1.PRO|javafx.properties" Attributes="0" SourcePath="..\jre7\lib\javafx.properties" SelfReg="false"/>
+    <ROW File="javaws.jar" Component_="accessibility.properties" FileName="javaws.jar" Attributes="0" SourcePath="..\jre7\lib\javaws.jar" SelfReg="false"/>
+    <ROW File="jce.jar" Component_="accessibility.properties" FileName="jce.jar" Attributes="0" SourcePath="..\jre7\lib\jce.jar" SelfReg="false"/>
+    <ROW File="default.jfc" Component_="default.jfc" FileName="default.jfc" Attributes="0" SourcePath="..\jre7\lib\jfr\default.jfc" SelfReg="false"/>
+    <ROW File="profile.jfc" Component_="default.jfc" FileName="profile.jfc" Attributes="0" SourcePath="..\jre7\lib\jfr\profile.jfc" SelfReg="false"/>
+    <ROW File="jfr.jar" Component_="accessibility.properties" FileName="jfr.jar" Attributes="0" SourcePath="..\jre7\lib\jfr.jar" SelfReg="false"/>
+    <ROW File="jfxrt.jar" Component_="accessibility.properties" FileName="jfxrt.jar" Attributes="0" SourcePath="..\jre7\lib\jfxrt.jar" SelfReg="false"/>
+    <ROW File="jsse.jar" Component_="accessibility.properties" FileName="jsse.jar" Attributes="0" SourcePath="..\jre7\lib\jsse.jar" SelfReg="false"/>
+    <ROW File="jvm.hprof.txt" Component_="accessibility.properties" FileName="JVMHPR~1.TXT|jvm.hprof.txt" Attributes="0" SourcePath="..\jre7\lib\jvm.hprof.txt" SelfReg="false"/>
+    <ROW File="logging.properties" Component_="accessibility.properties" FileName="LOGGIN~1.PRO|logging.properties" Attributes="0" SourcePath="..\jre7\lib\logging.properties" SelfReg="false"/>
+    <ROW File="jmxremote.access" Component_="jmxremote.access" FileName="JMXREM~1.ACC|jmxremote.access" Attributes="0" SourcePath="..\jre7\lib\management\jmxremote.access" SelfReg="false"/>
+    <ROW File="jmxremote.password.template" Component_="jmxremote.access" FileName="JMXREM~1.TEM|jmxremote.password.template" Attributes="0" SourcePath="..\jre7\lib\management\jmxremote.password.template" SelfReg="false"/>
+    <ROW File="management.properties" Component_="jmxremote.access" FileName="MANAGE~1.PRO|management.properties" Attributes="0" SourcePath="..\jre7\lib\management\management.properties" SelfReg="false"/>
+    <ROW File="snmp.acl.template" Component_="jmxremote.access" FileName="SNMPAC~1.TEM|snmp.acl.template" Attributes="0" SourcePath="..\jre7\lib\management\snmp.acl.template" SelfReg="false"/>
+    <ROW File="managementagent.jar" Component_="accessibility.properties" FileName="MANAGE~1.JAR|management-agent.jar" Attributes="0" SourcePath="..\jre7\lib\management-agent.jar" SelfReg="false"/>
+    <ROW File="metaindex_1" Component_="accessibility.properties" FileName="META-I~1|meta-index" Attributes="0" SourcePath="..\jre7\lib\meta-index" SelfReg="false"/>
+    <ROW File="net.properties" Component_="accessibility.properties" FileName="NET~1.PRO|net.properties" Attributes="0" SourcePath="..\jre7\lib\net.properties" SelfReg="false"/>
+    <ROW File="plugin.jar" Component_="accessibility.properties" FileName="plugin.jar" Attributes="0" SourcePath="..\jre7\lib\plugin.jar" SelfReg="false"/>
+    <ROW File="psfont.properties.ja" Component_="accessibility.properties" FileName="PSFONT~1.JA|psfont.properties.ja" Attributes="0" SourcePath="..\jre7\lib\psfont.properties.ja" SelfReg="false"/>
+    <ROW File="psfontj2d.properties" Component_="accessibility.properties" FileName="PSFONT~1.PRO|psfontj2d.properties" Attributes="0" SourcePath="..\jre7\lib\psfontj2d.properties" SelfReg="false"/>
+    <ROW File="resources.jar" Component_="accessibility.properties" FileName="RESOUR~1.JAR|resources.jar" Attributes="0" SourcePath="..\jre7\lib\resources.jar" SelfReg="false"/>
+    <ROW File="rt.jar" Component_="accessibility.properties" FileName="rt.jar" Attributes="0" SourcePath="..\jre7\lib\rt.jar" SelfReg="false"/>
+    <ROW File="blacklist" Component_="blacklist" FileName="BLACKL~1|blacklist" Attributes="0" SourcePath="..\jre7\lib\security\blacklist" SelfReg="false"/>
+    <ROW File="cacerts" Component_="blacklist" FileName="cacerts" Attributes="0" SourcePath="..\jre7\lib\security\cacerts" SelfReg="false"/>
+    <ROW File="java.policy" Component_="blacklist" FileName="JAVA~1.POL|java.policy" Attributes="0" SourcePath="..\jre7\lib\security\java.policy" SelfReg="false"/>
+    <ROW File="java.security" Component_="blacklist" FileName="JAVA~1.SEC|java.security" Attributes="0" SourcePath="..\jre7\lib\security\java.security" SelfReg="false"/>
+    <ROW File="javafx.policy" Component_="blacklist" FileName="JAVAFX~1.POL|javafx.policy" Attributes="0" SourcePath="..\jre7\lib\security\javafx.policy" SelfReg="false"/>
+    <ROW File="javaws.policy" Component_="blacklist" FileName="JAVAWS~1.POL|javaws.policy" Attributes="0" SourcePath="..\jre7\lib\security\javaws.policy" SelfReg="false"/>
+    <ROW File="local_policy.jar" Component_="blacklist" FileName="LOCAL_~1.JAR|local_policy.jar" Attributes="0" SourcePath="..\jre7\lib\security\local_policy.jar" SelfReg="false"/>
+    <ROW File="trusted.libraries" Component_="blacklist" FileName="TRUSTE~1.LIB|trusted.libraries" Attributes="0" SourcePath="..\jre7\lib\security\trusted.libraries" SelfReg="false"/>
+    <ROW File="US_export_policy.jar" Component_="blacklist" FileName="US_EXP~1.JAR|US_export_policy.jar" Attributes="0" SourcePath="..\jre7\lib\security\US_export_policy.jar" SelfReg="false"/>
+    <ROW File="sound.properties" Component_="accessibility.properties" FileName="SOUND~1.PRO|sound.properties" Attributes="0" SourcePath="..\jre7\lib\sound.properties" SelfReg="false"/>
+    <ROW File="tzmappings" Component_="accessibility.properties" FileName="TZMAPP~1|tzmappings" Attributes="0" SourcePath="..\jre7\lib\tzmappings" SelfReg="false"/>
+    <ROW File="Abidjan" Component_="Abidjan" FileName="Abidjan" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Abidjan" SelfReg="false"/>
+    <ROW File="Accra" Component_="Abidjan" FileName="Accra" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Accra" SelfReg="false"/>
+    <ROW File="Algiers" Component_="Abidjan" FileName="Algiers" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Algiers" SelfReg="false"/>
+    <ROW File="Bissau" Component_="Abidjan" FileName="Bissau" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Bissau" SelfReg="false"/>
+    <ROW File="Cairo" Component_="Abidjan" FileName="Cairo" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Cairo" SelfReg="false"/>
+    <ROW File="Casablanca" Component_="Abidjan" FileName="CASABL~1|Casablanca" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Casablanca" SelfReg="false"/>
+    <ROW File="Ceuta" Component_="Abidjan" FileName="Ceuta" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Ceuta" SelfReg="false"/>
+    <ROW File="El_Aaiun" Component_="Abidjan" FileName="El_Aaiun" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\El_Aaiun" SelfReg="false"/>
+    <ROW File="Johannesburg" Component_="Abidjan" FileName="JOHANN~1|Johannesburg" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Johannesburg" SelfReg="false"/>
+    <ROW File="Khartoum" Component_="Abidjan" FileName="Khartoum" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Khartoum" SelfReg="false"/>
+    <ROW File="Lagos" Component_="Abidjan" FileName="Lagos" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Lagos" SelfReg="false"/>
+    <ROW File="Maputo" Component_="Abidjan" FileName="Maputo" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Maputo" SelfReg="false"/>
+    <ROW File="Monrovia" Component_="Abidjan" FileName="Monrovia" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Monrovia" SelfReg="false"/>
+    <ROW File="Nairobi" Component_="Abidjan" FileName="Nairobi" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Nairobi" SelfReg="false"/>
+    <ROW File="Ndjamena" Component_="Abidjan" FileName="Ndjamena" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Ndjamena" SelfReg="false"/>
+    <ROW File="Tripoli" Component_="Abidjan" FileName="Tripoli" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Tripoli" SelfReg="false"/>
+    <ROW File="Tunis" Component_="Abidjan" FileName="Tunis" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Tunis" SelfReg="false"/>
+    <ROW File="Windhoek" Component_="Abidjan" FileName="Windhoek" Attributes="0" SourcePath="..\jre7\lib\zi\Africa\Windhoek" SelfReg="false"/>
+    <ROW File="Adak" Component_="Adak" FileName="Adak" Attributes="0" SourcePath="..\jre7\lib\zi\America\Adak" SelfReg="false"/>
+    <ROW File="Anchorage" Component_="Adak" FileName="ANCHOR~1|Anchorage" Attributes="0" SourcePath="..\jre7\lib\zi\America\Anchorage" SelfReg="false"/>
+    <ROW File="Antigua" Component_="Adak" FileName="Antigua" Attributes="0" SourcePath="..\jre7\lib\zi\America\Antigua" SelfReg="false"/>
+    <ROW File="Araguaina" Component_="Adak" FileName="ARAGUA~1|Araguaina" Attributes="0" SourcePath="..\jre7\lib\zi\America\Araguaina" SelfReg="false"/>
+    <ROW File="Buenos_Aires" Component_="Buenos_Aires" FileName="BUENOS~1|Buenos_Aires" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Buenos_Aires" SelfReg="false"/>
+    <ROW File="Catamarca" Component_="Buenos_Aires" FileName="CATAMA~1|Catamarca" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Catamarca" SelfReg="false"/>
+    <ROW File="Cordoba" Component_="Buenos_Aires" FileName="Cordoba" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Cordoba" SelfReg="false"/>
+    <ROW File="Jujuy" Component_="Buenos_Aires" FileName="Jujuy" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Jujuy" SelfReg="false"/>
+    <ROW File="La_Rioja" Component_="Buenos_Aires" FileName="La_Rioja" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\La_Rioja" SelfReg="false"/>
+    <ROW File="Mendoza" Component_="Buenos_Aires" FileName="Mendoza" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Mendoza" SelfReg="false"/>
+    <ROW File="Rio_Gallegos" Component_="Buenos_Aires" FileName="RIO_GA~1|Rio_Gallegos" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Rio_Gallegos" SelfReg="false"/>
+    <ROW File="Salta" Component_="Buenos_Aires" FileName="Salta" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Salta" SelfReg="false"/>
+    <ROW File="San_Juan" Component_="Buenos_Aires" FileName="San_Juan" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\San_Juan" SelfReg="false"/>
+    <ROW File="San_Luis" Component_="Buenos_Aires" FileName="San_Luis" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\San_Luis" SelfReg="false"/>
+    <ROW File="Tucuman" Component_="Buenos_Aires" FileName="Tucuman" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Tucuman" SelfReg="false"/>
+    <ROW File="Ushuaia" Component_="Buenos_Aires" FileName="Ushuaia" Attributes="0" SourcePath="..\jre7\lib\zi\America\Argentina\Ushuaia" SelfReg="false"/>
+    <ROW File="Asuncion" Component_="Adak" FileName="Asuncion" Attributes="0" SourcePath="..\jre7\lib\zi\America\Asuncion" SelfReg="false"/>
+    <ROW File="Atikokan" Component_="Adak" FileName="Atikokan" Attributes="0" SourcePath="..\jre7\lib\zi\America\Atikokan" SelfReg="false"/>
+    <ROW File="Bahia" Component_="Adak" FileName="Bahia" Attributes="0" SourcePath="..\jre7\lib\zi\America\Bahia" SelfReg="false"/>
+    <ROW File="Bahia_Banderas" Component_="Adak" FileName="BAHIA_~1|Bahia_Banderas" Attributes="0" SourcePath="..\jre7\lib\zi\America\Bahia_Banderas" SelfReg="false"/>
+    <ROW File="Barbados" Component_="Adak" FileName="Barbados" Attributes="0" SourcePath="..\jre7\lib\zi\America\Barbados" SelfReg="false"/>
+    <ROW File="Belem" Component_="Adak" FileName="Belem" Attributes="0" SourcePath="..\jre7\lib\zi\America\Belem" SelfReg="false"/>
+    <ROW File="Belize" Component_="Adak" FileName="Belize" Attributes="0" SourcePath="..\jre7\lib\zi\America\Belize" SelfReg="false"/>
+    <ROW File="BlancSablon" Component_="Adak" FileName="BLANC-~1|Blanc-Sablon" Attributes="0" SourcePath="..\jre7\lib\zi\America\Blanc-Sablon" SelfReg="false"/>
+    <ROW File="Boa_Vista" Component_="Adak" FileName="BOA_VI~1|Boa_Vista" Attributes="0" SourcePath="..\jre7\lib\zi\America\Boa_Vista" SelfReg="false"/>
+    <ROW File="Bogota" Component_="Adak" FileName="Bogota" Attributes="0" SourcePath="..\jre7\lib\zi\America\Bogota" SelfReg="false"/>
+    <ROW File="Boise" Component_="Adak" FileName="Boise" Attributes="0" SourcePath="..\jre7\lib\zi\America\Boise" SelfReg="false"/>
+    <ROW File="Cambridge_Bay" Component_="Adak" FileName="CAMBRI~1|Cambridge_Bay" Attributes="0" SourcePath="..\jre7\lib\zi\America\Cambridge_Bay" SelfReg="false"/>
+    <ROW File="Campo_Grande" Component_="Adak" FileName="CAMPO_~1|Campo_Grande" Attributes="0" SourcePath="..\jre7\lib\zi\America\Campo_Grande" SelfReg="false"/>
+    <ROW File="Cancun" Component_="Adak" FileName="Cancun" Attributes="0" SourcePath="..\jre7\lib\zi\America\Cancun" SelfReg="false"/>
+    <ROW File="Caracas" Component_="Adak" FileName="Caracas" Attributes="0" SourcePath="..\jre7\lib\zi\America\Caracas" SelfReg="false"/>
+    <ROW File="Cayenne" Component_="Adak" FileName="Cayenne" Attributes="0" SourcePath="..\jre7\lib\zi\America\Cayenne" SelfReg="false"/>
+    <ROW File="Cayman" Component_="Adak" FileName="Cayman" Attributes="0" SourcePath="..\jre7\lib\zi\America\Cayman" SelfReg="false"/>
+    <ROW File="Chicago" Component_="Adak" FileName="Chicago" Attributes="0" SourcePath="..\jre7\lib\zi\America\Chicago" SelfReg="false"/>
+    <ROW File="Chihuahua" Component_="Adak" FileName="CHIHUA~1|Chihuahua" Attributes="0" SourcePath="..\jre7\lib\zi\America\Chihuahua" SelfReg="false"/>
+    <ROW File="Costa_Rica" Component_="Adak" FileName="COSTA_~1|Costa_Rica" Attributes="0" SourcePath="..\jre7\lib\zi\America\Costa_Rica" SelfReg="false"/>
+    <ROW File="Creston" Component_="Adak" FileName="Creston" Attributes="0" SourcePath="..\jre7\lib\zi\America\Creston" SelfReg="false"/>
+    <ROW File="Cuiaba" Component_="Adak" FileName="Cuiaba" Attributes="0" SourcePath="..\jre7\lib\zi\America\Cuiaba" SelfReg="false"/>
+    <ROW File="Curacao" Component_="Adak" FileName="Curacao" Attributes="0" SourcePath="..\jre7\lib\zi\America\Curacao" SelfReg="false"/>
+    <ROW File="Danmarkshavn" Component_="Adak" FileName="DANMAR~1|Danmarkshavn" Attributes="0" SourcePath="..\jre7\lib\zi\America\Danmarkshavn" SelfReg="false"/>
+    <ROW File="Dawson" Component_="Adak" FileName="Dawson" Attributes="0" SourcePath="..\jre7\lib\zi\America\Dawson" SelfReg="false"/>
+    <ROW File="Dawson_Creek" Component_="Adak" FileName="DAWSON~1|Dawson_Creek" Attributes="0" SourcePath="..\jre7\lib\zi\America\Dawson_Creek" SelfReg="false"/>
+    <ROW File="Denver" Component_="Adak" FileName="Denver" Attributes="0" SourcePath="..\jre7\lib\zi\America\Denver" SelfReg="false"/>
+    <ROW File="Detroit" Component_="Adak" FileName="Detroit" Attributes="0" SourcePath="..\jre7\lib\zi\America\Detroit" SelfReg="false"/>
+    <ROW File="Edmonton" Component_="Adak" FileName="Edmonton" Attributes="0" SourcePath="..\jre7\lib\zi\America\Edmonton" SelfReg="false"/>
+    <ROW File="Eirunepe" Component_="Adak" FileName="Eirunepe" Attributes="0" SourcePath="..\jre7\lib\zi\America\Eirunepe" SelfReg="false"/>
+    <ROW File="El_Salvador" Component_="Adak" FileName="EL_SAL~1|El_Salvador" Attributes="0" SourcePath="..\jre7\lib\zi\America\El_Salvador" SelfReg="false"/>
+    <ROW File="Fortaleza" Component_="Adak" FileName="FORTAL~1|Fortaleza" Attributes="0" SourcePath="..\jre7\lib\zi\America\Fortaleza" SelfReg="false"/>
+    <ROW File="Glace_Bay" Component_="Adak" FileName="GLACE_~1|Glace_Bay" Attributes="0" SourcePath="..\jre7\lib\zi\America\Glace_Bay" SelfReg="false"/>
+    <ROW File="Godthab" Component_="Adak" FileName="Godthab" Attributes="0" SourcePath="..\jre7\lib\zi\America\Godthab" SelfReg="false"/>
+    <ROW File="Goose_Bay" Component_="Adak" FileName="GOOSE_~1|Goose_Bay" Attributes="0" SourcePath="..\jre7\lib\zi\America\Goose_Bay" SelfReg="false"/>
+    <ROW File="Grand_Turk" Component_="Adak" FileName="GRAND_~1|Grand_Turk" Attributes="0" SourcePath="..\jre7\lib\zi\America\Grand_Turk" SelfReg="false"/>
+    <ROW File="Guatemala" Component_="Adak" FileName="GUATEM~1|Guatemala" Attributes="0" SourcePath="..\jre7\lib\zi\America\Guatemala" SelfReg="false"/>
+    <ROW File="Guayaquil" Component_="Adak" FileName="GUAYAQ~1|Guayaquil" Attributes="0" SourcePath="..\jre7\lib\zi\America\Guayaquil" SelfReg="false"/>
+    <ROW File="Guyana" Component_="Adak" FileName="Guyana" Attributes="0" SourcePath="..\jre7\lib\zi\America\Guyana" SelfReg="false"/>
+    <ROW File="Halifax" Component_="Adak" FileName="Halifax" Attributes="0" SourcePath="..\jre7\lib\zi\America\Halifax" SelfReg="false"/>
+    <ROW File="Havana" Component_="Adak" FileName="Havana" Attributes="0" SourcePath="..\jre7\lib\zi\America\Havana" SelfReg="false"/>
+    <ROW File="Hermosillo" Component_="Adak" FileName="HERMOS~1|Hermosillo" Attributes="0" SourcePath="..\jre7\lib\zi\America\Hermosillo" SelfReg="false"/>
+    <ROW File="Indianapolis" Component_="Indianapolis" FileName="INDIAN~1|Indianapolis" Attributes="0" SourcePath="..\jre7\lib\zi\America\Indiana\Indianapolis" SelfReg="false"/>
+    <ROW File="Knox" Component_="Indianapolis" FileName="Knox" Attributes="0" SourcePath="..\jre7\lib\zi\America\Indiana\Knox" SelfReg="false"/>
+    <ROW File="Marengo" Component_="Indianapolis" FileName="Marengo" Attributes="0" SourcePath="..\jre7\lib\zi\America\Indiana\Marengo" SelfReg="false"/>
+    <ROW File="Petersburg" Component_="Indianapolis" FileName="PETERS~1|Petersburg" Attributes="0" SourcePath="..\jre7\lib\zi\America\Indiana\Petersburg" SelfReg="false"/>
+    <ROW File="Tell_City" Component_="Indianapolis" FileName="TELL_C~1|Tell_City" Attributes="0" SourcePath="..\jre7\lib\zi\America\Indiana\Tell_City" SelfReg="false"/>
+    <ROW File="Vevay" Component_="Indianapolis" FileName="Vevay" Attributes="0" SourcePath="..\jre7\lib\zi\America\Indiana\Vevay" SelfReg="false"/>
+    <ROW File="Vincennes" Component_="Indianapolis" FileName="VINCEN~1|Vincennes" Attributes="0" SourcePath="..\jre7\lib\zi\America\Indiana\Vincennes" SelfReg="false"/>
+    <ROW File="Winamac" Component_="Indianapolis" FileName="Winamac" Attributes="0" SourcePath="..\jre7\lib\zi\America\Indiana\Winamac" SelfReg="false"/>
+    <ROW File="Inuvik" Component_="Adak" FileName="Inuvik" Attributes="0" SourcePath="..\jre7\lib\zi\America\Inuvik" SelfReg="false"/>
+    <ROW File="Iqaluit" Component_="Adak" FileName="Iqaluit" Attributes="0" SourcePath="..\jre7\lib\zi\America\Iqaluit" SelfReg="false"/>
+    <ROW File="Jamaica" Component_="Adak" FileName="Jamaica" Attributes="0" SourcePath="..\jre7\lib\zi\America\Jamaica" SelfReg="false"/>
+    <ROW File="Juneau" Component_="Adak" FileName="Juneau" Attributes="0" SourcePath="..\jre7\lib\zi\America\Juneau" SelfReg="false"/>
+    <ROW File="Louisville" Component_="Louisville" FileName="LOUISV~1|Louisville" Attributes="0" SourcePath="..\jre7\lib\zi\America\Kentucky\Louisville" SelfReg="false"/>
+    <ROW File="Monticello" Component_="Louisville" FileName="MONTIC~1|Monticello" Attributes="0" SourcePath="..\jre7\lib\zi\America\Kentucky\Monticello" SelfReg="false"/>
+    <ROW File="La_Paz" Component_="Adak" FileName="La_Paz" Attributes="0" SourcePath="..\jre7\lib\zi\America\La_Paz" SelfReg="false"/>
+    <ROW File="Lima" Component_="Adak" FileName="Lima" Attributes="0" SourcePath="..\jre7\lib\zi\America\Lima" SelfReg="false"/>
+    <ROW File="Los_Angeles" Component_="Adak" FileName="LOS_AN~1|Los_Angeles" Attributes="0" SourcePath="..\jre7\lib\zi\America\Los_Angeles" SelfReg="false"/>
+    <ROW File="Maceio" Component_="Adak" FileName="Maceio" Attributes="0" SourcePath="..\jre7\lib\zi\America\Maceio" SelfReg="false"/>
+    <ROW File="Managua" Component_="Adak" FileName="Managua" Attributes="0" SourcePath="..\jre7\lib\zi\America\Managua" SelfReg="false"/>
+    <ROW File="Manaus" Component_="Adak" FileName="Manaus" Attributes="0" SourcePath="..\jre7\lib\zi\America\Manaus" SelfReg="false"/>
+    <ROW File="Martinique" Component_="Adak" FileName="MARTIN~1|Martinique" Attributes="0" SourcePath="..\jre7\lib\zi\America\Martinique" SelfReg="false"/>
+    <ROW File="Matamoros" Component_="Adak" FileName="MATAMO~1|Matamoros" Attributes="0" SourcePath="..\jre7\lib\zi\America\Matamoros" SelfReg="false"/>
+    <ROW File="Mazatlan" Component_="Adak" FileName="Mazatlan" Attributes="0" SourcePath="..\jre7\lib\zi\America\Mazatlan" SelfReg="false"/>
+    <ROW File="Menominee" Component_="Adak" FileName="MENOMI~1|Menominee" Attributes="0" SourcePath="..\jre7\lib\zi\America\Menominee" SelfReg="false"/>
+    <ROW File="Merida" Component_="Adak" FileName="Merida" Attributes="0" SourcePath="..\jre7\lib\zi\America\Merida" SelfReg="false"/>
+    <ROW File="Metlakatla" Component_="Adak" FileName="METLAK~1|Metlakatla" Attributes="0" SourcePath="..\jre7\lib\zi\America\Metlakatla" SelfReg="false"/>
+    <ROW File="Mexico_City" Component_="Adak" FileName="MEXICO~1|Mexico_City" Attributes="0" SourcePath="..\jre7\lib\zi\America\Mexico_City" SelfReg="false"/>
+    <ROW File="Miquelon" Component_="Adak" FileName="Miquelon" Attributes="0" SourcePath="..\jre7\lib\zi\America\Miquelon" SelfReg="false"/>
+    <ROW File="Moncton" Component_="Adak" FileName="Moncton" Attributes="0" SourcePath="..\jre7\lib\zi\America\Moncton" SelfReg="false"/>
+    <ROW File="Monterrey" Component_="Adak" FileName="MONTER~1|Monterrey" Attributes="0" SourcePath="..\jre7\lib\zi\America\Monterrey" SelfReg="false"/>
+    <ROW File="Montevideo" Component_="Adak" FileName="MONTEV~1|Montevideo" Attributes="0" SourcePath="..\jre7\lib\zi\America\Montevideo" SelfReg="false"/>
+    <ROW File="Montreal" Component_="Adak" FileName="Montreal" Attributes="0" SourcePath="..\jre7\lib\zi\America\Montreal" SelfReg="false"/>
+    <ROW File="Nassau" Component_="Adak" FileName="Nassau" Attributes="0" SourcePath="..\jre7\lib\zi\America\Nassau" SelfReg="false"/>
+    <ROW File="New_York" Component_="Adak" FileName="New_York" Attributes="0" SourcePath="..\jre7\lib\zi\America\New_York" SelfReg="false"/>
+    <ROW File="Nipigon" Component_="Adak" FileName="Nipigon" Attributes="0" SourcePath="..\jre7\lib\zi\America\Nipigon" SelfReg="false"/>
+    <ROW File="Nome" Component_="Adak" FileName="Nome" Attributes="0" SourcePath="..\jre7\lib\zi\America\Nome" SelfReg="false"/>
+    <ROW File="Noronha" Component_="Adak" FileName="Noronha" Attributes="0" SourcePath="..\jre7\lib\zi\America\Noronha" SelfReg="false"/>
+    <ROW File="Beulah" Component_="Beulah" FileName="Beulah" Attributes="0" SourcePath="..\jre7\lib\zi\America\North_Dakota\Beulah" SelfReg="false"/>
+    <ROW File="Center" Component_="Beulah" FileName="Center" Attributes="0" SourcePath="..\jre7\lib\zi\America\North_Dakota\Center" SelfReg="false"/>
+    <ROW File="New_Salem" Component_="Beulah" FileName="NEW_SA~1|New_Salem" Attributes="0" SourcePath="..\jre7\lib\zi\America\North_Dakota\New_Salem" SelfReg="false"/>
+    <ROW File="Ojinaga" Component_="Adak" FileName="Ojinaga" Attributes="0" SourcePath="..\jre7\lib\zi\America\Ojinaga" SelfReg="false"/>
+    <ROW File="Panama" Component_="Adak" FileName="Panama" Attributes="0" SourcePath="..\jre7\lib\zi\America\Panama" SelfReg="false"/>
+    <ROW File="Pangnirtung" Component_="Adak" FileName="PANGNI~1|Pangnirtung" Attributes="0" SourcePath="..\jre7\lib\zi\America\Pangnirtung" SelfReg="false"/>
+    <ROW File="Paramaribo" Component_="Adak" FileName="PARAMA~1|Paramaribo" Attributes="0" SourcePath="..\jre7\lib\zi\America\Paramaribo" SelfReg="false"/>
+    <ROW File="Phoenix" Component_="Adak" FileName="Phoenix" Attributes="0" SourcePath="..\jre7\lib\zi\America\Phoenix" SelfReg="false"/>
+    <ROW File="PortauPrince" Component_="Adak" FileName="PORT-A~1|Port-au-Prince" Attributes="0" SourcePath="..\jre7\lib\zi\America\Port-au-Prince" SelfReg="false"/>
+    <ROW File="Porto_Velho" Component_="Adak" FileName="PORTO_~1|Porto_Velho" Attributes="0" SourcePath="..\jre7\lib\zi\America\Porto_Velho" SelfReg="false"/>
+    <ROW File="Port_of_Spain" Component_="Adak" FileName="PORT_O~1|Port_of_Spain" Attributes="0" SourcePath="..\jre7\lib\zi\America\Port_of_Spain" SelfReg="false"/>
+    <ROW File="Puerto_Rico" Component_="Adak" FileName="PUERTO~1|Puerto_Rico" Attributes="0" SourcePath="..\jre7\lib\zi\America\Puerto_Rico" SelfReg="false"/>
+    <ROW File="Rainy_River" Component_="Adak" FileName="RAINY_~1|Rainy_River" Attributes="0" SourcePath="..\jre7\lib\zi\America\Rainy_River" SelfReg="false"/>
+    <ROW File="Rankin_Inlet" Component_="Adak" FileName="RANKIN~1|Rankin_Inlet" Attributes="0" SourcePath="..\jre7\lib\zi\America\Rankin_Inlet" SelfReg="false"/>
+    <ROW File="Recife" Component_="Adak" FileName="Recife" Attributes="0" SourcePath="..\jre7\lib\zi\America\Recife" SelfReg="false"/>
+    <ROW File="Regina" Component_="Adak" FileName="Regina" Attributes="0" SourcePath="..\jre7\lib\zi\America\Regina" SelfReg="false"/>
+    <ROW File="Resolute" Component_="Adak" FileName="Resolute" Attributes="0" SourcePath="..\jre7\lib\zi\America\Resolute" SelfReg="false"/>
+    <ROW File="Rio_Branco" Component_="Adak" FileName="RIO_BR~1|Rio_Branco" Attributes="0" SourcePath="..\jre7\lib\zi\America\Rio_Branco" SelfReg="false"/>
+    <ROW File="Santarem" Component_="Adak" FileName="Santarem" Attributes="0" SourcePath="..\jre7\lib\zi\America\Santarem" SelfReg="false"/>
+    <ROW File="Santa_Isabel" Component_="Adak" FileName="SANTA_~1|Santa_Isabel" Attributes="0" SourcePath="..\jre7\lib\zi\America\Santa_Isabel" SelfReg="false"/>
+    <ROW File="Santiago" Component_="Adak" FileName="Santiago" Attributes="0" SourcePath="..\jre7\lib\zi\America\Santiago" SelfReg="false"/>
+    <ROW File="Santo_Domingo" Component_="Adak" FileName="SANTO_~1|Santo_Domingo" Attributes="0" SourcePath="..\jre7\lib\zi\America\Santo_Domingo" SelfReg="false"/>
+    <ROW File="Sao_Paulo" Component_="Adak" FileName="SAO_PA~1|Sao_Paulo" Attributes="0" SourcePath="..\jre7\lib\zi\America\Sao_Paulo" SelfReg="false"/>
+    <ROW File="Scoresbysund" Component_="Adak" FileName="SCORES~1|Scoresbysund" Attributes="0" SourcePath="..\jre7\lib\zi\America\Scoresbysund" SelfReg="false"/>
+    <ROW File="Sitka" Component_="Adak" FileName="Sitka" Attributes="0" SourcePath="..\jre7\lib\zi\America\Sitka" SelfReg="false"/>
+    <ROW File="St_Johns" Component_="Adak" FileName="St_Johns" Attributes="0" SourcePath="..\jre7\lib\zi\America\St_Johns" SelfReg="false"/>
+    <ROW File="Swift_Current" Component_="Adak" FileName="SWIFT_~1|Swift_Current" Attributes="0" SourcePath="..\jre7\lib\zi\America\Swift_Current" SelfReg="false"/>
+    <ROW File="Tegucigalpa" Component_="Adak" FileName="TEGUCI~1|Tegucigalpa" Attributes="0" SourcePath="..\jre7\lib\zi\America\Tegucigalpa" SelfReg="false"/>
+    <ROW File="Thule" Component_="Adak" FileName="Thule" Attributes="0" SourcePath="..\jre7\lib\zi\America\Thule" SelfReg="false"/>
+    <ROW File="Thunder_Bay" Component_="Adak" FileName="THUNDE~1|Thunder_Bay" Attributes="0" SourcePath="..\jre7\lib\zi\America\Thunder_Bay" SelfReg="false"/>
+    <ROW File="Tijuana" Component_="Adak" FileName="Tijuana" Attributes="0" SourcePath="..\jre7\lib\zi\America\Tijuana" SelfReg="false"/>
+    <ROW File="Toronto" Component_="Adak" FileName="Toronto" Attributes="0" SourcePath="..\jre7\lib\zi\America\Toronto" SelfReg="false"/>
+    <ROW File="Vancouver" Component_="Adak" FileName="VANCOU~1|Vancouver" Attributes="0" SourcePath="..\jre7\lib\zi\America\Vancouver" SelfReg="false"/>
+    <ROW File="Whitehorse" Component_="Adak" FileName="WHITEH~1|Whitehorse" Attributes="0" SourcePath="..\jre7\lib\zi\America\Whitehorse" SelfReg="false"/>
+    <ROW File="Winnipeg" Component_="Adak" FileName="Winnipeg" Attributes="0" SourcePath="..\jre7\lib\zi\America\Winnipeg" SelfReg="false"/>
+    <ROW File="Yakutat" Component_="Adak" FileName="Yakutat" Attributes="0" SourcePath="..\jre7\lib\zi\America\Yakutat" SelfReg="false"/>
+    <ROW File="Yellowknife" Component_="Adak" FileName="YELLOW~1|Yellowknife" Attributes="0" SourcePath="..\jre7\lib\zi\America\Yellowknife" SelfReg="false"/>
+    <ROW File="Casey" Component_="Casey" FileName="Casey" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Casey" SelfReg="false"/>
+    <ROW File="Davis" Component_="Casey" FileName="Davis" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Davis" SelfReg="false"/>
+    <ROW File="DumontDUrville" Component_="Casey" FileName="DUMONT~1|DumontDUrville" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\DumontDUrville" SelfReg="false"/>
+    <ROW File="Macquarie" Component_="Casey" FileName="MACQUA~1|Macquarie" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Macquarie" SelfReg="false"/>
+    <ROW File="Mawson" Component_="Casey" FileName="Mawson" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Mawson" SelfReg="false"/>
+    <ROW File="Palmer" Component_="Casey" FileName="Palmer" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Palmer" SelfReg="false"/>
+    <ROW File="Rothera" Component_="Casey" FileName="Rothera" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Rothera" SelfReg="false"/>
+    <ROW File="Syowa" Component_="Casey" FileName="Syowa" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Syowa" SelfReg="false"/>
+    <ROW File="Troll" Component_="Casey" FileName="Troll" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Troll" SelfReg="false"/>
+    <ROW File="Vostok" Component_="Casey" FileName="Vostok" Attributes="0" SourcePath="..\jre7\lib\zi\Antarctica\Vostok" SelfReg="false"/>
+    <ROW File="Almaty" Component_="Almaty" FileName="Almaty" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Almaty" SelfReg="false"/>
+    <ROW File="Amman" Component_="Almaty" FileName="Amman" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Amman" SelfReg="false"/>
+    <ROW File="Anadyr" Component_="Almaty" FileName="Anadyr" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Anadyr" SelfReg="false"/>
+    <ROW File="Aqtau" Component_="Almaty" FileName="Aqtau" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Aqtau" SelfReg="false"/>
+    <ROW File="Aqtobe" Component_="Almaty" FileName="Aqtobe" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Aqtobe" SelfReg="false"/>
+    <ROW File="Ashgabat" Component_="Almaty" FileName="Ashgabat" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Ashgabat" SelfReg="false"/>
+    <ROW File="Baghdad" Component_="Almaty" FileName="Baghdad" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Baghdad" SelfReg="false"/>
+    <ROW File="Baku" Component_="Almaty" FileName="Baku" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Baku" SelfReg="false"/>
+    <ROW File="Bangkok" Component_="Almaty" FileName="Bangkok" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Bangkok" SelfReg="false"/>
+    <ROW File="Beirut" Component_="Almaty" FileName="Beirut" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Beirut" SelfReg="false"/>
+    <ROW File="Bishkek" Component_="Almaty" FileName="Bishkek" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Bishkek" SelfReg="false"/>
+    <ROW File="Brunei" Component_="Almaty" FileName="Brunei" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Brunei" SelfReg="false"/>
+    <ROW File="Chita" Component_="Almaty" FileName="Chita" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Chita" SelfReg="false"/>
+    <ROW File="Choibalsan" Component_="Almaty" FileName="CHOIBA~1|Choibalsan" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Choibalsan" SelfReg="false"/>
+    <ROW File="Colombo" Component_="Almaty" FileName="Colombo" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Colombo" SelfReg="false"/>
+    <ROW File="Damascus" Component_="Almaty" FileName="Damascus" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Damascus" SelfReg="false"/>
+    <ROW File="Dhaka" Component_="Almaty" FileName="Dhaka" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Dhaka" SelfReg="false"/>
+    <ROW File="Dili" Component_="Almaty" FileName="Dili" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Dili" SelfReg="false"/>
+    <ROW File="Dubai" Component_="Almaty" FileName="Dubai" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Dubai" SelfReg="false"/>
+    <ROW File="Dushanbe" Component_="Almaty" FileName="Dushanbe" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Dushanbe" SelfReg="false"/>
+    <ROW File="Gaza" Component_="Almaty" FileName="Gaza" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Gaza" SelfReg="false"/>
+    <ROW File="Hebron" Component_="Almaty" FileName="Hebron" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Hebron" SelfReg="false"/>
+    <ROW File="Hong_Kong" Component_="Almaty" FileName="HONG_K~1|Hong_Kong" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Hong_Kong" SelfReg="false"/>
+    <ROW File="Hovd" Component_="Almaty" FileName="Hovd" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Hovd" SelfReg="false"/>
+    <ROW File="Ho_Chi_Minh" Component_="Almaty" FileName="HO_CHI~1|Ho_Chi_Minh" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Ho_Chi_Minh" SelfReg="false"/>
+    <ROW File="Irkutsk" Component_="Almaty" FileName="Irkutsk" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Irkutsk" SelfReg="false"/>
+    <ROW File="Jakarta" Component_="Almaty" FileName="Jakarta" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Jakarta" SelfReg="false"/>
+    <ROW File="Jayapura" Component_="Almaty" FileName="Jayapura" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Jayapura" SelfReg="false"/>
+    <ROW File="Jerusalem" Component_="Almaty" FileName="JERUSA~1|Jerusalem" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Jerusalem" SelfReg="false"/>
+    <ROW File="Kabul" Component_="Almaty" FileName="Kabul" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Kabul" SelfReg="false"/>
+    <ROW File="Kamchatka" Component_="Almaty" FileName="KAMCHA~1|Kamchatka" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Kamchatka" SelfReg="false"/>
+    <ROW File="Karachi" Component_="Almaty" FileName="Karachi" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Karachi" SelfReg="false"/>
+    <ROW File="Kathmandu" Component_="Almaty" FileName="KATHMA~1|Kathmandu" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Kathmandu" SelfReg="false"/>
+    <ROW File="Khandyga" Component_="Almaty" FileName="Khandyga" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Khandyga" SelfReg="false"/>
+    <ROW File="Kolkata" Component_="Almaty" FileName="Kolkata" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Kolkata" SelfReg="false"/>
+    <ROW File="Krasnoyarsk" Component_="Almaty" FileName="KRASNO~1|Krasnoyarsk" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Krasnoyarsk" SelfReg="false"/>
+    <ROW File="Kuala_Lumpur" Component_="Almaty" FileName="KUALA_~1|Kuala_Lumpur" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Kuala_Lumpur" SelfReg="false"/>
+    <ROW File="Kuching" Component_="Almaty" FileName="Kuching" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Kuching" SelfReg="false"/>
+    <ROW File="Macau" Component_="Almaty" FileName="Macau" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Macau" SelfReg="false"/>
+    <ROW File="Magadan" Component_="Almaty" FileName="Magadan" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Magadan" SelfReg="false"/>
+    <ROW File="Makassar" Component_="Almaty" FileName="Makassar" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Makassar" SelfReg="false"/>
+    <ROW File="Manila" Component_="Almaty" FileName="Manila" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Manila" SelfReg="false"/>
+    <ROW File="Nicosia" Component_="Almaty" FileName="Nicosia" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Nicosia" SelfReg="false"/>
+    <ROW File="Novokuznetsk" Component_="Almaty" FileName="NOVOKU~1|Novokuznetsk" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Novokuznetsk" SelfReg="false"/>
+    <ROW File="Novosibirsk" Component_="Almaty" FileName="NOVOSI~1|Novosibirsk" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Novosibirsk" SelfReg="false"/>
+    <ROW File="Omsk" Component_="Almaty" FileName="Omsk" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Omsk" SelfReg="false"/>
+    <ROW File="Oral" Component_="Almaty" FileName="Oral" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Oral" SelfReg="false"/>
+    <ROW File="Pontianak" Component_="Almaty" FileName="PONTIA~1|Pontianak" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Pontianak" SelfReg="false"/>
+    <ROW File="Pyongyang" Component_="Almaty" FileName="PYONGY~1|Pyongyang" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Pyongyang" SelfReg="false"/>
+    <ROW File="Qatar" Component_="Almaty" FileName="Qatar" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Qatar" SelfReg="false"/>
+    <ROW File="Qyzylorda" Component_="Almaty" FileName="QYZYLO~1|Qyzylorda" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Qyzylorda" SelfReg="false"/>
+    <ROW File="Rangoon" Component_="Almaty" FileName="Rangoon" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Rangoon" SelfReg="false"/>
+    <ROW File="Riyadh" Component_="Almaty" FileName="Riyadh" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Riyadh" SelfReg="false"/>
+    <ROW File="Riyadh87" Component_="Almaty" FileName="Riyadh87" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Riyadh87" SelfReg="false"/>
+    <ROW File="Riyadh88" Component_="Almaty" FileName="Riyadh88" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Riyadh88" SelfReg="false"/>
+    <ROW File="Riyadh89" Component_="Almaty" FileName="Riyadh89" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Riyadh89" SelfReg="false"/>
+    <ROW File="Sakhalin" Component_="Almaty" FileName="Sakhalin" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Sakhalin" SelfReg="false"/>
+    <ROW File="Samarkand" Component_="Almaty" FileName="SAMARK~1|Samarkand" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Samarkand" SelfReg="false"/>
+    <ROW File="Seoul" Component_="Almaty" FileName="Seoul" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Seoul" SelfReg="false"/>
+    <ROW File="Shanghai" Component_="Almaty" FileName="Shanghai" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Shanghai" SelfReg="false"/>
+    <ROW File="Singapore" Component_="Almaty" FileName="SINGAP~1|Singapore" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Singapore" SelfReg="false"/>
+    <ROW File="Srednekolymsk" Component_="Almaty" FileName="SREDNE~1|Srednekolymsk" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Srednekolymsk" SelfReg="false"/>
+    <ROW File="Taipei" Component_="Almaty" FileName="Taipei" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Taipei" SelfReg="false"/>
+    <ROW File="Tashkent" Component_="Almaty" FileName="Tashkent" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Tashkent" SelfReg="false"/>
+    <ROW File="Tbilisi" Component_="Almaty" FileName="Tbilisi" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Tbilisi" SelfReg="false"/>
+    <ROW File="Tehran" Component_="Almaty" FileName="Tehran" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Tehran" SelfReg="false"/>
+    <ROW File="Thimphu" Component_="Almaty" FileName="Thimphu" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Thimphu" SelfReg="false"/>
+    <ROW File="Tokyo" Component_="Almaty" FileName="Tokyo" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Tokyo" SelfReg="false"/>
+    <ROW File="Ulaanbaatar" Component_="Almaty" FileName="ULAANB~1|Ulaanbaatar" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Ulaanbaatar" SelfReg="false"/>
+    <ROW File="Urumqi" Component_="Almaty" FileName="Urumqi" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Urumqi" SelfReg="false"/>
+    <ROW File="UstNera" Component_="Almaty" FileName="Ust-Nera" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Ust-Nera" SelfReg="false"/>
+    <ROW File="Vladivostok" Component_="Almaty" FileName="VLADIV~1|Vladivostok" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Vladivostok" SelfReg="false"/>
+    <ROW File="Yakutsk" Component_="Almaty" FileName="Yakutsk" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Yakutsk" SelfReg="false"/>
+    <ROW File="Yekaterinburg" Component_="Almaty" FileName="YEKATE~1|Yekaterinburg" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Yekaterinburg" SelfReg="false"/>
+    <ROW File="Yerevan" Component_="Almaty" FileName="Yerevan" Attributes="0" SourcePath="..\jre7\lib\zi\Asia\Yerevan" SelfReg="false"/>
+    <ROW File="Azores" Component_="Azores" FileName="Azores" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\Azores" SelfReg="false"/>
+    <ROW File="Bermuda" Component_="Azores" FileName="Bermuda" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\Bermuda" SelfReg="false"/>
+    <ROW File="Canary" Component_="Azores" FileName="Canary" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\Canary" SelfReg="false"/>
+    <ROW File="Cape_Verde" Component_="Azores" FileName="CAPE_V~1|Cape_Verde" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\Cape_Verde" SelfReg="false"/>
+    <ROW File="Faroe" Component_="Azores" FileName="Faroe" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\Faroe" SelfReg="false"/>
+    <ROW File="Madeira" Component_="Azores" FileName="Madeira" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\Madeira" SelfReg="false"/>
+    <ROW File="Reykjavik" Component_="Azores" FileName="REYKJA~1|Reykjavik" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\Reykjavik" SelfReg="false"/>
+    <ROW File="South_Georgia" Component_="Azores" FileName="SOUTH_~1|South_Georgia" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\South_Georgia" SelfReg="false"/>
+    <ROW File="Stanley" Component_="Azores" FileName="Stanley" Attributes="0" SourcePath="..\jre7\lib\zi\Atlantic\Stanley" SelfReg="false"/>
+    <ROW File="Adelaide" Component_="Adelaide" FileName="Adelaide" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Adelaide" SelfReg="false"/>
+    <ROW File="Brisbane" Component_="Adelaide" FileName="Brisbane" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Brisbane" SelfReg="false"/>
+    <ROW File="Broken_Hill" Component_="Adelaide" FileName="BROKEN~1|Broken_Hill" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Broken_Hill" SelfReg="false"/>
+    <ROW File="Currie" Component_="Adelaide" FileName="Currie" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Currie" SelfReg="false"/>
+    <ROW File="Darwin" Component_="Adelaide" FileName="Darwin" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Darwin" SelfReg="false"/>
+    <ROW File="Eucla" Component_="Adelaide" FileName="Eucla" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Eucla" SelfReg="false"/>
+    <ROW File="Hobart" Component_="Adelaide" FileName="Hobart" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Hobart" SelfReg="false"/>
+    <ROW File="Lindeman" Component_="Adelaide" FileName="Lindeman" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Lindeman" SelfReg="false"/>
+    <ROW File="Lord_Howe" Component_="Adelaide" FileName="LORD_H~1|Lord_Howe" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Lord_Howe" SelfReg="false"/>
+    <ROW File="Melbourne" Component_="Adelaide" FileName="MELBOU~1|Melbourne" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Melbourne" SelfReg="false"/>
+    <ROW File="Perth" Component_="Adelaide" FileName="Perth" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Perth" SelfReg="false"/>
+    <ROW File="Sydney" Component_="Adelaide" FileName="Sydney" Attributes="0" SourcePath="..\jre7\lib\zi\Australia\Sydney" SelfReg="false"/>
+    <ROW File="CET" Component_="CET" FileName="CET" Attributes="0" SourcePath="..\jre7\lib\zi\CET" SelfReg="false"/>
+    <ROW File="CST6CDT" Component_="CET" FileName="CST6CDT" Attributes="0" SourcePath="..\jre7\lib\zi\CST6CDT" SelfReg="false"/>
+    <ROW File="EET" Component_="CET" FileName="EET" Attributes="0" SourcePath="..\jre7\lib\zi\EET" SelfReg="false"/>
+    <ROW File="EST" Component_="CET" FileName="EST" Attributes="0" SourcePath="..\jre7\lib\zi\EST" SelfReg="false"/>
+    <ROW File="EST5EDT" Component_="CET" FileName="EST5EDT" Attributes="0" SourcePath="..\jre7\lib\zi\EST5EDT" SelfReg="false"/>
+    <ROW File="GMT" Component_="GMT" FileName="GMT" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT" SelfReg="false"/>
+    <ROW File="GMT1" Component_="GMT" FileName="GMT_1~1|GMT+1" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+1" SelfReg="false"/>
+    <ROW File="GMT10" Component_="GMT" FileName="GMT_10~1|GMT+10" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+10" SelfReg="false"/>
+    <ROW File="GMT11" Component_="GMT" FileName="GMT_11~1|GMT+11" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+11" SelfReg="false"/>
+    <ROW File="GMT12" Component_="GMT" FileName="GMT_12~1|GMT+12" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+12" SelfReg="false"/>
+    <ROW File="GMT2" Component_="GMT" FileName="GMT_2~1|GMT+2" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+2" SelfReg="false"/>
+    <ROW File="GMT3" Component_="GMT" FileName="GMT_3~1|GMT+3" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+3" SelfReg="false"/>
+    <ROW File="GMT4" Component_="GMT" FileName="GMT_4~1|GMT+4" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+4" SelfReg="false"/>
+    <ROW File="GMT5" Component_="GMT" FileName="GMT_5~1|GMT+5" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+5" SelfReg="false"/>
+    <ROW File="GMT6" Component_="GMT" FileName="GMT_6~1|GMT+6" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+6" SelfReg="false"/>
+    <ROW File="GMT7" Component_="GMT" FileName="GMT_7~1|GMT+7" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+7" SelfReg="false"/>
+    <ROW File="GMT8" Component_="GMT" FileName="GMT_8~1|GMT+8" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+8" SelfReg="false"/>
+    <ROW File="GMT9" Component_="GMT" FileName="GMT_9~1|GMT+9" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT+9" SelfReg="false"/>
+    <ROW File="GMT1_1" Component_="GMT" FileName="GMT-1" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-1" SelfReg="false"/>
+    <ROW File="GMT10_1" Component_="GMT" FileName="GMT-10" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-10" SelfReg="false"/>
+    <ROW File="GMT11_1" Component_="GMT" FileName="GMT-11" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-11" SelfReg="false"/>
+    <ROW File="GMT12_1" Component_="GMT" FileName="GMT-12" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-12" SelfReg="false"/>
+    <ROW File="GMT13" Component_="GMT" FileName="GMT-13" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-13" SelfReg="false"/>
+    <ROW File="GMT14" Component_="GMT" FileName="GMT-14" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-14" SelfReg="false"/>
+    <ROW File="GMT2_1" Component_="GMT" FileName="GMT-2" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-2" SelfReg="false"/>
+    <ROW File="GMT3_1" Component_="GMT" FileName="GMT-3" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-3" SelfReg="false"/>
+    <ROW File="GMT4_1" Component_="GMT" FileName="GMT-4" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-4" SelfReg="false"/>
+    <ROW File="GMT5_1" Component_="GMT" FileName="GMT-5" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-5" SelfReg="false"/>
+    <ROW File="GMT6_1" Component_="GMT" FileName="GMT-6" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-6" SelfReg="false"/>
+    <ROW File="GMT7_1" Component_="GMT" FileName="GMT-7" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-7" SelfReg="false"/>
+    <ROW File="GMT8_1" Component_="GMT" FileName="GMT-8" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-8" SelfReg="false"/>
+    <ROW File="GMT9_1" Component_="GMT" FileName="GMT-9" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\GMT-9" SelfReg="false"/>
+    <ROW File="UCT" Component_="GMT" FileName="UCT" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\UCT" SelfReg="false"/>
+    <ROW File="UTC" Component_="GMT" FileName="UTC" Attributes="0" SourcePath="..\jre7\lib\zi\Etc\UTC" SelfReg="false"/>
+    <ROW File="Amsterdam" Component_="Amsterdam" FileName="AMSTER~1|Amsterdam" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Amsterdam" SelfReg="false"/>
+    <ROW File="Andorra" Component_="Amsterdam" FileName="Andorra" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Andorra" SelfReg="false"/>
+    <ROW File="Athens" Component_="Amsterdam" FileName="Athens" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Athens" SelfReg="false"/>
+    <ROW File="Belgrade" Component_="Amsterdam" FileName="Belgrade" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Belgrade" SelfReg="false"/>
+    <ROW File="Berlin" Component_="Amsterdam" FileName="Berlin" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Berlin" SelfReg="false"/>
+    <ROW File="Brussels" Component_="Amsterdam" FileName="Brussels" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Brussels" SelfReg="false"/>
+    <ROW File="Bucharest" Component_="Amsterdam" FileName="BUCHAR~1|Bucharest" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Bucharest" SelfReg="false"/>
+    <ROW File="Budapest" Component_="Amsterdam" FileName="Budapest" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Budapest" SelfReg="false"/>
+    <ROW File="Chisinau" Component_="Amsterdam" FileName="Chisinau" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Chisinau" SelfReg="false"/>
+    <ROW File="Copenhagen" Component_="Amsterdam" FileName="COPENH~1|Copenhagen" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Copenhagen" SelfReg="false"/>
+    <ROW File="Dublin" Component_="Amsterdam" FileName="Dublin" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Dublin" SelfReg="false"/>
+    <ROW File="Gibraltar" Component_="Amsterdam" FileName="GIBRAL~1|Gibraltar" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Gibraltar" SelfReg="false"/>
+    <ROW File="Helsinki" Component_="Amsterdam" FileName="Helsinki" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Helsinki" SelfReg="false"/>
+    <ROW File="Istanbul" Component_="Amsterdam" FileName="Istanbul" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Istanbul" SelfReg="false"/>
+    <ROW File="Kaliningrad" Component_="Amsterdam" FileName="KALINI~1|Kaliningrad" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Kaliningrad" SelfReg="false"/>
+    <ROW File="Kiev" Component_="Amsterdam" FileName="Kiev" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Kiev" SelfReg="false"/>
+    <ROW File="Lisbon" Component_="Amsterdam" FileName="Lisbon" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Lisbon" SelfReg="false"/>
+    <ROW File="London" Component_="Amsterdam" FileName="London" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\London" SelfReg="false"/>
+    <ROW File="Luxembourg" Component_="Amsterdam" FileName="LUXEMB~1|Luxembourg" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Luxembourg" SelfReg="false"/>
+    <ROW File="Madrid" Component_="Amsterdam" FileName="Madrid" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Madrid" SelfReg="false"/>
+    <ROW File="Malta" Component_="Amsterdam" FileName="Malta" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Malta" SelfReg="false"/>
+    <ROW File="Minsk" Component_="Amsterdam" FileName="Minsk" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Minsk" SelfReg="false"/>
+    <ROW File="Monaco" Component_="Amsterdam" FileName="Monaco" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Monaco" SelfReg="false"/>
+    <ROW File="Moscow" Component_="Amsterdam" FileName="Moscow" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Moscow" SelfReg="false"/>
+    <ROW File="Oslo" Component_="Amsterdam" FileName="Oslo" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Oslo" SelfReg="false"/>
+    <ROW File="Paris" Component_="Amsterdam" FileName="Paris" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Paris" SelfReg="false"/>
+    <ROW File="Prague" Component_="Amsterdam" FileName="Prague" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Prague" SelfReg="false"/>
+    <ROW File="Riga" Component_="Amsterdam" FileName="Riga" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Riga" SelfReg="false"/>
+    <ROW File="Rome" Component_="Amsterdam" FileName="Rome" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Rome" SelfReg="false"/>
+    <ROW File="Samara" Component_="Amsterdam" FileName="Samara" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Samara" SelfReg="false"/>
+    <ROW File="Simferopol" Component_="Amsterdam" FileName="SIMFER~1|Simferopol" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Simferopol" SelfReg="false"/>
+    <ROW File="Sofia" Component_="Amsterdam" FileName="Sofia" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Sofia" SelfReg="false"/>
+    <ROW File="Stockholm" Component_="Amsterdam" FileName="STOCKH~1|Stockholm" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Stockholm" SelfReg="false"/>
+    <ROW File="Tallinn" Component_="Amsterdam" FileName="Tallinn" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Tallinn" SelfReg="false"/>
+    <ROW File="Tirane" Component_="Amsterdam" FileName="Tirane" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Tirane" SelfReg="false"/>
+    <ROW File="Uzhgorod" Component_="Amsterdam" FileName="Uzhgorod" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Uzhgorod" SelfReg="false"/>
+    <ROW File="Vienna" Component_="Amsterdam" FileName="Vienna" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Vienna" SelfReg="false"/>
+    <ROW File="Vilnius" Component_="Amsterdam" FileName="Vilnius" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Vilnius" SelfReg="false"/>
+    <ROW File="Volgograd" Component_="Amsterdam" FileName="VOLGOG~1|Volgograd" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Volgograd" SelfReg="false"/>
+    <ROW File="Warsaw" Component_="Amsterdam" FileName="Warsaw" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Warsaw" SelfReg="false"/>
+    <ROW File="Zaporozhye" Component_="Amsterdam" FileName="ZAPORO~1|Zaporozhye" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Zaporozhye" SelfReg="false"/>
+    <ROW File="Zurich" Component_="Amsterdam" FileName="Zurich" Attributes="0" SourcePath="..\jre7\lib\zi\Europe\Zurich" SelfReg="false"/>
+    <ROW File="GMT_1" Component_="CET" FileName="GMT" Attributes="0" SourcePath="..\jre7\lib\zi\GMT" SelfReg="false"/>
+    <ROW File="HST" Component_="CET" FileName="HST" Attributes="0" SourcePath="..\jre7\lib\zi\HST" SelfReg="false"/>
+    <ROW File="Chagos" Component_="Chagos" FileName="Chagos" Attributes="0" SourcePath="..\jre7\lib\zi\Indian\Chagos" SelfReg="false"/>
+    <ROW File="Christmas" Component_="Chagos" FileName="CHRIST~1|Christmas" Attributes="0" SourcePath="..\jre7\lib\zi\Indian\Christmas" SelfReg="false"/>
+    <ROW File="Cocos" Component_="Chagos" FileName="Cocos" Attributes="0" SourcePath="..\jre7\lib\zi\Indian\Cocos" SelfReg="false"/>
+    <ROW File="Kerguelen" Component_="Chagos" FileName="KERGUE~1|Kerguelen" Attributes="0" SourcePath="..\jre7\lib\zi\Indian\Kerguelen" SelfReg="false"/>
+    <ROW File="Mahe" Component_="Chagos" FileName="Mahe" Attributes="0" SourcePath="..\jre7\lib\zi\Indian\Mahe" SelfReg="false"/>
+    <ROW File="Maldives" Component_="Chagos" FileName="Maldives" Attributes="0" SourcePath="..\jre7\lib\zi\Indian\Maldives" SelfReg="false"/>
+    <ROW File="Mauritius" Component_="Chagos" FileName="MAURIT~1|Mauritius" Attributes="0" SourcePath="..\jre7\lib\zi\Indian\Mauritius" SelfReg="false"/>
+    <ROW File="Reunion" Component_="Chagos" FileName="Reunion" Attributes="0" SourcePath="..\jre7\lib\zi\Indian\Reunion" SelfReg="false"/>
+    <ROW File="MET" Component_="CET" FileName="MET" Attributes="0" SourcePath="..\jre7\lib\zi\MET" SelfReg="false"/>
+    <ROW File="MST" Component_="CET" FileName="MST" Attributes="0" SourcePath="..\jre7\lib\zi\MST" SelfReg="false"/>
+    <ROW File="MST7MDT" Component_="CET" FileName="MST7MDT" Attributes="0" SourcePath="..\jre7\lib\zi\MST7MDT" SelfReg="false"/>
+    <ROW File="Apia" Component_="Apia" FileName="Apia" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Apia" SelfReg="false"/>
+    <ROW File="Auckland" Component_="Apia" FileName="Auckland" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Auckland" SelfReg="false"/>
+    <ROW File="Bougainville" Component_="Apia" FileName="BOUGAI~1|Bougainville" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Bougainville" SelfReg="false"/>
+    <ROW File="Chatham" Component_="Apia" FileName="Chatham" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Chatham" SelfReg="false"/>
+    <ROW File="Chuuk" Component_="Apia" FileName="Chuuk" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Chuuk" SelfReg="false"/>
+    <ROW File="Easter" Component_="Apia" FileName="Easter" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Easter" SelfReg="false"/>
+    <ROW File="Efate" Component_="Apia" FileName="Efate" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Efate" SelfReg="false"/>
+    <ROW File="Enderbury" Component_="Apia" FileName="ENDERB~1|Enderbury" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Enderbury" SelfReg="false"/>
+    <ROW File="Fakaofo" Component_="Apia" FileName="Fakaofo" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Fakaofo" SelfReg="false"/>
+    <ROW File="Fiji" Component_="Apia" FileName="Fiji" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Fiji" SelfReg="false"/>
+    <ROW File="Funafuti" Component_="Apia" FileName="Funafuti" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Funafuti" SelfReg="false"/>
+    <ROW File="Galapagos" Component_="Apia" FileName="GALAPA~1|Galapagos" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Galapagos" SelfReg="false"/>
+    <ROW File="Gambier" Component_="Apia" FileName="Gambier" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Gambier" SelfReg="false"/>
+    <ROW File="Guadalcanal" Component_="Apia" FileName="GUADAL~1|Guadalcanal" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Guadalcanal" SelfReg="false"/>
+    <ROW File="Guam" Component_="Apia" FileName="Guam" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Guam" SelfReg="false"/>
+    <ROW File="Honolulu" Component_="Apia" FileName="Honolulu" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Honolulu" SelfReg="false"/>
+    <ROW File="Kiritimati" Component_="Apia" FileName="KIRITI~1|Kiritimati" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Kiritimati" SelfReg="false"/>
+    <ROW File="Kosrae" Component_="Apia" FileName="Kosrae" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Kosrae" SelfReg="false"/>
+    <ROW File="Kwajalein" Component_="Apia" FileName="KWAJAL~1|Kwajalein" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Kwajalein" SelfReg="false"/>
+    <ROW File="Majuro" Component_="Apia" FileName="Majuro" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Majuro" SelfReg="false"/>
+    <ROW File="Marquesas" Component_="Apia" FileName="MARQUE~1|Marquesas" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Marquesas" SelfReg="false"/>
+    <ROW File="Midway" Component_="Apia" FileName="Midway" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Midway" SelfReg="false"/>
+    <ROW File="Nauru" Component_="Apia" FileName="Nauru" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Nauru" SelfReg="false"/>
+    <ROW File="Niue" Component_="Apia" FileName="Niue" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Niue" SelfReg="false"/>
+    <ROW File="Norfolk" Component_="Apia" FileName="Norfolk" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Norfolk" SelfReg="false"/>
+    <ROW File="Noumea" Component_="Apia" FileName="Noumea" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Noumea" SelfReg="false"/>
+    <ROW File="Pago_Pago" Component_="Apia" FileName="PAGO_P~1|Pago_Pago" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Pago_Pago" SelfReg="false"/>
+    <ROW File="Palau" Component_="Apia" FileName="Palau" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Palau" SelfReg="false"/>
+    <ROW File="Pitcairn" Component_="Apia" FileName="Pitcairn" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Pitcairn" SelfReg="false"/>
+    <ROW File="Pohnpei" Component_="Apia" FileName="Pohnpei" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Pohnpei" SelfReg="false"/>
+    <ROW File="Port_Moresby" Component_="Apia" FileName="PORT_M~1|Port_Moresby" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Port_Moresby" SelfReg="false"/>
+    <ROW File="Rarotonga" Component_="Apia" FileName="RAROTO~1|Rarotonga" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Rarotonga" SelfReg="false"/>
+    <ROW File="Saipan" Component_="Apia" FileName="Saipan" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Saipan" SelfReg="false"/>
+    <ROW File="Tahiti" Component_="Apia" FileName="Tahiti" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Tahiti" SelfReg="false"/>
+    <ROW File="Tarawa" Component_="Apia" FileName="Tarawa" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Tarawa" SelfReg="false"/>
+    <ROW File="Tongatapu" Component_="Apia" FileName="TONGAT~1|Tongatapu" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Tongatapu" SelfReg="false"/>
+    <ROW File="Wake" Component_="Apia" FileName="Wake" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Wake" SelfReg="false"/>
+    <ROW File="Wallis" Component_="Apia" FileName="Wallis" Attributes="0" SourcePath="..\jre7\lib\zi\Pacific\Wallis" SelfReg="false"/>
+    <ROW File="PST8PDT" Component_="CET" FileName="PST8PDT" Attributes="0" SourcePath="..\jre7\lib\zi\PST8PDT" SelfReg="false"/>
+    <ROW File="AST4" Component_="AST4" FileName="AST4" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\AST4" SelfReg="false"/>
+    <ROW File="AST4ADT" Component_="AST4" FileName="AST4ADT" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\AST4ADT" SelfReg="false"/>
+    <ROW File="CST6" Component_="AST4" FileName="CST6" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\CST6" SelfReg="false"/>
+    <ROW File="CST6CDT_1" Component_="AST4" FileName="CST6CDT" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\CST6CDT" SelfReg="false"/>
+    <ROW File="EST5" Component_="AST4" FileName="EST5" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\EST5" SelfReg="false"/>
+    <ROW File="EST5EDT_1" Component_="AST4" FileName="EST5EDT" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\EST5EDT" SelfReg="false"/>
+    <ROW File="HST10" Component_="AST4" FileName="HST10" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\HST10" SelfReg="false"/>
+    <ROW File="MST7" Component_="AST4" FileName="MST7" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\MST7" SelfReg="false"/>
+    <ROW File="MST7MDT_1" Component_="AST4" FileName="MST7MDT" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\MST7MDT" SelfReg="false"/>
+    <ROW File="PST8" Component_="AST4" FileName="PST8" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\PST8" SelfReg="false"/>
+    <ROW File="PST8PDT_1" Component_="AST4" FileName="PST8PDT" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\PST8PDT" SelfReg="false"/>
+    <ROW File="YST9" Component_="AST4" FileName="YST9" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\YST9" SelfReg="false"/>
+    <ROW File="YST9YDT" Component_="AST4" FileName="YST9YDT" Attributes="0" SourcePath="..\jre7\lib\zi\SystemV\YST9YDT" SelfReg="false"/>
+    <ROW File="WET" Component_="CET" FileName="WET" Attributes="0" SourcePath="..\jre7\lib\zi\WET" SelfReg="false"/>
+    <ROW File="ZoneInfoMappings" Component_="CET" FileName="ZONEIN~1|ZoneInfoMappings" Attributes="0" SourcePath="..\jre7\lib\zi\ZoneInfoMappings" SelfReg="false"/>
+    <ROW File="LICENSE" Component_="COPYRIGHT" FileName="LICENSE" Attributes="0" SourcePath="..\jre7\LICENSE" SelfReg="false"/>
+    <ROW File="README.txt" Component_="COPYRIGHT" FileName="README.txt" Attributes="0" SourcePath="..\jre7\README.txt" SelfReg="false"/>
+    <ROW File="release" Component_="COPYRIGHT" FileName="release" Attributes="0" SourcePath="..\jre7\release" SelfReg="false"/>
+    <ROW File="THIRDPARTYLICENSEREADMEJAVAFX.txt" Component_="COPYRIGHT" FileName="THIRDP~1.TXT|THIRDPARTYLICENSEREADME-JAVAFX.txt" Attributes="0" SourcePath="..\jre7\THIRDPARTYLICENSEREADME-JAVAFX.txt" SelfReg="false"/>
+    <ROW File="THIRDPARTYLICENSEREADME.txt" Component_="COPYRIGHT" FileName="THIRDP~2.TXT|THIRDPARTYLICENSEREADME.txt" Attributes="0" SourcePath="..\jre7\THIRDPARTYLICENSEREADME.txt" SelfReg="false"/>
+    <ROW File="Welcome.html" Component_="COPYRIGHT" FileName="WELCOM~1.HTM|Welcome.html" Attributes="0" SourcePath="..\jre7\Welcome.html" SelfReg="false"/>
+    <ROW File="license.rtf" Component_="license.rtf" FileName="license.rtf" Attributes="0" SourcePath="..\src\bridgedesigner\resources\license.rtf" SelfReg="false"/>
+    <ROW File="bdv23j1417.exe" Component_="bdv23j1417.exe" FileName="BDV23J~2.EXE|bdv23j1417.exe" Attributes="0" SourcePath="..\dist\bdv23j1417.exe" SelfReg="false" DigSign="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.AiPersistentPropComponent">
+    <ROW Property="AI_INSTALLPERUSER" Registry="AI_INSTALLPERUSER" HklmSearch="AI_INSTALLPERUSER" HkcuSearch="AI_INSTALLPERUSER_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="151"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="..\release" PackageFileName="BridgeDesignerSetup-2023.1417" Languages="en" InstallationType="4" ExtUI="true" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="InstallTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\InstallTypeDlg.aip"/>
+    <ROW Fragment="LicenseAgreementDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\LicenseAgreementDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_INSTALLPERUSER" Signature_="AI_INSTALLPERUSER"/>
+    <ROW Property="AI_INSTALLPERUSER" Signature_="AI_INSTALLPERUSER_1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ROW Dialog_="LicenseAgreementDlg" Control="AgreementText" Type="ScrollableText" X="20" Y="60" Width="330" Height="120" Attributes="7" Text="..\src\bridgedesigner\resources\license.rtf" Order="400" TextLocId="Control.Text.LicenseAgreementDlg#AgreementText" MsiKey="LicenseAgreementDlg#AgreementText"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="203"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="InstallTypeDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="204"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="NewDialog" Argument="InstallTypeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="InstallTypeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="101"/>
+    <ROW Dialog_="InstallTypeDlg" Control_="Back" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL" Ordering="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AuthorSinglePackage" Type="1" Source="aicustact.dll" Target="AI_AuthorSinglePackage" WithoutSeq="true"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#bdv23j1417.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SETMIXINSTLOCATION" Type="1" Source="aicustact.dll" Target="MixedAllUsersInstallLocation"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[AI_UserProgramFiles]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="AbsoluteLayout.jar"/>
+    <ROW Feature_="MainFeature" Component_="awt.dll"/>
+    <ROW Feature_="MainFeature" Component_="dcpr.dll"/>
+    <ROW Feature_="MainFeature" Component_="decorasse.dll"/>
+    <ROW Feature_="MainFeature" Component_="deploy.dll"/>
+    <ROW Feature_="MainFeature" Component_="deployJava1.dll"/>
+    <ROW Feature_="MainFeature" Component_="npdeployJava1.dll"/>
+    <ROW Feature_="MainFeature" Component_="dt_shmem.dll"/>
+    <ROW Feature_="MainFeature" Component_="dt_socket.dll"/>
+    <ROW Feature_="MainFeature" Component_="eula.dll"/>
+    <ROW Feature_="MainFeature" Component_="fontmanager.dll"/>
+    <ROW Feature_="MainFeature" Component_="fxplugins.dll"/>
+    <ROW Feature_="MainFeature" Component_="glass.dll"/>
+    <ROW Feature_="MainFeature" Component_="gliblite.dll"/>
+    <ROW Feature_="MainFeature" Component_="gstreamerlite.dll"/>
+    <ROW Feature_="MainFeature" Component_="hprof.dll"/>
+    <ROW Feature_="MainFeature" Component_="installer.dll"/>
+    <ROW Feature_="MainFeature" Component_="instrument.dll"/>
+    <ROW Feature_="MainFeature" Component_="j2pcsc.dll"/>
+    <ROW Feature_="MainFeature" Component_="jaas_nt.dll"/>
+    <ROW Feature_="MainFeature" Component_="jabswitch.exe"/>
+    <ROW Feature_="MainFeature" Component_="javarmi.exe"/>
+    <ROW Feature_="MainFeature" Component_="java.dll"/>
+    <ROW Feature_="MainFeature" Component_="java.exe"/>
+    <ROW Feature_="MainFeature" Component_="JavaAccessBridge64.dll"/>
+    <ROW Feature_="MainFeature" Component_="javacpl.exe"/>
+    <ROW Feature_="MainFeature" Component_="javafxfont.dll"/>
+    <ROW Feature_="MainFeature" Component_="javafxiio.dll"/>
+    <ROW Feature_="MainFeature" Component_="javaw.exe"/>
+    <ROW Feature_="MainFeature" Component_="javaws.exe"/>
+    <ROW Feature_="MainFeature" Component_="java_crw_demo.dll"/>
+    <ROW Feature_="MainFeature" Component_="jawt.dll"/>
+    <ROW Feature_="MainFeature" Component_="JAWTAccessBridge64.dll"/>
+    <ROW Feature_="MainFeature" Component_="JdbcOdbc.dll"/>
+    <ROW Feature_="MainFeature" Component_="jdwp.dll"/>
+    <ROW Feature_="MainFeature" Component_="jfr.dll"/>
+    <ROW Feature_="MainFeature" Component_="jfxmedia.dll"/>
+    <ROW Feature_="MainFeature" Component_="jfxwebkit.dll"/>
+    <ROW Feature_="MainFeature" Component_="jli.dll"/>
+    <ROW Feature_="MainFeature" Component_="jp2iexp.dll"/>
+    <ROW Feature_="MainFeature" Component_="jp2launcher.exe"/>
+    <ROW Feature_="MainFeature" Component_="jp2native.dll"/>
+    <ROW Feature_="MainFeature" Component_="jp2ssv.dll"/>
+    <ROW Feature_="MainFeature" Component_="jpeg.dll"/>
+    <ROW Feature_="MainFeature" Component_="jsdt.dll"/>
+    <ROW Feature_="MainFeature" Component_="jsound.dll"/>
+    <ROW Feature_="MainFeature" Component_="jsoundds.dll"/>
+    <ROW Feature_="MainFeature" Component_="kcms.dll"/>
+    <ROW Feature_="MainFeature" Component_="keytool.exe"/>
+    <ROW Feature_="MainFeature" Component_="kinit.exe"/>
+    <ROW Feature_="MainFeature" Component_="klist.exe"/>
+    <ROW Feature_="MainFeature" Component_="ktab.exe"/>
+    <ROW Feature_="MainFeature" Component_="libxml2.dll"/>
+    <ROW Feature_="MainFeature" Component_="libxslt.dll"/>
+    <ROW Feature_="MainFeature" Component_="management.dll"/>
+    <ROW Feature_="MainFeature" Component_="mlib_image.dll"/>
+    <ROW Feature_="MainFeature" Component_="msvcr100.dll"/>
+    <ROW Feature_="MainFeature" Component_="net.dll"/>
+    <ROW Feature_="MainFeature" Component_="nio.dll"/>
+    <ROW Feature_="MainFeature" Component_="npt.dll"/>
+    <ROW Feature_="MainFeature" Component_="orbd.exe"/>
+    <ROW Feature_="MainFeature" Component_="pack200.exe"/>
+    <ROW Feature_="MainFeature" Component_="msvcr100.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="npjp2.dll"/>
+    <ROW Feature_="MainFeature" Component_="policytool.exe"/>
+    <ROW Feature_="MainFeature" Component_="prismd3d.dll"/>
+    <ROW Feature_="MainFeature" Component_="rmid.exe"/>
+    <ROW Feature_="MainFeature" Component_="rmiregistry.exe"/>
+    <ROW Feature_="MainFeature" Component_="classes.jsa"/>
+    <ROW Feature_="MainFeature" Component_="jvm.dll"/>
+    <ROW Feature_="MainFeature" Component_="servertool.exe"/>
+    <ROW Feature_="MainFeature" Component_="splashscreen.dll"/>
+    <ROW Feature_="MainFeature" Component_="ssv.dll"/>
+    <ROW Feature_="MainFeature" Component_="ssvagent.exe"/>
+    <ROW Feature_="MainFeature" Component_="sunec.dll"/>
+    <ROW Feature_="MainFeature" Component_="sunmscapi.dll"/>
+    <ROW Feature_="MainFeature" Component_="t2k.dll"/>
+    <ROW Feature_="MainFeature" Component_="tnameserv.exe"/>
+    <ROW Feature_="MainFeature" Component_="unpack.dll"/>
+    <ROW Feature_="MainFeature" Component_="unpack200.exe"/>
+    <ROW Feature_="MainFeature" Component_="verify.dll"/>
+    <ROW Feature_="MainFeature" Component_="w2k_lsa_auth.dll"/>
+    <ROW Feature_="MainFeature" Component_="WindowsAccessBridge64.dll"/>
+    <ROW Feature_="MainFeature" Component_="wsdetect.dll"/>
+    <ROW Feature_="MainFeature" Component_="zip.dll"/>
+    <ROW Feature_="MainFeature" Component_="COPYRIGHT"/>
+    <ROW Feature_="MainFeature" Component_="accessibility.properties"/>
+    <ROW Feature_="MainFeature" Component_="jvm.cfg"/>
+    <ROW Feature_="MainFeature" Component_="CIEXYZ.pf"/>
+    <ROW Feature_="MainFeature" Component_="ffjcext.zip"/>
+    <ROW Feature_="MainFeature" Component_="accessbridge64.jar"/>
+    <ROW Feature_="MainFeature" Component_="LucidaBrightDemiBold.ttf"/>
+    <ROW Feature_="MainFeature" Component_="cursors.properties"/>
+    <ROW Feature_="MainFeature" Component_="default.jfc"/>
+    <ROW Feature_="MainFeature" Component_="jmxremote.access"/>
+    <ROW Feature_="MainFeature" Component_="blacklist"/>
+    <ROW Feature_="MainFeature" Component_="Abidjan"/>
+    <ROW Feature_="MainFeature" Component_="Adak"/>
+    <ROW Feature_="MainFeature" Component_="Buenos_Aires"/>
+    <ROW Feature_="MainFeature" Component_="Indianapolis"/>
+    <ROW Feature_="MainFeature" Component_="Louisville"/>
+    <ROW Feature_="MainFeature" Component_="Beulah"/>
+    <ROW Feature_="MainFeature" Component_="Casey"/>
+    <ROW Feature_="MainFeature" Component_="Almaty"/>
+    <ROW Feature_="MainFeature" Component_="Azores"/>
+    <ROW Feature_="MainFeature" Component_="Adelaide"/>
+    <ROW Feature_="MainFeature" Component_="CET"/>
+    <ROW Feature_="MainFeature" Component_="GMT"/>
+    <ROW Feature_="MainFeature" Component_="Amsterdam"/>
+    <ROW Feature_="MainFeature" Component_="Chagos"/>
+    <ROW Feature_="MainFeature" Component_="Apia"/>
+    <ROW Feature_="MainFeature" Component_="AST4"/>
+    <ROW Feature_="MainFeature" Component_="AI_INSTALLPERUSER"/>
+    <ROW Feature_="MainFeature" Component_="_"/>
+    <ROW Feature_="MainFeature" Component_="__1"/>
+    <ROW Feature_="MainFeature" Component_="__2"/>
+    <ROW Feature_="MainFeature" Component_="Shell"/>
+    <ROW Feature_="MainFeature" Component_="__3"/>
+    <ROW Feature_="MainFeature" Component_="open"/>
+    <ROW Feature_="MainFeature" Component_="__4"/>
+    <ROW Feature_="MainFeature" Component_="__5"/>
+    <ROW Feature_="MainFeature" Component_="bdv23j1417.exe"/>
+    <ROW Feature_="MainFeature" Component_="WPBridgeDesignFile"/>
+    <ROW Feature_="MainFeature" Component_="license.rtf"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="appiconnew.exe" SourcePath="..\src\bridgedesigner\resources\appiconnew.ico" Index="0"/>
+    <ROW Name="bdv23j1417.exe" SourcePath="..\dist\bdv23j1417.exe" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1397"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+    <ROW Action="AI_SETMIXINSTLOCATION" Sequence="748"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="102"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+    <ROW Action="AI_SETMIXINSTLOCATION" Sequence="748"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_INSTALLPERUSER" Root="2" Key="Software\[Manufacturer]\[UpgradeCode]" Name="AI_INSTALLPERUSER" Type="2"/>
+    <ROW Signature_="AI_INSTALLPERUSER_1" Root="1" Key="Software\[Manufacturer]\[UpgradeCode]" Name="AI_INSTALLPERUSER" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_INSTALLPERUSER" Root="-1" Key="Software\[Manufacturer]\[UpgradeCode]" Name="AI_INSTALLPERUSER" Value="[AI_INSTALLPERUSER]" Component_="AI_INSTALLPERUSER"/>
+    <ROW Registry="DefaultIcon" Root="0" Key="WP Bridge Design File\DefaultIcon" Name="\"/>
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[ProductName]" Name="\"/>
+    <ROW Registry="Shell" Root="0" Key="WP Bridge Design File\Shell" Name="+" Component_="Shell"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="UpgradeCode" Root="-1" Key="Software\[Manufacturer]\[UpgradeCode]" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+    <ROW Registry="WPBridgeDesignFile" Root="0" Key="WP Bridge Design File" Name="*" Component_="WPBridgeDesignFile"/>
+    <ROW Registry="_" Root="0" Key=".bdc" Value="WP Bridge Design File" Component_="_"/>
+    <ROW Registry="__1" Root="0" Key="WP Bridge Design File" Value="WP Bridge Design File" Component_="__1"/>
+    <ROW Registry="__2" Root="0" Key="WP Bridge Design File\DefaultIcon" Value="[APPDIR]\bdv23j1417.exe,0" Component_="__2"/>
+    <ROW Registry="__3" Root="0" Key="WP Bridge Design File\Shell\edit" Value="Edit WP Bridge Design File" Component_="__3"/>
+    <ROW Registry="__4" Root="0" Key="WP Bridge Design File\Shell\edit\command" Value="&quot;[APPDIR]\bdv23j1417.exe&quot; &quot;%1&quot;" Component_="__4"/>
+    <ROW Registry="__5" Root="0" Key="WP Bridge Design File\Shell\open\command" Value="&quot;[APPDIR]\bdv23j1417.exe&quot; &quot;%1&quot;" Component_="__5"/>
+    <ROW Registry="bdc" Root="0" Key=".bdc" Name="\"/>
+    <ROW Registry="command" Root="0" Key="WP Bridge Design File\Shell\edit\command" Name="\"/>
+    <ROW Registry="command_1" Root="0" Key="WP Bridge Design File\Shell\open\command" Name="\"/>
+    <ROW Registry="edit" Root="0" Key="WP Bridge Design File\Shell\edit" Name="\"/>
+    <ROW Registry="open" Root="0" Key="WP Bridge Design File\Shell\open" Name="+" Component_="open"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="BridgeDesigner" Directory_="APPDIR" Name="BRIDGE~1|Bridge Designer" Component_="bdv23j1417.exe" Target="[#bdv23j1417.exe]" Hotkey="0" Icon_="bdv23j1417.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="BridgeDesigner_1" Directory_="DesktopFolder" Name="BRIDGE~1|Bridge Designer" Component_="bdv23j1417.exe" Target="[#bdv23j1417.exe]" Hotkey="0" Icon_="bdv23j1417.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="BridgeDesigner_2" Directory_="StartMenuFolder" Name="BRIDGE~1|Bridge Designer" Component_="bdv23j1417.exe" Target="[#bdv23j1417.exe]" Hotkey="0" Icon_="bdv23j1417.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>

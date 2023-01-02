@@ -35,11 +35,6 @@ import org.jdesktop.application.Action;
  * @author Eugene K. Ressler
  */
 public final class FlyThruControls extends JDialog implements AnimationControls {
-   
-    // A supprimer Frank SAURET
-    private EditableBridgeModel bridge = new EditableBridgeModel();
-    
-        
         
     private final FlyThruAnimation animation;
     /**
@@ -150,6 +145,9 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
             s.apply(new JSlider [] { speedSlider, brightnessSlider } );
             s.apply(new JSpinner [] { chargeSpinner } );
         }
+        else{
+            saveState();
+        }
         // If hardware can't do shadows, turn off and disable the check.
         if (!animation.getConfig().canShowShadows) {
             shadowsCheckBox.setSelected(false);
@@ -203,6 +201,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         truckCheckBox = new javax.swing.JCheckBox();
         erosionCheckbox = new javax.swing.JCheckBox();
         compteChargeLabel = new javax.swing.JLabel();
+        compteChargeLabel1 = new javax.swing.JLabel();
         animationControlsDialogDropButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -282,6 +281,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         brightnessSlider.setToolTipText(resourceMap.getString("brightnessSlider.toolTipText")); // NOI18N
         brightnessSlider.setValue(100);
         brightnessSlider.setName("brightnessSlider"); // NOI18N
+        brightnessSlider.setPreferredSize(new java.awt.Dimension(150, 26));
         brightnessSlider.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 brightnessSliderStateChanged(evt);
@@ -310,6 +310,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         });
 
         chargebuttonGroup.add(chargeFreeRadioButton);
+        chargeFreeRadioButton.setForeground(resourceMap.getColor("chargeFreeRadioButton.foreground")); // NOI18N
         chargeFreeRadioButton.setText(resourceMap.getString("chargeFreeRadioButton.text")); // NOI18N
         chargeFreeRadioButton.setActionCommand(resourceMap.getString("chargeFreeRadioButton.actionCommand")); // NOI18N
         chargeFreeRadioButton.setName("chargeFreeRadioButton"); // NOI18N
@@ -321,6 +322,8 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         });
 
         chargebuttonGroup.add(chargeHeavyRadioButton);
+        chargeHeavyRadioButton.setForeground(resourceMap.getColor("chargeLightRadioButton.foreground")); // NOI18N
+        chargeHeavyRadioButton.setSelected(true);
         chargeHeavyRadioButton.setText(resourceMap.getString("chargeHeavyRadioButton.text")); // NOI18N
         chargeHeavyRadioButton.setAlignmentX(0.5F);
         chargeHeavyRadioButton.setName("chargeHeavyRadioButton"); // NOI18N
@@ -331,6 +334,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         });
 
         chargebuttonGroup.add(chargeLightRadioButton);
+        chargeLightRadioButton.setForeground(resourceMap.getColor("chargeLightRadioButton.foreground")); // NOI18N
         chargeLightRadioButton.setText(resourceMap.getString("chargeLightRadioButton.text")); // NOI18N
         chargeLightRadioButton.setAlignmentX(0.5F);
         chargeLightRadioButton.setName("chargeLightRadioButton"); // NOI18N
@@ -346,16 +350,15 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         chargePanelLayout.setHorizontalGroup(
             chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(chargePanelLayout.createSequentialGroup()
-                .addGroup(chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, chargePanelLayout.createSequentialGroup()
+                .addGroup(chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chargeFreeRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(chargePanelLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(chargeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(chargeHeavyRadioButton))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, chargePanelLayout.createSequentialGroup()
-                        .addComponent(chargeFreeRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(chargeLightRadioButton)))
+                        .addComponent(chargeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(23, 23, 23)
+                .addGroup(chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chargeHeavyRadioButton)
+                    .addComponent(chargeLightRadioButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         chargePanelLayout.setVerticalGroup(
@@ -368,7 +371,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
                 .addGroup(chargePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chargeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chargeHeavyRadioButton))
-                .addGap(32, 32, 32))
+                .addContainerGap())
         );
 
         chargeSpinner.getAccessibleContext().setAccessibleName(resourceMap.getString("chargeSpinner.AccessibleContext.accessibleName")); // NOI18N
@@ -379,7 +382,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
 
         animationControlsPanel.setAlignmentX(10.0F);
         animationControlsPanel.setName("animationControlsPanel"); // NOI18N
-        animationControlsPanel.setPreferredSize(new java.awt.Dimension(151, 120));
+        animationControlsPanel.setPreferredSize(new java.awt.Dimension(151, 80));
 
         shadowsCheckBox.setSelected(true);
         shadowsCheckBox.setText(resourceMap.getString("shadowsCheckBox.text")); // NOI18N
@@ -460,17 +463,19 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
                 .addContainerGap()
                 .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(shadowsCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(skyCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(terrainCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(erosionCheckbox))
+                    .addComponent(skyCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(exaggerationCheckBox)
-                    .addGroup(animationControlsPanelLayout.createSequentialGroup()
-                        .addComponent(abutmentsCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
-                        .addGap(29, 29, 29))
-                    .addComponent(truckCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                    .addComponent(colorsCheckBox))
+                    .addComponent(abutmentsCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(truckCheckBox))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(erosionCheckbox)
+                    .addComponent(terrainCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(colorsCheckBox)
+                    .addComponent(exaggerationCheckBox))
                 .addContainerGap())
         );
         animationControlsPanelLayout.setVerticalGroup(
@@ -478,25 +483,26 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
             .addGroup(animationControlsPanelLayout.createSequentialGroup()
                 .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(shadowsCheckBox)
-                    .addComponent(abutmentsCheckBox))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(skyCheckBox)
-                    .addComponent(truckCheckBox))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(abutmentsCheckBox)
                     .addComponent(terrainCheckBox)
                     .addComponent(colorsCheckBox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(animationControlsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(skyCheckBox)
+                    .addComponent(truckCheckBox)
                     .addComponent(erosionCheckbox)
                     .addComponent(exaggerationCheckBox))
-                .addContainerGap(3, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
+        compteChargeLabel.setForeground(resourceMap.getColor("compteChargeLabel.foreground")); // NOI18N
         compteChargeLabel.setText(resourceMap.getString("compteChargeLabel.text")); // NOI18N
         compteChargeLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         compteChargeLabel.setName("compteChargeLabel"); // NOI18N
+
+        compteChargeLabel1.setText(resourceMap.getString("compteChargeLabel1.text")); // NOI18N
+        compteChargeLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        compteChargeLabel1.setName("compteChargeLabel1"); // NOI18N
 
         animationControlsDialogDropButton.setAction(actionMap.get("toggleAnimationDrop")); // NOI18N
         animationControlsDialogDropButton.setHideActionText(true);
@@ -506,42 +512,44 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
         animationControlsDialogDropButton.setName("animationControlsDialogDropButton"); // NOI18N
         animationControlsDialogDropButton.setPreferredSize(new java.awt.Dimension(37, 37));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel1.setForeground(resourceMap.getColor("jLabel1.foreground")); // NOI18N
+        jLabel1.setIcon(resourceMap.getIcon("jLabel1.icon")); // NOI18N
         jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel1.setName("jLabel1"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(animationControlsToolbar, javax.swing.GroupLayout.DEFAULT_SIZE, 793, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(animationControlsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(compteChargeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(compteChargeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(animationControlsToolbar, javax.swing.GroupLayout.PREFERRED_SIZE, 757, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(animationControlsDialogDropButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(animationControlsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(360, 360, 360)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(compteChargeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
-                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(animationControlsDialogDropButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(animationControlsToolbar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(animationControlsToolbar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(animationControlsDialogDropButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(compteChargeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(animationControlsPanel, 0, 95, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(compteChargeLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(compteChargeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addComponent(animationControlsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)))
         );
-
-        jLabel1.getAccessibleContext().setAccessibleName(resourceMap.getString("jLabel1.AccessibleContext.accessibleName")); // NOI18N
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -667,6 +675,7 @@ public final class FlyThruControls extends JDialog implements AnimationControls 
     private javax.swing.ButtonGroup chargebuttonGroup;
     private javax.swing.JCheckBox colorsCheckBox;
     private javax.swing.JLabel compteChargeLabel;
+    private javax.swing.JLabel compteChargeLabel1;
     private javax.swing.JLabel dimLabel;
     private javax.swing.JCheckBox erosionCheckbox;
     private javax.swing.JCheckBox exaggerationCheckBox;

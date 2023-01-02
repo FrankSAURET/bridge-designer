@@ -2,7 +2,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>..\dist\WPBD.jar</jar>
-  <outfile>..\dist\bdv23j956.exe</outfile>
+  <outfile>..\dist\bdv23j1417.exe</outfile>
   <errTitle>Bridge Designer 2023</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -14,7 +14,7 @@
   <manifest>wpbd.manifest</manifest>
   <icon>appicon.ico</icon>
   <jre>
-    <path>jre6</path>
+    <path>jre7</path>
     <initialHeapSize>96</initialHeapSize>
     <maxHeapSize>512</maxHeapSize>
     <jdkPreference>preferJre</jdkPreference>
@@ -22,7 +22,7 @@
   <messages>
     <startupErr>An error occurred while starting the Bridge Designer.</startupErr>
     <bundledJreErr>This application was configured to use a bundled Java Runtime Environment but the runtime is missing or corrupted.</bundledJreErr>
-    <jreVersionErr>This application requires Java Runtime Environment version 1.6 release 17 or later.</jreVersionErr>
+    <jreVersionErr>This application requires Java Runtime Environment version 1.7 release 80 or later.</jreVersionErr>
     <launcherErr>The registry refers to a nonexistent Java Runtime Environment installation or the runtime is corrupted.</launcherErr>
     <instanceAlreadyExistsMsg>An application instance is already running.</instanceAlreadyExistsMsg>
   </messages>

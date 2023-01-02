@@ -78,6 +78,8 @@ public class SetupWizard extends JDialog {
         pages[1] = new Page1();
         pages[2] = new Page2();
         pages[3] = new Page3();
+        loadingPanel.setVisible(false);
+        //standardTruckButton.setVisible(false);
         pages[4] = new Page4();
         pages[5] = new Page5();
         pages[6] = new Page6();
@@ -329,7 +331,8 @@ public class SetupWizard extends JDialog {
                     archAbutmentsButton.isSelected() ? 24 - 4 * ((ExtendedComboBox) archHeightBox).getRawSelectedIndex() : -1,
                     pierButton.isSelected() ? 24 - 4 * ((ExtendedComboBox) pierHeightBox).getRawSelectedIndex() : -1,
                     noAnchorageButton.isSelected() ? 0 : oneAnchorageButton.isSelected() ? 1 : twoAnchoragesButton.isSelected() ? 2 : 0,
-                    permitLoadButton.isSelected() ? DesignConditions.HEAVY_TRUCK : DesignConditions.STANDARD_TRUCK,
+                    //permitLoadButton.isSelected() ? DesignConditions.HEAVY_TRUCK : DesignConditions.STANDARD_TRUCK,
+                    permitLoadButton.isSelected() ? DesignConditions.HEAVY_TRUCK : DesignConditions.HEAVY_TRUCK,//Force à ne dessiner qu'un seul camion Frank SAURET
                     highConcreteButton.isSelected() ? DesignConditions.HI_STRENGTH_DECK : DesignConditions.MEDIUM_STRENGTH_DECK);
             updateDependencies();
         }
@@ -370,6 +373,7 @@ public class SetupWizard extends JDialog {
                 switch (conditions.getLoadType()) {
                     case DesignConditions.STANDARD_TRUCK:
                         deckCartoonIcon = hghDeckStdLoad;
+                        
                         break;
                     case DesignConditions.HEAVY_TRUCK:
                         deckCartoonIcon = hghDeckPmtLoad;
@@ -1292,7 +1296,7 @@ public class SetupWizard extends JDialog {
                 .addComponent(mediumConcreteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(highConcreteButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         loadingPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, resourceMap.getString("loadingPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, resourceMap.getFont("loadingPanel.border.titleFont"), resourceMap.getColor("loadingPanel.border.titleColor"))); // NOI18N
@@ -1305,6 +1309,11 @@ public class SetupWizard extends JDialog {
         standardTruckButton.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 standardTruckButtonItemStateChanged(evt);
+            }
+        });
+        standardTruckButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                standardTruckButtonActionPerformed(evt);
             }
         });
 
@@ -1980,18 +1989,6 @@ private void highConcreteButtonItemStateChanged(java.awt.event.ItemEvent evt) {/
     }
 }//GEN-LAST:event_highConcreteButtonItemStateChanged
 
-private void standardTruckButtonItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_standardTruckButtonItemStateChanged
-    if (evt.getStateChange() == ItemEvent.SELECTED) {
-        update();
-    }
-}//GEN-LAST:event_standardTruckButtonItemStateChanged
-
-private void permitLoadButtonItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_permitLoadButtonItemStateChanged
-    if (evt.getStateChange() == ItemEvent.SELECTED) {
-        update();
-    }
-}//GEN-LAST:event_permitLoadButtonItemStateChanged
-
 private void templateListValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_templateListValueChanged
     bridgeCartoonView.getBridgeSketchView().setModel(templateList.getSelectedIndex() == 0 ? null : (BridgeSketchModel) templateList.getSelectedValue());
     elevationViewLabel.repaint();
@@ -2004,6 +2001,22 @@ private void localContest4YesButtonItemStateChanged(java.awt.event.ItemEvent evt
     private void dropRaiseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropRaiseButtonActionPerformed
         showDetailPane(!siteCostDetailTable.isVisible());
     }//GEN-LAST:event_dropRaiseButtonActionPerformed
+
+    private void permitLoadButtonItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_permitLoadButtonItemStateChanged
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            update();
+        }
+}//GEN-LAST:event_permitLoadButtonItemStateChanged
+
+    private void standardTruckButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_standardTruckButtonActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_standardTruckButtonActionPerformed
+
+    private void standardTruckButtonItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_standardTruckButtonItemStateChanged
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            update();
+        }
+}//GEN-LAST:event_standardTruckButtonItemStateChanged
 // <editor-fold defaultstate="collapsed" desc="Global defs">
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup abutmentGroup;

@@ -1,0 +1,3 @@
+Remplacer tous les numéros de version par le nouveau numéro dans le aip.
+
+Ouvrir advanced installer et faire build.
