@@ -16,6 +16,9 @@ package bridgedesigner;
 
 import java.awt.Frame;
 import org.jdesktop.application.Action;
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
 
 /**
  * "About" information dialog for the Bridge Designer.
@@ -33,6 +36,21 @@ public class AboutBox extends javax.swing.JDialog {
         super(parent);
         initComponents();
         sysInfoLabel.setText("JRE " + System.getProperty("java.version"));
+        String folderSeparator = System.getProperty( "file.separator" );
+        String DossierApp =  System.getProperty("user.dir");
+        String fichierProp=System.getProperty("user.dir")+System.getProperty("file.separator")+"build.number";
+        versionLabel.setText("Version 2023");
+        try {
+            FileInputStream fis = null;
+            fis = new FileInputStream(new File(fichierProp));
+            Properties props = new Properties();
+            props.load(fis);
+            fis.close();
+            versionLabel.setText("Version 2023 build "+ props.getProperty("build.number") );
+        }catch (Exception e) {
+            System.out.println(e);
+             
+        }
         getRootPane().setDefaultButton(closeButton);
         Help.getBroker().enableHelpOnButton(purposesButton, "hlp_purposes", Help.getSet());
         Help.getBroker().enableHelpOnButton(howItWorksButton, "hlp_how_wpbd_works", Help.getSet());
@@ -151,6 +169,8 @@ public class AboutBox extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(closeButton))
         );
+
+        versionLabel.getAccessibleContext().setAccessibleName(resourceMap.getString("versionLabel.AccessibleContext.accessibleName")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

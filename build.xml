@@ -81,6 +81,10 @@
         <!-- Configuration dependent properties. -->
         <property file="nbproject/configs/${config}.properties" />
 
+        <!-- Copy build number properties. -->
+        <copy file="build.number" tofile="src/bridgedesigner/build.number">
+        </copy>
+
         <!-- Build target properties. -->
         <property file="build.number" />
         <property file="nbproject/config.properties" />
@@ -199,7 +203,8 @@
         </copy>
         <!-- Clear old exes just for safety -->
         <delete>
-            <fileset dir="dist" includes="bd*.exe" />
+            <fileset dir="dist" includes="Bridge*.exe" />
+            <fileset dir="dist" includes="Bd*.exe" />
             <fileset dir="release" includes="setupbd*.exe" />
             <fileset dir="release" includes="BridgeDesignerSetup*.exe" />
        </delete>

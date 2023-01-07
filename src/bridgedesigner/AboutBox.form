@@ -184,6 +184,9 @@
             <Property name="text" type="java.lang.String" resourceKey="versionLabel.text"/>
             <Property name="name" type="java.lang.String" value="versionLabel" noResource="true"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" resourceKey="versionLabel.AccessibleContext.accessibleName"/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="flashImageLabel">
           <Properties>

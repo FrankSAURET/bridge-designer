@@ -2,8 +2,8 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>..\dist\WPBD.jar</jar>
-  <outfile>..\dist\bdv23j1417.exe</outfile>
-  <errTitle>Bridge Designer 2023</errTitle>
+  <outfile>..\dist\BridgeDesigner.exe</outfile>
+  <errTitle>Bridge Designer</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
   <priority>normal</priority>

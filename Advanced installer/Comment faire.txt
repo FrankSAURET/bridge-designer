@@ -1,3 +1,4 @@
-Remplacer tous les numéros de version par le nouveau numéro dans le aip.
 
-Ouvrir advanced installer et faire build.
+Ouvrir advanced installer.
+Changer le numéro de version  dans "Product Detail".
+Faire build.

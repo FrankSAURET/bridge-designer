@@ -23,6 +23,7 @@ L'objectif de ces modifications (outre le français) est de produire une simulat
 * Suppression de la signature des fichiers (voir le **build - Original.xml** pour la restaurer). J'en suis désolé mais je n'ai pas réussis à le faire signer. Peut-être une prochaine version.
 * Update de JDK6 vers JDK7 pour supprimer le bug des polices dans les jFolderOpen.
 * Création d'un package MSI pour déploiement lycée.
+* Modification du build pour ne plus mettre le numéro de build dans le nom du logiciel.
 
 ## Comment compiler  
 * Récupérer le projet sur github.

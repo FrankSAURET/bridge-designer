@@ -3,7 +3,7 @@
 ; NSIS build script for the Bridge Designer.
 ;
 !define BD "Bridge Designer"
-!define EXE "Bridge Designer.exe"
+!define EXE "BridgeDesigner.exe"
 !define RESOURCE_DIR  "..\src\bridgedesigner\resources"
 
 ; Set up multiuser privilege package
@@ -63,8 +63,8 @@ Var StartMenuFolder
 !define MUI_ABORTWARNING
 
 ; Set the installer icon.
-!define MUI_ICON "${RESOURCE_DIR}\appiconnew.ico"
-!define MUI_UNICON "${RESOURCE_DIR}\appiconnew.ico"
+!define MUI_ICON "${RESOURCE_DIR}\appicon.ico"
+!define MUI_UNICON "${RESOURCE_DIR}\appicon.ico"
 
 ; Provide custom graphics and configuration information.
 !define MUI_HEADERIMAGE
@@ -133,6 +133,7 @@ Section "Bridge Designer" SectionBD
     File ${RESOURCE_DIR}\*.ico
     File /r /x WPBD.jar /x README.TXT /x detectjvm.exe ..\dist\*.* 
     File /r ..\jre7
+    File ..\src\bridgedesigner\build.number
     ; Since we are using a 32-bit jre, always get the 32-bit dll.
     ;File ..\lib-sup\jogamp-all-platforms\lib\windows-i586\*.dll
 

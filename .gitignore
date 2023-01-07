@@ -3,7 +3,9 @@
 *.class
 
 # Tests perso
-
+/essais/
+test*.*
+temp*.*
 
 # Mac 
 .DS_Store
@@ -17,6 +19,7 @@
 /release/
 /Advanced installer/Bridge Designer 2023-cache/
 
+
 # Class files for DetectJVM.java
 /nsis/classes/
 
@@ -26,7 +29,7 @@
 #fichiers locaux
 BD2023.lnk
 Demande.docx
-temp.*
+
 
 # Omit the RC4 key
 #/src/bridgedesigner/RC4Key.java

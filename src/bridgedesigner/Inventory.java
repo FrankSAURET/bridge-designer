@@ -72,8 +72,8 @@ public class Inventory {
         new Material(2, "Acier trempé", "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70, 6.00}),
         // Valeurs de teste (E et Fi) empiriquement correspondant aux maquettes
         // E valeur élevé et Fi par dichotomie
-        new Material(3, "Carton 1mm", "Car", 60000000, 150000, 618, new double[]{21.6, 21.6,21.6}),
-        new Material(4, "MDF 3mm", "MDF", 25000000, 200000, 740, new double[]{3.30, 3.30,3.30}),
+        new Material(3, "Carton 1mm", "Car", 75750000, 150000, 618, new double[]{21.6, 21.6,21.6}),//Tient à 562 kN et casse à 563kN
+        new Material(4, "MDF 3mm", "MDF",   100000000, 200000, 740, new double[]{3.30, 3.30,3.30}),
     };
 
     /**
