@@ -14,8 +14,9 @@ L'objectif de ces modifications (outre le français) est de produire une simulat
 * Traduction en français.
 * Coût en euros.
 * Ajout de matériaux pour les maquettes (carton et MDF).
-* Ajout de la section rectangulaire pour les matériaux.
+* Ajout de la section rectangulaire pour les membrures.
 * Ajout de la modification de la charge en live avec 2 camions 225 kN et 480 kN qui ont une charge répartie 20 % sur l’essieu avant et 80 % sur l’essieu arrière et une charge libre (0 à 99 999 kN) répartie 50 % sur chaque essieu. Le but de cette dernière est de prévoir la charge à laquelle le pont rompra dès la simulation. Les changements sont possible uniquement dans la simulation  haute qualitée mais ils influent sur les 2 simulations.
+* La liste des matériaux est maintenant dans le fichier **« materiaux.xml »** à la racine du logiciel ce qui permet une modification aisée sans recompilation.
 ### Modifications cosmétiques
 * Image du pont de Saint-Nazaire, cartouche et modification du setupWizard pour correspondre à nos TP.
 * Changement des icônes et de quelques images un rien monotones.
