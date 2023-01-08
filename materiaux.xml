@@ -1,0 +1,66 @@
+<!-- 
+Table of materials in this inventory.
+index, nom, nom court, module d'élasticité (E) en kPa, limite d'élasticité (Fy) kPa, masse volumique (rho), cout par kilo de barre, tubes, bielle
+Carton Canson C200704250, Car, E= 3 à 9 GPa, Fy=15 à 34 MPa, ρ=618 kg/m³, 21,6 €/kg ou 13,2 €/m² TTC
+Médium , MDF, E= 2,5 GPa, Fy=650 kPa, ρ=740 kg/m³, 3,3 €/kg ou 7,35 €/m² (en 3 mm) TTC
+new Material(3, "Carton 1mm", "Car", 3000000, 15000, 618, new double[]{21.6, 21.6}),
+new Material(4, "MDF 3mm", "MDF", 2500000, 650, 740, new double[]{3.30, 3.30}), 
+-->
+
+<materials>
+    <material>
+        <id>0</id>
+        <name>Acier au carbone</name>
+        <abbreviation>CS</abbreviation>
+        <youngModulus>200000000</youngModulus>
+        <elasticityLimit>250000</elasticityLimit>
+        <density>7850</density>
+        <cost>1.44</cost>
+        <cost>1.55</cost>
+        <cost>1.44</cost>
+    </material>
+    <material>
+        <id>1</id>
+        <name>Acier rapide</name>
+        <abbreviation>HSS</abbreviation>
+        <youngModulus>200000000</youngModulus>
+        <elasticityLimit>345000</elasticityLimit>
+        <density>7850</density>
+        <cost>1.55</cost>
+        <cost>1.76</cost>
+        <cost>1.55</cost>
+    </material>
+    <material>
+        <id>2</id>
+        <name>Acier trempé</name>
+        <abbreviation>QTS</abbreviation>
+        <youngModulus>200000000</youngModulus>
+        <elasticityLimit>485000</elasticityLimit>
+        <density>7850</density>
+        <cost>6.00</cost>
+        <cost>7.70</cost>
+        <cost>6.00</cost>
+    </material>
+    <material>
+        <id>3</id>
+        <name>Carton 1mm</name>
+        <abbreviation>Car</abbreviation>
+        <youngModulus>75750000</youngModulus>
+        <elasticityLimit>150000</elasticityLimit>
+        <density>618</density>
+        <cost>21.6</cost>
+        <cost>21.6</cost>
+        <cost>21.6</cost>
+    </material>
+    <material>
+        <id>4</id>
+        <name>MDF 3mm</name>
+        <abbreviation>MDF</abbreviation>
+        <youngModulus>100000000</youngModulus>
+        <elasticityLimit>200000</elasticityLimit>
+        <density>740</density>
+        <cost>3.3</cost>
+        <cost>3.3</cost>
+        <cost>3.3</cost>
+    </material>
+</materials>    

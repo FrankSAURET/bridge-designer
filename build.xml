@@ -84,6 +84,8 @@
         <!-- Copy build number properties. -->
         <copy file="build.number" tofile="src/bridgedesigner/build.number">
         </copy>
+        <copy file="materiaux.xml" tofile="src/bridgedesigner/materiaux.xml">
+        </copy>
 
         <!-- Build target properties. -->
         <property file="build.number" />

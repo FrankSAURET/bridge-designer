@@ -36,8 +36,6 @@ public class AboutBox extends javax.swing.JDialog {
         super(parent);
         initComponents();
         sysInfoLabel.setText("JRE " + System.getProperty("java.version"));
-        String folderSeparator = System.getProperty( "file.separator" );
-        String DossierApp =  System.getProperty("user.dir");
         String fichierProp=System.getProperty("user.dir")+System.getProperty("file.separator")+"build.number";
         versionLabel.setText("Version 2023");
         try {

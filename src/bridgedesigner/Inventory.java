@@ -16,6 +16,13 @@ package bridgedesigner;
 
 import javax.swing.AbstractListModel;
 import javax.swing.ComboBoxModel;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+import java.io.File;
 
 /**
  * Inventory of stock for building bridges and supporting functions.
@@ -66,15 +73,58 @@ public class Inventory {
      new Material(3, "Carton 1mm", "Car", 3000000, 15000, 618, new double[]{21.6, 21.6}),
      new Material(4, "MDF 3mm", "MDF", 2500000, 650, 740, new double[]{3.30, 3.30}),
      */
-    private final Material materials[] = new Material[]{
-        new Material(0, "Acier au carbone", "CS",  200000000, 250000, 7850, new double[]{1.44, 1.55, 1.44}),
-        new Material(1, "Acier rapide", "HSS", 200000000, 345000, 7850, new double[]{1.55, 1.76, 1.55}),
-        new Material(2, "Acier trempé", "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70, 6.00}),
-        // Valeurs de teste (E et Fi) empiriquement correspondant aux maquettes
-        // E valeur élevé et Fi par dichotomie
-        new Material(3, "Carton 1mm", "Car", 75750000, 150000, 618, new double[]{21.6, 21.6,21.6}),//Tient à 562 kN et casse à 563kN
-        new Material(4, "MDF 3mm", "MDF",   100000000, 200000, 740, new double[]{3.30, 3.30,3.30}),
-    };
+//    private Material materials[] = new Material[]{
+////        new Material(0, "Acier au carbone", "CS",  200000000, 250000, 7850, new double[]{1.44, 1.55, 1.44}),
+////        new Material(1, "Acier rapide", "HSS", 200000000, 345000, 7850, new double[]{1.55, 1.76, 1.55}),
+////        new Material(2, "Acier trempé", "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70, 6.00}),
+////        // Valeurs de teste (E et Fi) empiriquement correspondant aux maquettes
+////        // E valeur élevé et Fi par dichotomie
+////        new Material(3, "Carton 1mm", "Car", 75750000, 150000, 618, new double[]{21.6, 21.6,21.6}),//Tient à 562 kN et casse à 563kN
+////        new Material(4, "MDF 3mm", "MDF",   100000000, 200000, 740, new double[]{3.30, 3.30,3.30}),
+//        
+//    };
+
+    /**
+     * Table of materials in this inventory.
+     * index, nom, nom court, module d'élasticité (E) en kPa, limite d'élasticité (Fy) kPa, masse volumique (rho), cout par kilo de barre, tubes, bielle
+     *  Carton Canson C200704250, Car, E= 3 à 9 GPa, Fy=15 à 34 MPa, ρ=618 kg/m³, 21,6 €/kg ou 13,2 €/m² TTC
+     *  Médium , MDF, E= 2,5 GPa, Fy=650 kPa, ρ=740 kg/m³, 3,3 €/kg ou 7,35 €/m² (en 3 mm) TTC
+     new Material(3, "Carton 1mm", "Car", 3000000, 15000, 618, new double[]{21.6, 21.6}),
+     new Material(4, "MDF 3mm", "MDF", 2500000, 650, 740, new double[]{3.30, 3.30}),
+     */             
+    private Material[] materials;
+    private void loadMaterialsFromXML() {
+    String fichierMateriaux=System.getProperty("user.dir")+System.getProperty("file.separator")+"materiaux.xml";
+    
+    try {
+        File materiauxXML = new File(fichierMateriaux);
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+        Document doc = dBuilder.parse(materiauxXML);
+        doc.getDocumentElement().normalize();
+        NodeList nList = doc.getElementsByTagName("material");
+        materials = new Material[nList.getLength()];
+        for (int temp = 0; temp < nList.getLength(); temp++) {
+            Node nNode = nList.item(temp);
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+                int id = Integer.parseInt(eElement.getElementsByTagName("id").item(0).getTextContent());
+                String name = eElement.getElementsByTagName("name").item(0).getTextContent();
+                String abbreviation = eElement.getElementsByTagName("abbreviation").item(0).getTextContent();
+                int youngModulus = Integer.parseInt(eElement.getElementsByTagName("youngModulus").item(0).getTextContent());
+                int shearModulus = Integer.parseInt(eElement.getElementsByTagName("elasticityLimit").item(0).getTextContent());
+                int density = Integer.parseInt(eElement.getElementsByTagName("density").item(0).getTextContent());
+                double[] costs = new double[3];
+                costs[0] = Double.parseDouble(eElement.getElementsByTagName("cost").item(0).getTextContent());
+                costs[1] = Double.parseDouble(eElement.getElementsByTagName("cost").item(1).getTextContent());
+                costs[2] = Double.parseDouble(eElement.getElementsByTagName("cost").item(2).getTextContent());
+                materials[temp] = new Material(id, name, abbreviation, youngModulus, shearModulus, density, costs);
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
 
     /**
      * Table of shapes in this inventory.
@@ -82,12 +132,13 @@ public class Inventory {
     private final Shape shapes[][] = new Shape[crossSections.length][];
     
     /**
-     * Construct a stock inventory.
+     * Construct a stock and a material inventory.
      */
     public Inventory() {
         for (int i = 0; i < crossSections.length; i++) {
             shapes[i] = crossSections[i].getShapes();
         }
+        loadMaterialsFromXML();
     }
 
     /**
@@ -442,5 +493,6 @@ public class Inventory {
         public Object getSelectedItem() {
             return (selectedIndex >= 0) ? getElementAt(selectedIndex) : null;
         }
-    }    
+    } 
+
 }
