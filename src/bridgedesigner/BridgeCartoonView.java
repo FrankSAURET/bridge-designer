@@ -134,6 +134,7 @@ public class BridgeCartoonView extends BridgeView {
                 paintDeck(g, viewportTransform);
                 paintBridgeSketch(g, viewportTransform);
                 paintBridge(g, viewportTransform, null);
+                paintElevationMeasurements(g, viewportTransform);
             }
             if ((mode & MODE_TITLE_BLOCK) != 0) {
                 g.drawImage(titleBlock, 
@@ -190,7 +191,33 @@ public class BridgeCartoonView extends BridgeView {
         g.drawLine(xSlopeIcon - widthSlopeIconTail, ySlopeIcon + 2 * widthSlopeIconTail,
                 xSlopeIconTop + widthSlopeIconTail, ySlopeIconTop - 2 * widthSlopeIconTail);
     }
+    
+    private void paintElevationMeasurements(Graphics2D g, ViewportTransform viewportTransform) {
+        ResourceMap resourceMap = BDApp.getResourceMap(BridgeCartoonView.class);
+        g.setColor(Color.BLUE);
 
+        // Generally useful tick dimension.
+        final int tickHalfSize = 3;
+        // Useful gap x coordinates.
+        final int xGapLeft = viewportTransform.worldToViewportX(getLeftBankX());
+        final int xGapRight = viewportTransform.worldToViewportX(getRightBankX());
+        final int xGapMiddle = (xGapLeft + xGapRight) / 2;
+        final int xSlabLeft = viewportTransform.worldToViewportX(conditions.getXLeftmostDeckJoint() - deckCantilever);
+        final int xSlabRight = viewportTransform.worldToViewportX(conditions.getXRightmostDeckJoint() + deckCantilever);
+        // Useful gap y coordinates.
+        final int ySlabTop = viewportTransform.worldToViewportY(wearSurfaceHeight)-20;
+        final int yTickTop = ySlabTop - tickHalfSize;
+        final int yTickBottom = ySlabTop + 20 + tickHalfSize;
+        // Valeur de la portée
+        final String portee=String.valueOf(conditions.getNPanels()*4)+" "+resourceMap.getString("unit.text");
+        // Affichage portée
+        Utility.drawDoubleArrow(g, xSlabLeft, ySlabTop, xSlabRight, ySlabTop);//Trait dimension
+        g.drawLine(xSlabLeft, yTickTop, xSlabLeft, yTickBottom);// Trait largeur gauche
+        g.drawLine(xSlabRight, yTickTop, xSlabRight, yTickBottom);// Trait largeur droit
+        Labeler.drawJustified(g, portee, xGapMiddle, ySlabTop - tickHalfSize,
+                Labeler.JUSTIFY_CENTER, Labeler.JUSTIFY_BOTTOM, null);
+    }
+    
     @Override
     public void paintStandardAbutment(Graphics2D g, Point location, boolean mirror,int nConstraints,ViewportTransform viewportTransform) {
         paintStandardAbutment(g, concreteColor, Color.BLACK, location, mirror, viewportTransform);
