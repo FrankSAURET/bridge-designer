@@ -70,27 +70,10 @@ public class Inventory {
      * index, nom, nom court, module d'élasticité (E) en kPa, limite d'élasticité (Fy) kPa, masse volumique (rho), cout par kilo de barre, tubes, bielle
      *  Carton Canson C200704250, Car, E= 3 à 9 GPa, Fy=15 à 34 MPa, ρ=618 kg/m³, 21,6 €/kg ou 13,2 €/m² TTC
      *  Médium , MDF, E= 2,5 GPa, Fy=650 kPa, ρ=740 kg/m³, 3,3 €/kg ou 7,35 €/m² (en 3 mm) TTC
-     new Material(3, "Carton 1mm", "Car", 3000000, 15000, 618, new double[]{21.6, 21.6}),
-     new Material(4, "MDF 3mm", "MDF", 2500000, 650, 740, new double[]{3.30, 3.30}),
-     */
-//    private Material materials[] = new Material[]{
-////        new Material(0, "Acier au carbone", "CS",  200000000, 250000, 7850, new double[]{1.44, 1.55, 1.44}),
-////        new Material(1, "Acier rapide", "HSS", 200000000, 345000, 7850, new double[]{1.55, 1.76, 1.55}),
-////        new Material(2, "Acier trempé", "QTS", 200000000, 485000, 7850, new double[]{6.00, 7.70, 6.00}),
-////        // Valeurs de teste (E et Fi) empiriquement correspondant aux maquettes
-////        // E valeur élevé et Fi par dichotomie
-////        new Material(3, "Carton 1mm", "Car", 75750000, 150000, 618, new double[]{21.6, 21.6,21.6}),//Tient à 562 kN et casse à 563kN
-////        new Material(4, "MDF 3mm", "MDF",   100000000, 200000, 740, new double[]{3.30, 3.30,3.30}),
-//        
-//    };
-
-    /**
-     * Table of materials in this inventory.
-     * index, nom, nom court, module d'élasticité (E) en kPa, limite d'élasticité (Fy) kPa, masse volumique (rho), cout par kilo de barre, tubes, bielle
-     *  Carton Canson C200704250, Car, E= 3 à 9 GPa, Fy=15 à 34 MPa, ρ=618 kg/m³, 21,6 €/kg ou 13,2 €/m² TTC
-     *  Médium , MDF, E= 2,5 GPa, Fy=650 kPa, ρ=740 kg/m³, 3,3 €/kg ou 7,35 €/m² (en 3 mm) TTC
-     new Material(3, "Carton 1mm", "Car", 3000000, 15000, 618, new double[]{21.6, 21.6}),
-     new Material(4, "MDF 3mm", "MDF", 2500000, 650, 740, new double[]{3.30, 3.30}),
+     * new Material(3, "Carton 1mm", "Car", 3000000, 15000, 618, new double[]{21.6, 21.6}),
+     * new Material(4, "MDF 3mm", "MDF", 2500000, 650, 740, new double[]{3.30, 3.30}),
+     * 
+     * Modifier si nécessaire dans materiaux.xml.
      */             
     private Material[] materials;
     private void loadMaterialsFromXML() {

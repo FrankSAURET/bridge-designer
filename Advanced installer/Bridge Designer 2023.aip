@@ -18,10 +18,10 @@
     <ROW Property="IAgree" Value="No" Type="4"/>
     <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="Manufacturer" Value="Electropol"/>
-    <ROW Property="ProductCode" Value="1033:{699D812C-C60B-4AAE-A465-B9CD130D36EE} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{5E536924-C4DB-477A-8F77-5D07F40151CB} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Bridge Designer"/>
-    <ROW Property="ProductVersion" Value="2023.1462"/>
+    <ROW Property="ProductVersion" Value="2023.1526"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{679A0051-BAFC-468F-A48E-1246A3F6B85F}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -798,6 +798,7 @@
     <ROW File="license.rtf" Component_="license.rtf" FileName="license.rtf" Attributes="0" SourcePath="..\src\bridgedesigner\resources\license.rtf" SelfReg="false"/>
     <ROW File="BridgeDesigner.exe" Component_="BridgeDesigner.exe" FileName="BDV23J~2.EXE|BridgeDesigner.exe" Attributes="0" SourcePath="..\dist\BridgeDesigner.exe" SelfReg="false" DigSign="true"/>
     <ROW File="build.number" Component_="license.rtf" FileName="BUILD~1.NUM|build.number" Attributes="0" SourcePath="..\build.number" SelfReg="false"/>
+    <ROW File="materiaux.xml" Component_="license.rtf" FileName="MATERI~1.XML|materiaux.xml" Attributes="0" SourcePath="..\materiaux.xml" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AiPersistentPropComponent">
     <ROW Property="AI_INSTALLPERUSER" Registry="AI_INSTALLPERUSER" HklmSearch="AI_INSTALLPERUSER" HkcuSearch="AI_INSTALLPERUSER_1"/>
